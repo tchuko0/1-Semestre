@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+
+
+
+</head>
+
+<style>
+    .btn {
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 0 50px 0;
+
+        font-style: inherit;
+        display: inline;
+        margin-left: 22px;
+        font-size: 20px;
+        transition-duration: 0.4s;
+        color: #cb1d11;
+        color: inherit;
+        text-decoration: none;
+
+    }
+
+    .btn:hover {
+        /* color: #cb1d11; */
+        background-color: red;
+    }
+</style>
+
+<body style="background-image: url(https://investidor10.com.br/conteudo/wp-content/uploads/2020/12/25336.jpg);">
+
+
+    <center>
+
+
+
+        <h1 style="color: white;"> Dener machine </h1>
+
+        <H2 style="color: white;">Decimal</H2>
+
+        <input id="demo1" type="text" style="color: blue;" placeholder="digite o valor decimal">
+
+        <h1 style="color: white;">Converta para:</h1>
+
+        <span style="color: white;"> Octal </span>
+        <input onclick="covercaoOctal()" type="checkbox">
+
+        <div style="display:block; background-color: rgb(245, 234, 220); border-radius: 5px; padding: 5px;
+ color:blue; width: 15%; height: 40%;font-weight: 500 ; " id="demo2"></div>
+
+        <br>
+        <br>
+
+        <span style="color: white;">Hexadecimal</span>
+        <input onclick="covercaoHexadecimal()" type="checkbox">
+
+        <div style="display:block; background-color: beige; border-radius: 5px; padding: 5px;
+ color:blue; width: 15%; height: 40%;font-weight: 500 ; " id="demo3"></div>
+
+        <br>
+        <br>
+
+        <span style="color: white;">Binario</span>
+        <input onclick="covercaoBinario()" type="checkbox">
+        <div style="display:block; background-color: beige; border-radius: 5px; padding: 5px; 
+color:blue; width: 15%; height: 40%;font-weight: 500 ; " id="demo4"></div>
+
+        <br>
+        <br>
+        <button class="btn" onclick="converter()">Converter</button>
+
+    </center>
+    <div id="exibir"></div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function converter() {
+
+        var decimal = Number(demo1.value);
+
+        let octal = decimal.toString(8);
+
+        let hexadecimal = decimal.toString(16);
+
+        let binaria = decimal.toString(2);
+
+        console.log(decimal);
+        console.log(octal);
+        console.log(hexadecimal);
+        console.log(binaria);
+
+        document.getElementById("demo1").innerHTML = ` ${decimal}`;
+        document.getElementById("demo2").innerHTML = ` ${octal}`;
+        document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+        document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+
+    }
+
+    function aparecer_bin() {
+        demo4.style.display = 'block'
+    }
+
+    function aparecer_hexa() {
+        demo3.style.display = 'block'
+    }
+
+    function aparecer_octal() {
+        demo2.style.display = 'block'
+    }
+    document.bgColor = "#66CDAA";
+</script>
