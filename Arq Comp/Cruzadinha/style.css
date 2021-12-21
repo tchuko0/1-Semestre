@@ -1,0 +1,104 @@
+
+*{
+    margin : 0;
+    padding: 0;
+    background-image: url();
+}
+.container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font: 700 30px Goldman;
+}
+
+span{
+    font: 400 15px Roboto;
+}
+
+.containerPerguntas{
+    margin-top: 50px;
+    width: 45%;
+    text-align: center;
+}
+input{
+    text-transform: uppercase;
+}
+
+/* Style da cruzada */
+.containerPalavras{
+    margin-top: 50px;
+}
+
+.palavra{
+border: black 1px solid;
+height: 30px;
+width: 30px;
+text-align: center;
+}
+
+p{
+position: absolute;
+font-size: 8pt;
+margin: 0px 0px 0px 0px;
+line-height: 0;
+font-weight: bold;
+color: black;
+} 
+.espaco{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}
+
+button{
+    width: 40%;
+    margin-left: 5%;
+    height: 100px;
+    background-color: darkgreen;
+    color: white;
+    font: 400 30px Roboto;
+}
+
+.Cpu,
+.Ula,
+.Memoria,
+.Ram,
+.Rom,
+.Registradores,
+.Flash,
+.Cs,
+.QuadCore,
+.DualCore,
+.I5,
+.I7,
+.AdressBus,
+.DataBus,
+.Eprom,
+.Dma{
+    color:white;
+}
+
+
+#span_pergunta2,
+#span_pergunta3,
+#span_pergunta4,
+#span_pergunta5,
+#span_pergunta6,
+#span_pergunta7,
+#span_pergunta8,
+#span_pergunta9,
+#span_pergunta10,
+#span_pergunta11,
+#span_pergunta12,
+#span_pergunta13,
+#span_pergunta14,
+#span_pergunta15,
+#span_pergunta16 {
+    display: none;
+
+    
+}
