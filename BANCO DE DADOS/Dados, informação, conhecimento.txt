@@ -1,0 +1,37 @@
+DADOS 
+
+pode ser palavras, numeros, se olhado individalmente não tenha um sentido claro.
+
+EX: 500 USUARIO
+
+INFORMAÇOES 
+
+são dados que já foram processados e possuem um significado 
+
+EX : 500 USUARIOS FORAM ESCRITOS NO CURSO
+
+CONHECIMENTO
+
+Informação que possui aplicação pratica 
+
+
+
+Dado
+Pode-se definir dado como a representação quantificada de alguma coisa. Quando olhamos um dado individualmente ele não terá um sentido claro. Para trazer um contexto mais aplicável, é necessário tratá-lo e transformá-lo em informação.
+
+Dados singulares como 500 leads ou 1000 usuários são bons exemplos dessa categoria. Pode-se notar que dispostos dessa forma, não é possível haver uma compreensão exata do sentido que esses números podem trazer ao negócio.
+
+Informação
+Dados que possuem um significado em determinado contexto são chamados de informações. Plataformas e pessoas podem auxiliar no tratamento desses dados a fim de que eles cada vez mais auxiliem os diretores na tomada de decisões estratégicas.
+
+Uma informação como “500 leads novos no Pulpo no mês de dezembro vindo de determinado canal” é um bom exemplo desta categoria. O objetivo de uma informação é que um dia ela se torne conhecimento e traga resultados para a empresa.
+
+Conhecimento
+Quando a informação possui uma aplicação prática, damos o nome de conhecimento. Esta classe se refere às formas de alcançar um resultado concreto a partir de determinado conteúdo. É derivado do aprendizado real dado em virtude das trocas interpessoais, práticas estabelecidas no negócio e valores entregues aos clientes internos e externos.
+
+Exemplos como um “treinamento de vendas para iniciantes” ou uma pergunta de “Como fazer com que se consigam 500 leads novos para o Pulpo no mês de dezembro” acompanhada pelos detalhes de sua resposta podem ser considerados conhecimentos e propensos a estarem dentro de uma base respectiva.
+
+A maioria dos conhecimentos são tácitos, ou seja, estão internalizados nas próprias pessoas. Isso torna eles difíceis de escalar e de se passar o know-how dos fundadores para o resto da equipe.
+
+
+BANCO DE DADOS É COMPOSTO POR LINHAS E COLUNAS
