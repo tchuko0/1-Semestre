@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+
+<body>
+
+    <button onclick="jogador1()">Jogador 1 jogar dadinho</button>
+    <button onclick="jogador2()">Jogador 2 jogar dadinho</button>
+
+    <img src="https://d29fhpw069ctt2.cloudfront.net/clipart/116789/preview/dado_1_preview_69ce.png" height="150px"
+        id="imgJogador1_1" style="display: none;" alt="">
+    <img src="https://images.vectorhq.com/images/previews/482/dado-2-138325.png" height="150px" id="imgJogador1_2"
+        style="display: none;" alt="">
+    <img src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/106472/dado_3.png" height="150px"
+        id="imgJogador1_3" style="display: none;" alt="">
+    <img src="https://png.vector.me/files/images/3/2/323088/dado_4_preview" height="180px" id="imgJogador1_4"
+        style="display: none;" alt="">
+    <img src="https://images.vectorhq.com/images/previews/93c/dado-5-138316.png" height="150px" id="imgJogador1_5"
+        style="display: none;" alt="">
+    <img src="https://png.vector.me/files/images/3/2/323082/dado_6_preview" height="150px" id="imgJogador1_6"
+        style="display: none;" alt="">
+
+    <img src="https://d29fhpw069ctt2.cloudfront.net/clipart/116789/preview/dado_1_preview_69ce.png" height="150px"
+        id="imgJogador2_1" style="display: none;" alt="">
+    <img src="https://images.vectorhq.com/images/previews/482/dado-2-138325.png" height="150px" id="imgJogador2_2"
+        style="display: none;" alt="">
+    <img src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/106472/dado_3.png" height="150px"
+        id="imgJogador2_3" style="display: none;" alt="">
+    <img src="https://png.vector.me/files/images/3/2/323088/dado_4_preview" height="180px" id="imgJogador2_4"
+        style="display: none;" alt="">
+    <img src="https://images.vectorhq.com/images/previews/93c/dado-5-138316.png" height="150px" id="imgJogador2_5"
+        style="display: none;" alt="">
+    <img src="https://png.vector.me/files/images/3/2/323082/dado_6_preview" height="150px" id="imgJogador2_6"
+        style="display: none;" alt="">
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    var JO1 = 0
+    var JO2 = 0
+
+    function jogador1() {
+
+        JOGADOR1 = (Math.random() * 6).toFixed()
+
+        var jog1 = JO1 = JOGADOR1
+
+        if (JO1 == 1) {
+            imgJogador1_1.style.display = 'block'
+            imgJogador1_2.style.display = 'none'
+            imgJogador1_3.style.display = 'none'
+            imgJogador1_4.style.display = 'none'
+            imgJogador1_5.style.display = 'none'
+            imgJogador1_6.style.display = 'none'
+
+        } else if (JO1 == 2) {
+            imgJogador1_1.style.display = 'none'
+            imgJogador1_2.style.display = 'block'
+            imgJogador1_3.style.display = 'none'
+            imgJogador1_4.style.display = 'none'
+            imgJogador1_5.style.display = 'none'
+            imgJogador1_6.style.display = 'none'
+
+        } else if (JO1 == 3) {
+            imgJogador1_1.style.display = 'none'
+            imgJogador1_2.style.display = 'none'
+            imgJogador1_3.style.display = 'block'
+            imgJogador1_4.style.display = 'none'
+            imgJogador1_5.style.display = 'none'
+            imgJogador1_6.style.display = 'none'
+
+        } else if (JO1 == 4) {
+            imgJogador1_1.style.display = 'none'
+            imgJogador1_2.style.display = 'none'
+            imgJogador1_3.style.display = 'none'
+            imgJogador1_4.style.display = 'block'
+            imgJogador1_5.style.display = 'none'
+            imgJogador1_6.style.display = 'none'
+        } else if (JO1 == 5) {
+            imgJogador1_1.style.display = 'none'
+            imgJogador1_2.style.display = 'none'
+            imgJogador1_3.style.display = 'none'
+            imgJogador1_4.style.display = 'none'
+            imgJogador1_5.style.display = 'block'
+            imgJogador1_6.style.display = 'none'
+        } else if (JO1 == 6) {
+            imgJogador1_1.style.display = 'none'
+            imgJogador1_2.style.display = 'none'
+            imgJogador1_3.style.display = 'none'
+            imgJogador1_4.style.display = 'none'
+            imgJogador1_5.style.display = 'none'
+            imgJogador1_6.style.display = 'block'
+
+        }
+
+
+    }
+
+    function jogador2() {
+
+        JOGADOR2 = (Math.random() * 6).toFixed()
+
+        var jog2 = JO2 = JOGADOR2
+
+        if (JO2 == 1) {
+            imgJogador2_1.style.display = 'block'
+            imgJogador2_2.style.display = 'none'
+            imgJogador2_3.style.display = 'none'
+            imgJogador2_4.style.display = 'none'
+            imgJogador2_5.style.display = 'none'
+            imgJogador2_6.style.display = 'none'
+
+        } else if (JO2 == 2) {
+            imgJogador2_1.style.display = 'none'
+            imgJogador2_2.style.display = 'block'
+            imgJogador2_3.style.display = 'none'
+            imgJogador2_4.style.display = 'none'
+            imgJogador2_5.style.display = 'none'
+            imgJogador2_6.style.display = 'none'
+
+        } else if (JO2 == 3) {
+            imgJogador2_1.style.display = 'none'
+            imgJogador2_2.style.display = 'none'
+            imgJogador2_3.style.display = 'block'
+            imgJogador2_4.style.display = 'none'
+            imgJogador2_5.style.display = 'none'
+            imgJogador2_6.style.display = 'none'
+
+        } else if (JO2 == 4) {
+            imgJogador2_1.style.display = 'none'
+            imgJogador2_2.style.display = 'none'
+            imgJogador2_3.style.display = 'none'
+            imgJogador2_4.style.display = 'block'
+            imgJogador2_5.style.display = 'none'
+            imgJogador2_6.style.display = 'none'
+        } else if (JO2 == 5) {
+            imgJogador2_1.style.display = 'none'
+            imgJogador2_2.style.display = 'none'
+            imgJogador2_3.style.display = 'none'
+            imgJogador2_4.style.display = 'none'
+            imgJogador2_5.style.display = 'block'
+            imgJogador2_6.style.display = 'none'
+        } else if (JO2 == 6) {
+            imgJogador2_1.style.display = 'none'
+            imgJogador2_2.style.display = 'none'
+            imgJogador2_3.style.display = 'none'
+            imgJogador2_4.style.display = 'none'
+            imgJogador2_5.style.display = 'none'
+            imgJogador2_6.style.display = 'block'
+
+        }
+
+         if (JO1 > JO2) {
+            exibir.innerHTML = `Jogador 1 Venceu`
+        } else if (JO2 > JO1) {
+            exibir.innerHTML = `Jogador 2 Venceu`
+        } else {
+            exibir.innerHTML = `EMPATE`
+        }
+
+    }
+</script>
+
+<!-- 1o Crie um programa em HTML/JS o qual:
+
+a) Tenha um botão "Jogador 1 jogar dadinho" que faz aparecer, abaixo dele, o valor de um dadinho de 6 lados sorteado
+
+b) Tenha um botão "Jogador 2 jogar dadinho" que faz aparecer, abaixo dele, o valor de um dadinho de 6 lados sorteado
+
+c) Ainda após o clique do segundo botão, exiba abaixo de tudo uma dessas frases:
+   "Jogador [1 ou 2] venceu" caso um deles tenha vencido
+   "Empate", caso de empate -->

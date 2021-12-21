@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select name="tv" id="combo_tv">
+        <option value="escolha uma televisão">escolha uma televisão</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Lg">LG</option>
+        <option value="Mondial">Mondial</option>
+        <option value="Britania">Britânia</option>
+    </select>
+    <br><br>
+    <input id="preco_tv">
+    <br>
+    <button onclick="verificar()">Analisar compra</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+
+        var preco = Number(preco_tv.value);
+
+        if (preco < 800 && preco >=2000) {
+            exibir.innerHTML = `TV fora da faixa de preço`
+        }else if (preco == 800 && preco <=2000 || combo_tv == Mondial ||combo_tv == Britania) {
+            exibir.innerHTML = `Na faixa de preço porem não confiavel`
+        }
+
+
+
+    }
+</script>

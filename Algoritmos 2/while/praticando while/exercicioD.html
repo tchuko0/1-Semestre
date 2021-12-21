@@ -1,0 +1,29 @@
+<input type="text" id="num1"> <br>
+    <input type="text" id="num2"> <br>
+
+    <button onclick="teste()">Teste</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function teste() {
+        exibir.innerHTML = '';
+        var contadorI = Number(num1.value);
+        var contadorF = Number(num2.value);
+        while (contadorI <= contadorF) {
+
+
+            if (contadorI%2==0) {
+                exibir.innerHTML += `${contadorI}<br>`
+            }
+            contadorI++
+
+
+        }
+    }
+</script>

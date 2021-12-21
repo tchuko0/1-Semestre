@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex9</title>
+</head>
+<body>
+
+    Informe seu login: <br>
+    <input type="text" id="inp_login"> <br><br>
+
+    Informe sua senha: <br>
+    <input type="password" id="inp_senha"> <br><br>
+
+    Informe seu codigo de segurança: <br>
+    <input type="text" id="inp_seguranca"><br><br>
+
+    <button onclick="validar()" >Entrar</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+</html>
+
+<script>
+
+function validar() {
+        var login = (inp_login.value);
+        var senha = (inp_senha.value);
+        var seguraca = Number(inp_seguranca.value);
+
+        if (login == 'bandtec' && seguraca >=1 && seguraca <=3 && senha == 'digital') {
+            alert('Usuário autenticado com sucesso')
+        }else{
+            alert('Falha na autenticação')
+        }
+
+}
+
+
+</script>
+
+
+
+<!-- 9. Crie um programa em HTML/JS o qual simula um pequeno sistema de login assim:
+
+a) Pergunte o login do usuário
+
+b) Pergunte a senha do usuário (curiosidade: se o type do input for "password", você não vê na tela o valor digitado)
+
+c) Pergunte o código de segurança do usuário (é como se fosse uma segunda senha, só isso)
+
+d) Ao clicar em "Entrar"...
+
+e) Caso o login for "bandtec" e a senha for "digital" e o código de segurança for "123", exibir um alert com a frase "Usuário autenticado com sucesso", caso contrário, exibir um alert com "Falha na autenticação" -->

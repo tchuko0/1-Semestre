@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex9</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Informe o nome de cada projeto que voce jpa fez na vida" id="inp_projeto"> <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="mostrar()" >Mostrar</button>
+    <br><br>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+    var projeto =[]
+    function cadastrar() {
+        projeto.push(inp_projeto.value);
+        inp_projeto.value = '';
+    }
+
+    function mostrar() {
+        exibir.innerHTML = '';
+        for (var index = 0; index <= projeto.length-1; index++) {
+            
+            if (index <= 4) {
+                exibir.innerHTML = `Você já fez ${index} projetos. Por isso você é um profissional Júnior`
+            }else if (index <=12) {
+                exibir.innerHTML = `Você já fez ${index} projetos. Por isso você é um profissional ${projeto[4]}`
+            }else if (index >=13) {
+                exibir.innerHTML = `Você já fez ${index} projetos. Por isso você é um Sênior ${projeto[12]}`
+            }
+            
+        }
+    }
+
+
+
+</script>
+
+<!-- 9. a) Pergunte para o usuário o nome de cada projeto que já criou na vida. Ele digita e clica em "Registrar projeto". Na medida que ele vai cadastrando, verifique quantos projetos já foram cadastrados e exiba o seguinte texto abaixo:
+
+            Você já fez X projetos. Por isso você é um profissional Z
+
+X é a quantidade de projetos e Z é seu nível de experiência, segundo estas regras:
+
+  0 a 4: Júnior
+
+  5 a 12: Pleno desde o projeto "nome do 5º projeto"
+
+13   u mais: Sênior desde o projeto "nome do 13º projeto"
+
+b)  Tenha um botão “Mostrar Projetos” que quando clicado mostra os projetos cadastrados, um abaixo do outro, em ordem inversa ao que foi cadastrado. -->

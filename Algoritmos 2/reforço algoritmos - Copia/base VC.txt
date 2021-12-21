@@ -1,0 +1,24 @@
+
+br significa breack
+
+1 br = quebra linha (e é alto suficiente)
+
+2 br = pula linha
+
+i = italico
+
+b = negrito
+
+u = sublinhar
+
+p = determina um paragrafo dentro do seu corpo
+
+title (nome da pagina)
+
+body (corpo da pagina)
+
+comentario = <!-- dener -->
+
+alinhamneto de tag = uma tag dentro da outra
+
+img src = link ( imagem ) alt  

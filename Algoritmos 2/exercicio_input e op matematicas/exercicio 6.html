@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+</head>
+<body>
+
+    Informe o sabor da pizza
+    <input id="Spizza">
+    <br>
+
+    Informe o valor da pizza
+    <input id="Vpizza">
+    <br>
+
+    Informe a quantidade de amigos 
+    <input id="Qamigos">
+    <br>
+
+    <button onclick="calculo()" >Ver valor por amigo</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calculo() {
+        var sabor_pizza = Spizza.value;
+        var valor_pizza = Number(Vpizza.value);
+        var qtd_amigos = Number(Qamigos.value);
+
+        var rateio = valor_pizza / qtd_amigos;
+
+        exibir.innerHTML = `Cada amigo vai colaborar com <u>R$${rateio.toFixed(2)}</u> para a pizza de ${sabor_pizza}`;
+        
+    }
+
+
+</script>
+<!-- 6. Todo mundo gosta de pizza! É um prato super democrático, pois existem sabores veganos, vegetarianos, sem glúten, com "low carb" (pouco carboidrato), doces etc. Crie um programa em HTML/JS o qual:
+
+a) Solicite o sabor e o preço da pizza
+
+b) Solicite a quantidade de amigos que vão comer
+
+c) Ao clicar num botão "Ver valor por amigo", calcule e exiba na tela uma frase como esta:
+
+    Cada amigo vai colaborar com R$X para a pizza de Y  
+
+Note que X aparece sublinhado. -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo && </title>
+</head>
+<body>
+    <h2>Média e frequencia dos alunos Bandtec</h2>
+
+    Digite sua media: <br>
+    <input type="text" id="inp_media"> <br><br>
+    
+    Digite sua frequencia: <br>
+    <input type="text" id="inp_freq"> <br><br>
+
+    <button onclick="calcular()" >Mostrar media</button>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+        var media = Number(inp_media.value);
+        var frequencia = Number (inp_freq.value);
+
+        if (media >= 6 && frequencia >= 75) {
+            alert('APROVADO 😎')
+        } else {
+            alert('REPROVADO 😥')
+        }
+    }
+
+
+
+</script>

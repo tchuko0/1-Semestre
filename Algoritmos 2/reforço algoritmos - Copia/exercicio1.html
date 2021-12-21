@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Brasil e Alemanha</h1>
+
+    <button onclick="gol_brasil()">Gol do Brasil </button>
+    <button onclick="gol_alemanha()">Gol da Alemanha </button>
+
+    <h2><b>Tempo real...</b></h2>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+
+
+<script>
+    function gol_brasil() {
+
+        exibir.innerHTML += " <b style ='color: green;' >É goooolll do Brasil!!!</b><br> "
+
+    }
+
+    function gol_alemanha() {
+
+        exibir.innerHTML += "<b style = 'background-color:red; color:yellow;'>É goooolll da Alemanha!!!</b><br>"
+
+    }
+</script>
+
+<!-- 01). Crie um programa em HTML/JS que simule a notificação de gols numa partida de
+futebol assim...
+a) Tenha um título grande com  a frase &quot;Brasil x Alemanha&quot;
+b) Abaixo desse título, os botões &quot;Gol do Brasil&quot; e &quot;Gol da Alemanha&quot;
+c) Abaixo dos botões deve haver um texto em negrito dizendo &quot;Tempo real do jogo:&quot;
+d) Sempre que o 1º botão for clicado, deve aparecer, na cor verde, a frase:
+    É goooolll do Brasil!!!
+e) Sempre que o 2º botão for clicado, deve aparecer, com cor de fundo vermelho
+escuro e letra amarela, a frase
+    É goooolll da Alemanha!!!
+f) Detalhe importante: As frase descritas em d) e e) devem ir de acumulando abaixo do
+que já existia na página. Ou seja, a primeira vez que clicar em algum dos botões o
+texto deve ficar abaixo do texto descrito em c). E depois cada vez abaixo do que já
+existia e assim por diante. -->

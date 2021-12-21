@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="nota1()" >Nota 1</button>
+    <button onclick="nota2()" >Nota 2</button>
+    <button onclick="nota3()" >Nota 3</button>
+    <button onclick="nota4()" >Nota 4</button>
+    <button onclick="nota5()" >Nota 5</button>
+    <br><br>
+
+    <!-- <img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_450x450.jpg" alt=""> -->
+
+    <span id="av" >Sua avaliação</span>
+
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    var total = 0;
+    var vezes = 0;
+   
+
+function nota1() {
+    total +=1;
+    vezes ++;
+
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+
+    if (total/vezes <= 2.99) {
+        exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+        exibir.innerHTML =  `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_450x450.jpg" >`
+    }
+}
+
+function nota2() {
+    total +=2;
+    vezes ++;
+
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+
+    if (total/vezes >= 2 && total/vezes <= 3 ) {
+        
+    }
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+    exibir.innerHTML =  `<img src="https://image.freepik.com/fotos-gratis/jovem-homem-isolado-rosto-neutro_75922-474.jpg" >`
+}
+
+function nota3() {
+    total +=3;
+    vezes ++;
+
+    if (total/vezes>=3 && total/vezes <= 4.5 ) {
+        
+    }
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+    exibir.innerHTML =  `<img src="https://i.pinimg.com/originals/82/48/3d/82483d857c92753802fe421b3ae9b67d.jpg" >`
+    
+}
+
+function nota4() {
+    total +=4;
+    vezes ++;
+
+    if (total/vezes>=4.5 ) {
+        
+    }
+
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+    exibir.innerHTML =  `<img src="https://image.freepik.com/vetores-gratis/emoji-de-rosto-radiante-com-oculos-de-sol-elegantes_1319-983.jpg" >`
+}
+
+function nota5() {
+    total +=5;
+    vezes ++;
+
+    if (total/vezes >= 4.5 && total/vezes <= 10 ) {
+        
+    }
+
+    exibir.innerHTML = `Sua avaliação ${(total/vezes).toFixed(2)}`
+    exibir.innerHTML =  `<img src="https://thumbs.dreamstime.com/b/homem-negro-feliz-46298442.jpg" >`
+}
+
+av.innerHTML += ``
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+<body>
+
+    <h1>Cofrinho</h1>
+
+    Valor guardado no cofrinho:  <b id="valor">R$0.00</b> 
+    <br>
+    deposito realizados <b id="depositoF">0</b>
+    <br>
+    saques realizados <b id="saqueF">0</b>
+    <br><br>
+
+   Informe o valor a ser depositado
+   <br>
+   <!-- <input type="text" id="inp_deposito" > -->
+
+   <br><br>
+
+    <button onclick="deposito()" >Depositar</button>
+    <br>
+    <button onclick="tirargrana()" >Tirar toda a grana</button>
+
+    <div id="exibir"></div>
+
+    
+</body>
+</html>
+
+<script>
+
+    depositar = 0;
+    vezes_deposito = 0;
+    saque = 0;
+    function deposito() {
+        depositar ++
+        vezes_deposito ++
+        valor.innerHTML = `${depositar}`
+        depositoF.innerHTML = `${vezes_deposito}`
+    }
+
+    function tirargrana() {
+        depositar --
+        saque ++
+        valor.innerHTML = `${depositar}`
+        saqueF.innerHTML = `${saque}`
+    }
+
+
+
+</script>

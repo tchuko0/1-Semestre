@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex21-8</title>
+</head>
+
+<body>
+
+    Informe a quantidade de homens num elevador: <br>
+    <input type="text" id="inp_homem"> <br><br>
+
+    Informe a quantidade de mulheres num elevador: <br>
+    <input type="text" id="inp_mulher"> <br><br>
+
+    <button onclick="calcular()">Ligar elevador</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var homem = Number(inp_homem.value);
+        var mulher = Number(inp_mulher.value);
+        homem = 90;
+        mulher = 70;
+        var total = homem + mulher;
+
+        if (total < 500) {
+            exibir.innerHTML = `<span style="color:green;" > Elevador vai se mover, pois está com ${total} kg </span>`
+        } else {
+            exibir.innerHTML =
+                `<span style="color:red;" >Alguém precisa descer. Precisa perder ${total} kg para mover o elevador</span>`
+        }
+
+
+
+
+    }
+</script>
+
+
+
+<!-- 8. Crie um programa em HTML/JS o qual:
+
+a) Solicite a quantidade de homens e mulheres num elevador
+
+b) Ao clicar num botão "Ligar elevador", calcule o peso total no elevador, considerando que um homem pesa em média 90kg e uma mulher 70kg
+
+c) Caso o peso seja menor que 500, exiba uma frase na cor verde abaixo do botão com a frase Elevador vai se mover, pois está com Xkg
+
+d) Caso o peso seja a partir de 500, exiba uma frase na cor vermelha abaixo do botão com a frase Alguém precisa descer. Precisa perder Xkg para mover o elevador -->

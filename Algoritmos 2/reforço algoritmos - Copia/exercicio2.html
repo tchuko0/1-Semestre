@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2 style="color: crimson;">escolha seu time</h2>
+
+
+
+<div id="escudos">
+    <img onclick="timao()" id="corinthians"
+        src="https://i.pinimg.com/originals/e8/1e/0b/e81e0bcf99242191d4dd7a89758615da.jpg" width="200"
+        alt="Corinthians">
+    <img onclick="tricolor()" id="sao_paulo"
+        src="https://upload.wikimedia.org/wikipedia/pt/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png" width="200"
+        alt="sao paulo">
+    <img onclick="verdao()" id="palmeiras"
+        src="https://i.pinimg.com/originals/fb/94/4a/fb944a7090471ddee8af7be70ce49f44.png" width="200" alt="palmeiras">
+    <img onclick="peixao()" id="santos"
+        src="https://i.pinimg.com/originals/0b/8f/79/0b8f791f4ce9dec8e455ad107a9156ec.png" width="200" alt="santos">
+    <br><br>
+
+</div>
+
+
+    <div style="display: none;" id="div_corinthians">
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120">
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120" >
+
+    </div>
+
+    <div style="display: none" id="div_sao_paulo">
+
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120">
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120" >
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120" >
+
+    </div>
+    
+    <div style="display: none;" id="div_palmeiras">
+        <img src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/04/palmeiras-mundial.jpg" width="120">
+
+
+    </div>
+    <div style="display: none;" id="div_santos">
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120">
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120" >
+
+    </div>
+
+    <button onclick="reset()">Resetar</button>
+    <div id="escudos_button">
+    <button onclick="esconder()" id="esconder_escudos" style="display: block;">Esconder Escudos</button>
+    <button onclick="mostrar()" id="mostrar_escudos" style="display: none;">Mostrar Escudos</button>
+
+</body>
+
+</html>
+
+
+
+
+<script>
+    function timao() {
+
+        div_corinthians.style.display  = "block" 
+        div_sao_paulo.style.display  = "none"
+        div_palmeiras.style.display  = "none"
+        div_santos.style.display  = "none"
+
+    }
+
+    function tricolor() {
+
+        
+        div_corinthians.style.display  = "none" 
+        div_sao_paulo.style.display  = "block"
+        div_palmeiras.style.display  = "none"
+        div_santos.style.display  = "none"
+
+
+    }
+
+    function verdao() {
+
+        div_corinthians.style.display  = "none" 
+        div_sao_paulo.style.display  = "none"
+        div_palmeiras.style.display  = "block"
+        div_santos.style.display  = "none"
+
+    }
+
+
+    function peixao() {
+
+        
+        div_corinthians.style.display  = "none" 
+        div_sao_paulo.style.display  = "none"
+        div_palmeiras.style.display  = "none"
+        div_santos.style.display  = "block"
+
+    }
+
+    
+    function reset() {
+
+        div_corinthians.style.display = "none";
+        div_sao_paulo.style.display = "none";
+        div_palmeiras.style.display = "none";
+        div_santos.style.display = "none";
+    }
+
+    function esconder() {
+
+        escudos.style.display = "none";
+        mostrar_escudos.style.display = "block";
+        esconder_escudos.style.display = "none";
+    }
+
+    function mostrar(){
+
+        escudos.style.display = "block";
+        mostrar_escudos.style.display = "none";
+        esconder_escudos.style.display = "block"; 
+    }
+</script>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex22-9</title>
+</head>
+
+<body>
+
+    <select onchange="mostrar()" name="" id="sel_esp">
+        <option value="">-Escolha Uma Especie-</option>
+        <option value="ovi">-Ovibaros-</option>
+        <option value="mami">-Mamiferos-</option>
+    </select> 
+    
+    <br>
+    <br>
+
+    <select style="display: none;" onchange="ovi()" name="" id="sel_ovi">
+        <option value="">-escolha um animal-</option>
+        <option value="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia9802/galinha-caipira-6-dicas-para-iniciar-sua-criacao.jpg">galinha</option>
+        <option value="https://s2.static.brasilescola.uol.com.br/be/2020/12/peixe.jpg">peixe</option>
+        <option value="https://cdn.diferenca.com/imagens/tartaruga-cagado-e-jabuti-og.jpg"> Tartaruga</option>
+    </select>
+
+    <select style="display: none;" onchange="mami()" name="" id="sel_mami">
+        <option value="">-escolha um animal-</option>
+        <option value="https://www.infoescola.com/wp-content/uploads/2016/12/elefante-asiatico-198685685.jpg">Elefante</option>
+        <option value="https://super.abril.com.br/wp-content/uploads/2021/05/porquinho_site.jpg?quality=70&strip=info&w=680&h=453&crop=1">Porco</option>
+        <option value="https://www.dicaspetz.com.br/wp-content/uploads/2021/02/com-quantos-dias-os-filhotes-de-coelhos-comecam-a-comer-roedores.jpg">Coelho</option>
+    </select>
+
+    <img id="id_img" width="400px" src="" alt="">
+
+    <br>
+    <br>
+    <br>
+
+    <input style="display: none;" id="compra" placeholder="valor de compra" type="text">
+    
+    <button id="mostra" style="display: none;" onclick="comprar()">Calcular o Imposto</button>
+
+
+    <div id="texto"></div>
+
+</html>
+<script>
+    function mostrar() {
+        if (sel_esp.value == 'ovi') {
+            sel_ovi.style.display = 'block'
+            sel_mami.style.display = 'none'
+
+        }
+        if (sel_esp.value == 'mami') {
+            sel_mami.style.display = 'block'
+            sel_ovi.style.display = 'none'
+        }
+
+    }
+
+    function mami() {
+        id_img.src = `${sel_mami.value}`
+        compra.style.display = 'block'
+        mostra.style.display = 'block'
+        div_texto.style.display = 'block'
+
+
+    }
+
+    function ovi() {
+        id_img.src = `${sel_ovi.value}`
+        compra.style.display = 'block'
+        mostra.style.display = 'block'
+    }
+
+    function comprar() {
+        var compraM = Number(compra.value);
+        var juros;
+        if (sel_esp == 'sel_ovi') {
+            juros = (compraM * 0.1)
+            texto.innerHTML = (`o imposto será de ${juros}` );
+
+        } else {
+        juros = (compraM * 0.05)
+            texto.innerHTML = (`o imposto será de ${juros}`);
+        }
+    }
+</script>
+
+<!-- 9 (desafio). Crie um programa em HTML/JS o qual:
+
+a) No início tenha somente uma combo com os itens:
+
+    - Escolha uma espécie -
+
+    Ovíparos
+
+    Mamiferos
+
+b) Se o usuário escolher o primeiro item, nada acontece e se, eventualmente, tiver algo abaixo da combo, deve desaparecer tudo (ver itens a seguir para entender melhor)
+
+c) Se o usuário escolher "Ovíparos", abaixo da combo deve aparecer outra combo com os itens:
+
+   - Escolha um Ovíparo -
+
+   Galinha
+
+   Peixe
+
+   Tartaruga
+
+d) Se o usuário escolher "Mamíferos", abaixo da combo deve aparecer outra combo com os itens:
+
+   - Escolha um Mamífero -
+
+   Elefante
+
+   Porco
+
+   Coelho
+
+e) Após escolher um animal - seja em c), seja em d), uma foto de um exemplar deve aparecer abaixo da combo. Se não for escolhido um animal válido (ou seja, se for escolhido o primeiro item da lista), a foto que estive, eventualmente aparecendo some. Se nenhum estiver sendo mostrada, continua sem mostrar nada
+
+f) Também após escolher um animal - seja em c), seja em d), abaixo da imagem descrita em e), deve aparecer um campo de texto solicitando o "Valor de compra do animal"
+
+g) Abaixo do campo em f) deve ter um botão "Calcula imposto". Ao clicar nele, aparecer abaixo uma frase como esta:
+
+    O imposto será de R$X
+
+Onde X é:
+
+    - Caso ovíparo: %5 do valor de compra
+
+    - Caso mamífero: %10 do valor de compra -->

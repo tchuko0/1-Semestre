@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Informe filmes que goste" id="inp_favorito"> <br>
+    <button onclick="cadastrar()" >Cadastrar</button> <br>
+    <div id="exibir"></div>
+
+    
+</body>
+</html>
+
+<script>
+    var filmes=[];
+    function cadastrar() {
+        filmes.push(inp_favorito.value) + '<br>';
+        inp_favorito.value = '';
+        
+        for (var index = 0; index <= filmes.length; index++) {
+            exibir.innerHTML = ''
+            if (filmes.length %2==0) {
+                exibir.innerHTML = `<strong style="color: red;" >${filmes}</strong><br>` 
+
+            }else{
+                exibir.innerHTML = `<strong style="color: blue;" >${filmes}</strong><br>`
+                
+            }
+        }
+    }
+
+
+
+</script>

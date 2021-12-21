@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+</head>
+
+<body>
+
+    Informe um numero:
+    <br>
+    <input type="text" id="Pnum">
+
+    <br><br>
+
+    Informe outro numero:
+    <br>
+    <input type="text" id="Snum">
+
+    <br><br>
+
+    <button onclick="calcular()">Calcular Raiz</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+
+        var result = Number(Pnum.velue) ^ Number(Snum.value)
+
+        exibir.innerHTML = `a ${Snum.value} raiz de ${Pnum.value} da ${result}`
+    }
+</script>
+
+<!-- a) Solicite um número
+
+b) Solicite outro número
+
+c) Ao clicar em "Calcular Raiz", exibe, abaixo, um texto como este:
+
+    a Bª raiz  de A dá X
+
+Onde A é o número informado em a) e B é o número informado em b)
+
+Ex: o usuário informou 25 e 2. Deve aparecer: "a 2ª raiz de 25 dá 5" -->

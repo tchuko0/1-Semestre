@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Informe o nome do seu filho" id="inp_filho"> <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="mostrar()">Mostrar</button><br>
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    var filho = []
+    var valorX = 0;
+    var valorZ = 0;
+
+    function cadastrar() {
+
+
+        if (filho.indexOf(inp_filho.value) == -1) {
+            filho.push(inp_filho.value)
+            inp_filho.value = '';
+
+        } else {
+             alert('Não pode mais de 1 filho com o mesmo nome!')
+        }
+
+
+    }
+
+    function mostrar() {
+        exibir.innerHTML = ``;
+        for (var index = 0; index <= filho.length-1; index++) {
+            valorX = index * 3000
+            valorZ = index * 1500
+            exibir.innerHTML =
+                `   Você tem ${index} filhos <br> Seu custo mensal será aproximadamente R$${valorX.toFixed(2)} se colocar eles em escola particular ou R$${valorZ.toFixed(2)} se eles estudarem em escola pública`
+
+        }
+    }
+</script>
+
+<!-- 12. Crie um programa em HTML/JS o qual:
+
+a) Pergunte ao usuário o nome de um filho seu
+
+b) Ao clicar em "Cadastrar", o nome do filho fica cadastrado num lugar que o usuário não vê, porém NÃO permita o cadastro de nomes repetidos. Em caso de tentativa de nome repetido, exiba um alert com a frase "Não pode mais de 1 filho com o mesmo nome!"
+
+c) Ao clicar em "Atualizar Família", deve aparecer um texto como este abaixo:
+
+   Você tem X filhos
+
+   Seu custo mensal será aproximadamente R$Y se colocar eles em escola particular ou R$Z se eles estudarem em escola pública
+
+Onde X é a quantidade de filhos cadastrados.
+
+Y é o resultado do seguinte cálculo: quant de filhos x 3000, com 2 casas decimais.
+
+Z é o resultado do seguinte cálculo: quant de filhos x 1500, com 2 casas decimais. -->

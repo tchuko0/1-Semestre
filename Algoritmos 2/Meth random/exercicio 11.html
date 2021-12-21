@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+
+<body>
+
+    <button onclick="avaliar()">Avaliar</button>
+
+
+</body>
+
+</html>
+
+<script>
+    function avaliar() {
+
+        var sorte = (Math.random() * 5)
+
+        if (sorte < 0.5) {
+            alert('Muito triste 😭😭😭')
+        } else if (sorte <= 1.5) {
+            alert('Meio triste 😥😥😥')
+        } else if (sorte <= 3.5) {
+            alert('Neutro 😑😐😐')
+        } else if (sorte <= 4.5) {
+            alert('Feliz 🥰🥰🥰')
+        } else {
+            alert('Muito Feliz 🤩🤩🤩')
+        }
+
+    }
+</script>
+
+<!-- 11. Crie um programa em HTML/JS que simule um sistema de avaliação de atendente:
+
+a) Ao clicar num botão "Avaliar". Esse botão vai gerar uma avaliação aleatória entre 0 e 5 (números reais com uma casa decimal)
+
+b) Mostra, abaixo, a nota da avaliação. Ex: "Nota recebida: 4.5"
+
+c) De acordo com a avaliação aleatória recebida, mostre um emoji, segundo os seguintes critérios (pode baixar e deixar as imagens locais se preferir):
+
+Muito triste (https://cdn.shopify.com/s/files/1/1061/1924/files/Sad_Face_Emoji_Icon_60x60.png):
+
+Caso a nota seja entre 0 e 0,5
+
+Meio triste (https://cdn.shopify.com/s/files/1/1061/1924/files/Confused_Face_Emoji_60x60.png):
+
+Caso a nota seja entre mais de 0,5 e 1,5
+
+Neutro (https://cdn.shopify.com/s/files/1/1061/1924/files/Unamused_Face_Emoji_Icon_60x60.png):
+
+Caso a nota seja entre mais de 1,5 e 3,5
+
+Feliz (https://cdn.shopify.com/s/files/1/1061/1924/files/Slightly_Smiling_Face_Emoji_Icon_60x60.png):
+
+Caso a nota seja entre mais de 3,5 e 4,5
+
+Muito Feliz (https://cdn.shopify.com/s/files/1/1061/1924/files/Smiling_Emoji_with_Eyes_Opened_Icon_60x60.png):
+
+Caso a nota seja entre mais de 4,5 -->

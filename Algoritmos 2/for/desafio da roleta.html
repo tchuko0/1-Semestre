@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta</title>
+</head>
+<body>
+
+    <div>
+        <h1>Roleta amiga</h1>
+
+        Em qual numero você vai apostar:  <input type="text" id="num_aposta" > <br>
+        Qual cor você escolhe: (Somente VERMELHO / AMARELO / VERDE): <input type="text" id="inp_cor"> <br>
+        Qual o valor da sua aposta por rodada:: <input type="text" id="inp_Vaposta"><br>
+        Quantas rodadas você quer participar: <input type="text" id="inp_rodada" > <br> <br>
+
+        <button onclick="mostrar()" >Jogar</button>
+
+    </div>
+
+
+    <div>
+
+        <!-- Sua aposta de <span id="" ></span> -->
+
+
+    </div>
+
+    <div id="exibir"></div>
+
+    
+    
+</body>
+</html>
+
+<script>
+
+
+    function mostrar() {
+        var numero_aposta = Number(num_aposta.value);
+        var cor = (inp_cor.value);
+        var valor_aposta = Number(inp_Vaposta.value);
+        var qtdrodada = Number(inp_rodada.value);
+        numeroA =0;
+        Vaposta = 0;
+        valor=0;
+        ficou=0;
+        exibir.innerHTML = ''
+
+
+        if (numero_aposta <1 || numero_aposta > 100) {
+            alert('Apostas somente de 1 a 100');
+        }else if (valor_aposta <1 || numero_aposta > 100){
+            alert('valor minimo é 1 e o maximo é 100');
+
+          } 
+            
+             for (var index = 1; index <= qtdrodada; index++) {
+                var sorteio = (Math.random()*35+1).toFixed(0);
+                var sorteCor =(Math.random()*3+1).toFixed();
+
+                if (sorteCor == 1) {
+                    cor = 'vermelho'
+                }else if (sorteCor == 2) {
+                    cor = 'amarelo'
+                }else if (sorteCor == 3) {
+                    cor = 'verde';
+                }
+
+
+
+                if (cor == cor && numero_aposta != sorteio) {
+
+                   var ganhou = valor_aposta * 0.2;
+                    valor_aposta+=ganhou
+                    ficou += valor_aposta;
+                    
+                    exibir.innerHTML += `${index}º sorteio – cor ${cor}, número ${sorteio} – você ganhou ${valor_aposta} seu saldo ficou em R$ ${ficou}<br>` 
+                
+                }if (cor != cor && numero_aposta ==sorteio ) {
+                    ganhou = valor_aposta * 0.3;
+                    valor_aposta+=ganhou
+                    ficou += valor_aposta;
+                    
+                    exibir.innerHTML += `${index}º sorteio – cor ${cor}, número ${sorteio} – você ganhou ${valor_aposta} seu saldo ficou em R$ ${ficou}<br>` 
+                
+                    
+                }if (cor == cor && numero_aposta == sorteio) {
+
+                    var ganhou = valor_aposta * 0.10;
+                    valor_aposta+=ganhou
+                    ficou += valor_aposta;
+                   
+
+ 
+                }if (cor != cor && numero_aposta != sorteio) {
+                    var perde =0
+                    perde -= valor_aposta * 0.10
+                }
+
+              
+               
+            }
+            
+            
+
+
+
+        } 
+    
+
+
+</script>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex23-11</title>
+</head>
+<body>
+        Informe o sabor da pizza: <br>
+        <input type="text" id="inp_sabor" autofocus> <br><br>
+
+        <select id="lista1" onchange="ingre_list1()">
+        <option value="">Escolha um ingrediente</option>
+        <option value="https://marketplace.triibo.com.br/wp-content/uploads/2020/02/queijo-artesanal-almeida-guimaraes-2_B.jpg">Queijo</option>
+        <option value="https://cdn.shopify.com/s/files/1/0946/5368/products/180764_06988-2_2048x.jpg?v=1441116006">Presunto</option>
+        <option value="https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/o/v/ovo_branco_1.jpg">Ovo</option>
+        <option value="https://t1.rg.ltmcdn.com/pt/images/2/1/0/palmito_de_bananeira_em_conserva_8012_600_square.jpg">Palmito</option>
+        <option value="https://swiftbr.vteximg.com.br/arquivos/ids/174264-768-768/frango-inteiro-swift-617522-1.jpg?v=637545522777830000">Frango</option>
+        <option value="https://d3o3bdzeq5san1.cloudfront.net/40/39939.jpg">Catupiry</option>
+        </select>
+
+        <br><br>
+
+        <select id="lista2" onchange="ingre_list2()">
+            <option value="">Escolha um ingrediente</option>
+            <option value="https://marketplace.triibo.com.br/wp-content/uploads/2020/02/queijo-artesanal-almeida-guimaraes-2_B.jpg">Queijo</option>
+            <option value="https://cdn.shopify.com/s/files/1/0946/5368/products/180764_06988-2_2048x.jpg?v=1441116006">Presunto</option>
+            <option value="https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/o/v/ovo_branco_1.jpg">Ovo</option>
+            <option value="https://t1.rg.ltmcdn.com/pt/images/2/1/0/palmito_de_bananeira_em_conserva_8012_600_square.jpg">Palmito</option>
+            <option value="https://swiftbr.vteximg.com.br/arquivos/ids/174264-768-768/frango-inteiro-swift-617522-1.jpg?v=637545522777830000">Frango</option>
+            <option value="https://d3o3bdzeq5san1.cloudfront.net/40/39939.jpg">Catupiry</option>
+            </select>
+
+        <br><br>
+
+        <select id="lista3" onchange="ingre_list3()">
+            <option value="">Escolha um ingrediente</option>
+            <option value="https://marketplace.triibo.com.br/wp-content/uploads/2020/02/queijo-artesanal-almeida-guimaraes-2_B.jpg">Queijo</option>
+            <option value="https://cdn.shopify.com/s/files/1/0946/5368/products/180764_06988-2_2048x.jpg?v=1441116006">Presunto</option>
+            <option value="https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/o/v/ovo_branco_1.jpg">Ovo</option>
+            <option value="https://t1.rg.ltmcdn.com/pt/images/2/1/0/palmito_de_bananeira_em_conserva_8012_600_square.jpg">Palmito</option>
+            <option value="https://swiftbr.vteximg.com.br/arquivos/ids/174264-768-768/frango-inteiro-swift-617522-1.jpg?v=637545522777830000">Frango</option>
+            <option value="https://d3o3bdzeq5san1.cloudfront.net/40/39939.jpg">Catupiry</option>
+            </select>
+
+        <br><br>
+
+        <img src="" id="img" width="200px" alt="">
+        
+        <button onclick="calcular()" >Calcular prezo da pizza</button>
+
+        <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    var queijo = 10.50
+    var presunto = 11.30
+    var ovo = 8.90
+    var palmito = 10.00
+    var frango = 15.50
+    var catupiry = 14.00
+
+    function ingre_list1() {
+        img.src = `${lista1.value}`;
+        // if (lista1.value == 'queijo') {
+        //     queijo++
+        // } else if (lista1.value == 'presunto') {
+        //     presunto++
+        // } else if (lista1.value == 'ovo') {
+        //     ovo++
+        // } else if (lista1.value == 'palmito') {
+        //     palmito++
+        // } else if (lista1.value == 'frango') {
+        //     frango++
+        // } else {
+        //     catupiry++
+        // }
+        }
+    
+    function ingre_list2() {
+        img.src = `${lista2.value}`;
+        
+        // if (lista2.value == 'queijo') {
+        //     queijo++
+        // } else if (lista2.value == 'presunto') {
+        //     presunto++
+        // } else if (lista2.value == 'ovo') {
+        //     ovo++
+        // } else if (lista2.value == 'palmito') {
+        //     palmito++
+        // } else if (lista2.value == 'frango') {
+        //     frango++
+        // } else {
+        //     catupiry++
+        // }
+
+        }    
+    function ingre_list3() {
+        img.src = `${lista3.value}`;
+
+        // if (lista3.value == 'queijo') {
+        //     queijo++
+        // } else if (lista3.value == 'presunto') {
+        //     presunto++
+        // } else if (lista3.value == 'ovo') {
+        //     ovo++
+        // } else if (lista3.value == 'palmito') {
+        //     palmito++
+        // } else if (lista3.value == 'frango') {
+        //     frango++
+        // } else {
+        //     catupiry++
+        // }        
+        }       
+        
+        
+    function calcular() {
+
+        if (ingre_list1.value) {
+            
+        }
+
+    }
+
+    
+
+
+
+</script>

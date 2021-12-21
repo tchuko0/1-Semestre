@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Informe seu nome: <br>
+    <input type="text" id="inp_nome" > <br>
+
+    Informe sua idade: <br>
+    <input type="text" id="inp_idade" > <br><br>
+
+    <select id="sel_modalidade">
+        <option value="">Escolha uma modalidade</option>
+        <option value="correr">Correr</option>
+        <option value="nadar">Nadar</option>
+        <option value="pedalar">Pedalar</option>
+    </select> <br><br>
+
+    <div id="geral" style="display: none;" >
+
+    Atleta: <strong id="frase_nome"> </strong> - Idade: <span id="frase_idade" ></span> anos
+
+    Km correndo: <span id="km_correndo" ></span>
+    Km nadando: <span id="km_nadando" ></span>
+    Km pedalando: <span id="km_pedalando" ></span>
+
+    Km total: <span id="km_total" ></span>
+
+</div>
+
+
+    <button onclick="praticar()" >Praticar esporte</button>
+    
+</body>
+</html>
+
+<script>
+
+    var correr =0
+    var nadar = 0
+    var pedalar = 0
+    function praticar() {
+        var nome = inp_nome.value;
+        var idade = Number (inp_idade.value);
+        var esporte = sel_modalidade.value;
+
+        if (nome.length < 3 || idade < 18 || idade >80) {
+            alert('dados invalidos')
+        } else if (esporte == correr) {
+            correr += 2
+        } else if (esporte == nadar) {
+            nadar +=1.5
+        } else {
+            pedalar +=1
+        } 
+
+    }
+
+    function atualizar() {
+        var total = correr + nadar + pedalar;
+        var porcentagem_correr = correr / total * 100;
+        var porcentagem_nadar = nadar / total * 100;
+        var porcentagem_pedalar = pedalar / total * 100;
+
+        if (correr == 5 && pedalar ==5 && nadar == 5) {
+            alert('Parabéns triatlo concluído!!!')
+        }else{
+            alert('\\')
+        }
+    }
+
+
+
+</script>
+
+<!-- O Triatlo da Bandtec consiste em 10  Km corrida, 10 Km de natação e 10 Km de ciclismo. Crie um programa que reproduza um mini aplicativo de triatlo o qual:
+
+a) Solicite o nome e a idade do atletla em inputs. Solicite ainda que o usuário informe qual modalidade vai praticar, dentre "Correr", "Nadar" e "Pedalar". Essa informação deve ser informada numa combo (tag "select")
+
+ 
+
+b)  Ao clicar num botão "Praticar esporte", verifique se seu nome possui pelo menos 3 letras e se sua idade é entre 18 e 80. Caso uma dessas condições não for atendida, exiba um alert com mensagem explicativa e não faça mais nada. Porém, caso tudo esteja válido, prossiga nos itens a seguir
+
+ 
+
+c) Ainda após clicar no botão "Praticar esporte", sorteie a distância entre 0 e 2km que o atleta irá percorrer (com uma casa decimal).
+
+O atleta irá correr, nadar ou pedalar, a distância sorteada dependendo do item selecionado na combo.
+
+Atualize um "placar" de ações na tela (some a distância sorteada na modalidade escolhida no select combo), como neste exemplo:
+
+ 
+
+Atleta: José Zolev - Idade: 30 anos
+
+Km correndo: 9.1
+Km nadando: 4.5
+Km pedalando: 7.4
+
+Km total: 21.0
+
+OBS: O nome e a idade devem aparecer em negrito.
+OBS2: Os valores percorridos devem aparecer sempre com 1 casa decimal.
+
+ 
+
+d) Melhore o placar do item c), exibindo a porcentagem relativa de cada distância percorrida em relação à Km total. Exemplo:
+
+Atleta: José Zolev - Idade: 30 anos
+
+Km correndo: 9.0 (42,86%)
+Km nadando: 4.5 (21,43%)
+Km pedalando: 7.5 (35,71%)
+
+Km total: 21.0
+
+OBS: As porcentagens devem aparecer sempre com 2 casas decimais.
+#Ficadica: Para calcular as porcentagens, basta dividir pelo total e multiplicar por 100
+
+ 
+
+e) (desafio) Melhore o programa colocando o limite de cada modalidade (10 Km corrida, 10 Km de natação e 10 Km de ciclismo), sendo que, se em uma modalidade o limite já foi atingido ou ultrapassado, então o usuário não pode escolher aquela modalidade. Quando as três modalidades atingirem o limite emita a mensagem “Parabéns triatlo concluído!!!” e reinicie todos os controles.
+
+ 
+
+f) Melhore o programa de tal forma que, abaixo do placar apareçam 3 figuras, lado a lado entre elas. Use as figuras citadas no início deste enunciado.
+
+Só que a largura de cada uma delas deve ter no máximo 250px e no mínimo 0px e vai se alterando na medida em que os botões do item d) forem sendo clicados (a largura da imagem corresponde à porcentagem da modalidade percorrida). 
+
+#FicaDica: Para encontrar a largura de uma figura multiplique 250 pelo percentual dessa modalidade (item d) e divida por 100.
+
+#FicaDica2: Não manipule as alturas! Manipule somente as larguras, pois as alturas irão se ajustar automaticamente.

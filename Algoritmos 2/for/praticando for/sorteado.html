@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteado</title>
+</head>
+
+<body>
+
+    Quantidade de numero que deseja sortear: <br>
+    <input type="text" id="inp_num"> <br> <br>
+
+    <button onclick="mostrar()">Mostrar</button> <br><br>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+        var numero = Number(inp_num.value);
+
+
+        if (numero < 10 || numero > 100) {
+            alert('informe um numero entre 10 e 100')
+        } else {
+            resultado();
+
+        }
+
+        function resultado() {
+            for (var index = 0; index < numero; index++) {
+                var sorteado = (Math.random() * 100).toFixed(0);
+                if (sorteado % 7 == 0) {
+                    exibir.innerHTML += `<b>${sorteado}</b><br>`
+                    break;
+                } else {
+                    exibir.innerHTML += `${sorteado}<br>`
+                }
+
+            }
+
+        }
+
+
+
+
+
+
+    }
+</script>

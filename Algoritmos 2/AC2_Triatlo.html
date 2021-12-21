@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triatlo</title>
+</head>
+<body>
+    Digite o nome: <br>
+    <input id="in_nome"> <br>
+    Digite sua idade: <br>
+    <input id="in_idade"><br>
+
+    <br><br>
+
+    Qual o esporte? <br>
+    <select name="" id="sel_esporte">
+        <option value="c">Correr</option>
+        <option value="n">Nadar</option>
+        <option value="p">Pedalar</option>
+    </select> <br>
+
+    <button onclick="praticar_esporte()">Praticar esporte</button>
+
+    <br><br>
+
+    <div id="placar" style="display: none;">
+        Atleta: <b id="b_nome"></b> - Idade: <b id="b_idade"></b> anos
+        <br><br>
+        Km correndo: <b id="kmCorrendo"></b> (<b id="b_porcentagem_correndo"></b>%) <br>
+        Km nadando: <b id="kmNadando"></b> (<b id="b_porcentagem_nadando"></b>%) <br>
+        Km pedalando: <b id="kmPedalando"></b> (<b id="b_porcentagem_pedalando"></b>%) <br>
+        <br>
+        Km total: <b id="kmTotal"></b>
+            <br><br>
+        <img id="img_correndo" style="width: 0px;" src="https://image.flaticon.com/icons/png/128/103/103956.png">    
+        <img id="img_nadando" style="width: 0px;" src="https://image.flaticon.com/icons/png/128/124/124212.png">    
+        <img id="img_pedalando" style="width: 0px;" src="https://image0.flaticon.com/icons/png/128/94/94203.png">    
+    </div>
+</body>
+</html>
+<script>
+    var km_correndo = 0;
+    var km_nadando = 0;
+    var km_pedalando = 0;
+
+    function praticar_esporte() {
+        var nome = in_nome.value;
+        var idade = Number(in_idade.value);
+        var esporte = sel_esporte.value;
+
+        if (nome.length < 3 || idade < 18 || idade > 80 ) {
+            alert('Dados inválidos!');
+        } else {
+            if (esporte == 'c') {
+                km_correndo += 1.5;
+            } else if (esporte == 'n') {
+                km_nadando += 1.5;
+            } else {
+                km_pedalando += 1.5;
+            }
+            atualizar();
+        }        
+    }
+
+    function atualizar() {
+        var km_total = km_correndo + km_nadando + km_pedalando;
+
+        var porcentagem_correndo = km_correndo / km_total * 100;
+        var porcentagem_nadando = km_nadando / km_total * 100;
+        var porcentagem_pedalando = km_pedalando / km_total * 100;
+        
+        placar.style.display = 'block';
+
+        b_nome.innerHTML = in_nome.value;
+        b_idade.innerHTML = in_idade.value;
+        
+        kmCorrendo.innerHTML = km_correndo.toFixed(1);
+        kmNadando.innerHTML = km_nadando.toFixed(1);
+        kmPedalando.innerHTML = km_pedalando.toFixed(1);
+        kmTotal.innerHTML = km_total.toFixed(1);
+
+        porcentagemCorrendo.innerHTML = porcentagem_correndo.toFixed(2);
+        porcentagemNadando.innerHTML = porcentagem_nadando.toFixed(2);
+        porcentagemPedalando.innerHTML = porcentagem_pedalando.toFixed(2);
+
+        var largura_correndo = 300 * porcentagem_correndo / 100;
+        var largura_nadando = 300 * porcentagem_nadando / 100;
+        var largura_pedalando = 300 * porcentagem_pedalando / 100;
+
+        img_correndo.style.width = `${largura_correndo}px`;
+        img_nadando.style.width = `${largura_nadando}px`;
+        img_pedalando.style.width = `${largura_pedalando}px`;
+
+    }
+</script>

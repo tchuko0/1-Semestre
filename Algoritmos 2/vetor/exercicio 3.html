@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Digite o lugar onde morou" id="inp_morou"> <br>
+    <button onclick="cadastrar()" >Cadastrar</button> <br><br>
+    <input type="text" placeholder="Informe um numero para achar o bairro" id="inp_num"> <br>
+    <button onclick="mostrar()" >Mostrar</button> <br><br>
+
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    vtMorou = [];
+
+    function cadastrar() {
+        
+        vtMorou.push(inp_morou.value);
+        inp_morou.value = '';
+        
+    }
+
+    function mostrar() {
+        numero = Number(inp_num.value)
+        if (vtMorou.length  >=  numero  ) {
+            exibir.innerHTML += `${vtMorou[numero-1]}`
+            
+        }else{
+            exibir.innerHTML += `Você ainda não morou num ${inp_num.value}º bairro!`
+            
+        }
+
+    }
+
+
+
+</script>
+
+<!-- 3. Crie um programa onde o usuário vá cadastrando os bairros para onde já morou. Ele digita o nome do lugar e vai clicar em "Cadastrar bairro".
+
+Deve haver um outro campo, onde ele digita apenas um número, indicando o local para onde morou, a partir do número 1 (porque os usuários comuns contam as coisas a partir do 1) e clica em "Relembrar moradia". Se ele informar 1, exiba o primeiro bairro cadastrado e assim por diante.
+
+Porém, se ele informar um número maior do que a quantidade de bairros, exiba: "Você ainda não morou num Xº bairro!" -->
+
+ 

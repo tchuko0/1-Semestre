@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="btn_nota()">Gerar Nota</button>
+    <br><br>
+    <button onclick="btn_freq()">Gerar uma frequência</button>
+    <br><br>
+    <button onclick="resultado()">Aprovado ?</button>
+
+    <div id="nota"></div>
+    <div id="freq"></div>
+    
+</body>
+</html>
+
+<script>
+    var nota_global = 0
+    var freq_global = 0
+
+    function btn_nota() {
+        var notaa = (Math.random() * 7 + 3).toFixed(2)
+        var nota_final = nota_global = notaa
+        nota.innerHTML = `${nota_global}`;
+    }
+
+    function btn_freq() {
+        var freque = (Math.random() * 50 + 50 ).toFixed(2)
+        var freq_final = freq_global = freque
+        freq.innerHTML = `${freq_global}`;
+    }
+
+    function resultado() {
+        if (nota_global >= 6 && freq_global >= 75) {
+            alert('Aluno aprovado')
+        } else {
+            alert('Aluno REPROVADO')
+        }
+    }
+</script>
+
+<!-- 9. Crie um programa em HTML/JS o qual:
+
+a) Tenha um botão "Gerar uma nota de aluno entre 3 e 10" que faz aparecer, abaixo dele, a nota gerada
+
+b) Tenha um botão "Gerar uma frequência de aluno entre 50 e 100" que faz aparecer, abaixo dele, a frequência gerada
+
+c) Deixe todos os valores com 1 casa decimal na tela
+
+d) Ao clicar no botão “Aprovado?”, emitir um alerta com a situação desse aluno. -->
+
+ 
+

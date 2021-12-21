@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13</title>
+</head>
+
+<body>
+
+    <select id="sel_resultado">
+        <option value="vazio">Escolha uma opção</option>
+        <option value="Vitoria">Vitoria</option>
+        <option value="Empate">Empate</option>
+        <option value="Derrota">Derrota</option>
+    </select>
+    <br>
+    <input type="text" id="inp_pesquisa" onkeyup="pesquisar()">
+    <br>
+    <button onclick="cadastrar()">Registrar jogo</button>
+    <br>
+    <div id="exibir"></div>
+
+    <br><br>
+
+    <div id="msg" style="display: none;">
+
+        O time teve: <span id="span_v">V</span> vitórias, <span id="span_e">E</span> empates, <span id="span_d">D</span>
+        derrotas
+
+        Pontuação total: <span id="span_t"></span> pontos
+
+        Aproveitamento: <span id="span_a"></span> %
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var jogo = []
+    var vitoria = 0;
+    var empate = 0;
+    var derrota = 0;
+    var totalP = 0;
+    var aproveitamento = 0;
+
+    function cadastrar() {
+
+
+        jogo.push(sel_resultado.value)
+
+        if (jogo[jogo.length - 1] == 'Vitoria') {
+            vitoria++
+        } else if (jogo[jogo.length - 1] == 'Empate') {
+            empate++
+        } else if (jogo[jogo.length - 1] == 'Derrota') {
+            derrota++
+        }
+
+        totalP = (vitoria * 3) + (empate * 1) + (derrota * 0)
+        aproveitamento = (totalP / (jogo.length * 3)) * 100
+
+        msg.style.display = 'block'
+        span_v.innerHTML = `${vitoria}`
+        span_e.innerHTML = `${empate}`
+        span_d.innerHTML = `${derrota}`
+        span_t.innerHTML = `${totalP}`
+        span_a.innerHTML = `${aproveitamento.toFixed(2)}`
+    }
+
+    function pesquisar() {
+        if (inp_pesquisa.value > jogo) {
+        exibir.innerHTML = `Não foi cadastrado um ${inp_pesquisa.value}º jogo`
+    } else {
+
+        if (jogo[inp_pesquisa.value - 1] == 3) {
+            exibir.innerHTML += `No ${inp_pesquisa.value}º jogo o time ganhou <br>`;
+        } else if (jogo[inp_pesquisa.value == 1]) {
+            exibir.innerHTML += `No ${inp_pesquisa.value}º jogo o time empatou <br>`;
+        } else {
+            exibir.innerHTML += `No ${inp_pesquisa.value}º jogo o time perdeu <br>`;
+
+        }
+
+
+
+    }
+    }
+
+   
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex20-6</title>
+</head>
+
+<body>
+
+    Informe a temperatura do ambiente: <br>
+    <input type="text" id="inp_temp"> <br><br>
+
+    <button onclick="calcular()">Verificar clima</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var temperatura = Number(inp_temp.value);
+
+        if (temperatura < 10) {
+            exibir.innerHTML =
+                'Apropriada para conservar alimento <br><br> <img src="https://static1.conquistesuavida.com.br/articles//4/61/84/@/19819-perfeito-para-compor-saladas-tortas-e-r-article_block_media-2.jpg" style="width: 200px;" alt=""> ';
+        } else {
+            exibir.innerHTML =
+                ' Inapropriada p/ conservar alimento <br><br> <img src="http://s2.glbimg.com/9j5W3Yvg7uJPUbC8_zrQ3vemCDM=/780x440/e.glbimg.com/og/ed/f/original/2015/12/03/mamao_podre_scot_nelson_creative_commons.jpg" style="width: 200px;" alt="">'
+        }
+    }
+</script>
+
+
+<!-- 6. Crie um programa em HTML/JS o qual:
+
+a) Solicita a temperatura do ambiente
+
+b) Ao clicar em "Verificar clima", determine se o clima está:
+
+Apropriada p/ conservar alimento - Caso a temperatura for menor que 10
+Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10
+
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado. Caso contrário, exiba a imagem de um
+alimento estragado -->

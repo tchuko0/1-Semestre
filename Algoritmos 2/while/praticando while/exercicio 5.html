@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5-list1</title>
+</head>
+<body>
+
+    Informe quantos numeros quer sortear: <br>
+    <input type="text" id="inp_sorte"> <br> <br>
+
+    <button onclick="sortear()" >Sortear numeros</button>
+
+    <div id="exibir"></div>    
+</body>
+</html>
+
+<script>
+
+    function sortear() {
+        var sorte =Number(inp_sorte.value) 
+        index=0;
+
+        while (index < sorte) {
+            var sorteio = (Math.random()*101).toFixed();
+            exibir.innerHTML += `${sorteio} <br>`;
+            index++;
+        }
+
+    }
+
+
+
+
+</script>
+
+
+<!-- 5. Crie um programa em HTML/JS o qual:
+
+a) Pergunte ao usuário quantos números ele quer sortear
+
+b) Ao clicar em "Sortear números", sorteie N números inteiros entre 0 e 100 - conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro -->

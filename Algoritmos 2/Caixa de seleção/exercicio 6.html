@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+
+<body>
+
+
+
+    <select name="Combo1" id="estacao" onchange="Estacao()">
+        <option value="">Selecione uma opção</option>
+        <option value="https://aempreendedora.com.br/wp-content/uploads/2017/09/Primavera-Magnolia.jpg">Primavera
+        </option>
+        <option value="https://cdn.abcdoabc.com.br/verao_5508634b.jpg">Verão</option>
+        <option value="https://www.lopes.com.br/blog/wp-content/uploads/2017/03/capa.jpg">Outono</option>
+        <option value="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg">Inverno</option>
+    </select>
+
+
+
+    <div id="exibir"></div>
+
+    <br><br>
+
+    
+
+    <img style="width: 200px;" id="img" src=""> </img>
+
+</body>
+
+</html>
+
+<script>
+    function Estacao() {
+        img.src = `${estacao.value} `
+    }
+</script>

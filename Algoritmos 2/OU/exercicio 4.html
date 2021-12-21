@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+
+    <h1>TIPO DE PAGMENTO</h1>
+
+    <select name="METODO DE PAGAMENTO " id="sel_pag">
+        <option value="">Escolha uma forma de pagamento</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="debito">Cartão de débito</option>
+        <option value="credito">Cartão de crédito</option>
+        <option value="boleto">Boleto</option>
+    </select>
+
+    <button onclick="analisar()" >Analisar Compra</button>
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+        if (sel_pag.value == 'dinheiro' || sel_pag.value == 'debito') {
+           exibir.innerHTML = 'Você terá que pagar a vista' 
+        }else{
+            exibir.innerHTML = 'Pagamento poderá ser parcelado'
+        }
+    }
+
+
+</script>

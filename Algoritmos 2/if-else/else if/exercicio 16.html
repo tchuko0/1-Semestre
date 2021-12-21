@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex16</title>
+</head>
+
+<body>
+
+    Digite o valor do ano: <br>
+    <input type="text" id="inp_ano"> <br><br>
+
+    <button onclick="VerFato()">Ver Fato</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function VerFato() {
+        var ano = Number(inp_ano.value);
+
+        if (ano < 1965) {
+            exibir.innerHTML = `No ano ${ano} o email nem havia sido criado ainda`;
+        } else if (ano == 1965) {
+            exibir.innerHTML = `No ano ${ano} o email estava sendo criado ... `;
+        } else if (ano == 1966 ||  ano <= 1969  ) {
+            exibir.innerHTML = `No ano ${ano} o email já havia sido criado ... `;
+        } else {
+            exibir.innerHTML = `No ano ${ano} o email já havia sido aprimorado... `;
+        }
+    }
+</script>
+
+
+<!-- 16. O primeiro sistema de e-mail era um programa chamado Mailbox e ficava em computadores do Instituto de Tecnologia de Massachusetts (MIT), já em 1965. Um usuário podia deixar uma mensagem para outro, que seria visualizada na próxima vez que o segundo fizesse login na mesma máquina.
+Em 1969, o Departamento de Defesa dos Estados Unidos implementou a Arpanet, precursora da Internet. Nessa rede, surgiu o primeiro envio de e-mail de um computador para outro.
+Levando em conta essas informações, crie um programa em HTML/JS o qual:
+
+a) Peça ao usuário para informar um valor de ano.
+b) Tenha um botão "Ver fato" que exiba a seguinte frase abaixo:
+Se o ano informado for anterior a 1965: "No ano X o email nem havia sido criado ainda ... ".
+Se o ano informado for 1965: "No ano X o email estava sendo criado ... ".
+Se o ano informado estiver entre 1966 e 1969: "No ano X o email já havia sido criado ... ".
+Se o ano informado for posterior a 1969: "No ano X o email já havia sido aprimorado - Poderia ser enviado para outro computador ... ". -->

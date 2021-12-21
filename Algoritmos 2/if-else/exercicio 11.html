@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    
+    <h1>Elevador</h1>
+
+
+    Informe a quantidade de homens que entraram no elevador: <br>
+    <input type="text" id="inp_qtdH"><br>
+
+
+    Informe a quantidade de mulheres que entraram no elevador: <br>
+    <input type="text" id="inp_qtdM"><br><br>
+
+    <button onclick="calcular()" >Analisar peso</button>
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+        var homem = Number(inp_qtdH.value);
+        var mulher = Number(inp_qtdM.value);
+        var somaH = homem * 80;
+        var somaM = mulher * 60;
+        var total = somaH + somaM
+        
+        if (total < 800) {
+            exibir.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${total} kg`
+        } else {
+            exibir.innerHTML = `<span style="color: blue;" >Será necessário descer alguém para que o elevador se movimente</span>`
+        }
+    
+    }
+
+
+
+</script>
+
+
+<!-- a) Solicite a quantidade de homens que entraram no elevador
+b) Solicite a quantidade de mulher que entraram no elevador
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de xxxkg";
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário descer alguém para que o elevador se
+movimente", na cor azul. -->

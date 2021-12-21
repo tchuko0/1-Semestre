@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+</head>
+
+<body>
+
+    Informe um numero: <br>
+    <input type="text" id="inp_num"> <br> <br>
+
+    Escreva uma frase: <br>
+    <input type="text" id="inp_frase"> <br><br>
+
+    <button onclick="mostrar()">Papagaio</button> <br><br>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+
+        var numero = Number(inp_num.value);
+        var frase = (inp_frase.value);
+
+        for (var index = 0; index < numero; index++) {
+            alert(`${frase}`)
+
+        }
+    }
+</script>
+
+<!-- 6.       Crie um programa o qual:
+
+a) Pergunte ao usuário um número
+
+b) Pergunte ao usuário uma frase
+
+c) Ao clicar num botão "Papagaio", a frase é exibida N vezes em N alerts, onde N é o número informado em a) -->

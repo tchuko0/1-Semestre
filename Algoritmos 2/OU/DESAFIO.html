@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO</title>
+</head>
+
+<body>
+    <div id="pg1">
+        <h1>Seja bem vindo ao banco KNAB</h1>
+
+        <h3>Simulação de imprestimo e investimento</h3>
+
+        <br><br>
+
+        Entre com os dados da sua conta: <br><br>
+
+        <input type="text" id="inp_conta" placeholder="digite sua conta">
+        <input type="text" id="inp_digito" placeholder="digite seu digito">
+        <input type="text" id="inp_senha" placeholder="digite sua senha">
+
+        <br><br>
+        <button onclick="simular()">Simular</button>
+    </div>
+
+    <div style="display: none;" id="pg2">
+
+        <h1>O banco KNAB é sua melhor opção</h1>
+
+        <h2>Emprestimos e invertimentos com as melhores taxas do mercado</h2>
+
+        <h3>Entre com os dados da sua simulação</h3>
+
+        valor da operação:
+        <input type="text" id="inp_valOperacao">
+
+        <br>
+        <br>
+
+        <select name="" id="sel_op">
+            <option value="">selecione a operação</option>
+            <option value="emprestimo">Emprestimo</option>
+            <option value="investimento">Investimento</option>
+        </select>
+
+        <select name="" id="sel_prazo">
+            <option value="">Selecione a operação</option>
+            <option value="curto">Curto prazo</option>
+            <option value="medio">Médio prazo</option>
+            <option value="longo">Longo prazo</option>
+        </select>
+        <br><br>
+
+        <button onclick="mostrar()">Mostrar o resultado</button>
+    </div>
+
+    <button onclick="voltar()" style="display: none;" id="btn_voltar"><b>Volte a simular</b></button>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    function simular() {
+        var conta = Number(inp_conta.value);
+        var digito = Number(inp_digito.value);
+        var senha = (inp_senha.value);
+        var resto = conta % 11
+
+        if (resto >= 0 && resto <= 3 && senha == 'manaus') {
+            alert('senha correta 😎');
+            pg1.style.display = 'none'
+            pg2.style.display = 'block'
+
+        } else if (resto >= 4 && resto <= 7 && senha == 'recife') {
+            alert('senha correta 😎');
+            pg1.style.display = 'none'
+            pg2.style.display = 'block'
+
+        } else if (resto > 7 && senha == 'fortaleza') {
+            alert('senha correta 😎');
+            pg1.style.display = 'none'
+            pg2.style.display = 'block'
+        } else {
+            alert(' Senha Incorreta 😪')
+            pg1.style.display = 'block'
+            pg2.style.display = 'none'
+        }
+    }
+
+    vezes = 0;
+
+    function mostrar() {
+        var valorOperacao = Number(inp_valOperacao.value);
+
+        var emprestimoLONGO = valorOperacao * 0.1;
+        var emprestimoMEDIO = valorOperacao * 0.16;
+        var emprestimoCURTO = valorOperacao * 0.24;
+
+        var investimentoLONGO = valorOperacao * 0.12;
+        var investimentoMEDIO = valorOperacao * 0.08;
+        var investimentoCURTO = valorOperacao * 0.05;
+
+        vezes++
+
+        if (sel_prazo.value == 'curto' || sel_prazo.value == 'medio') {
+            alert('Esta operação está condicionada ao seu perfil')
+        }
+
+
+        if (sel_op.value == 'emprestimo' && sel_prazo.value == 'longo') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoLONGO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        } else if (sel_op.value == 'emprestimo' && sel_prazo.value == 'medio') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoMEDIO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        } else if (sel_op.value == 'emprestimo' && sel_prazo.value == 'curto') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoCURTO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        } else if (sel_op.value == 'investimento' && sel_prazo.value == 'longo') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o investimento de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${investimentoLONGO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        } else if (sel_op.value == 'investimento' && sel_prazo.value == 'medio') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o investimento de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${investimentoMEDIO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        } else if (sel_op.value == 'investimento' && sel_prazo.value == 'curto') {
+            exibir.innerHTML +=
+                `Simulação ${vezes} – Para o investimento de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${investimentoCURTO} ao ano <br> <br>`
+            pg2.style.display = 'none'
+            btn_voltar.style.display = 'block'
+        }
+    }
+
+    function voltar() {
+        pg2.style.display = 'block'
+        btn_voltar.style.display = 'none'
+    }
+</script>
+<!-- 
+if (sel_op.value == 'emprestimo' && sel_prazo.value == 'longo') {
+    exibir.innerHTML += `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoLONGO} ao ano <br>`
+} else if (sel_op.value == 'emprestimo' && sel_prazo.value == 'medio') {
+    exibir.innerHTML += `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoMEDIO} ao ano <br>`
+} else if (sel_op.value == 'emprestimo' && sel_prazo.value == 'curto') {
+    exibir.innerHTML += `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${emprestimoCURTO} ao ano <br>`
+} else if (sel_op.value == 'investimento' && sel_prazo.value == 'longo') {
+    exibir.innerHTML += `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${investimentoLONGO} ao ano <br>`
+} else if (sel_op.value == 'investimento' && sel_prazo.value == 'medio') {
+    exibir.innerHTML += `Simulação ${vezes} – Para o empréstimo de ${valorOperacao} no ${sel_prazo.value} prazo será cobrado os juros de ${investimentoMEDIO} ao ano <br>`
+} else if ((sel_op.value == 'investimento' && sel_prazo.value == 'curto') {
+
+} -->

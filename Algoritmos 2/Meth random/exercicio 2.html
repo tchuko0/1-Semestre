@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+
+    <button onclick="sortear()">Sortear Time</button>
+
+    <div id="exibir"></div>
+
+    <img src="https://www.camisetasdahora.com/uploads/produtos/1652_1_middle.jpg" style="display: none; height: 150px;"
+        id="tricolor" alt="">
+    <img src="https://s2.glbimg.com/1U1Gqk5OWwPsV4qSoPodOvKwBVQ=/0x0:589x590/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/9/J/JE2YdaSwWWkHYyvDhSIw/escudosantos02.jpg"
+        style="display: none ;height: 150px; " id="peixe" alt="">
+    <img src="https://i.pinimg.com/600x315/d3/82/f8/d382f8e96c26dde08716f4455f51b72b.jpg" id="verdao"
+        style="display: none; height: 150px;" alt="">
+    <img src="https://pbs.twimg.com/profile_images/1436027498924494855/0NrWdGnm_400x400.jpg" id="timao"
+        style="display: none; height: 150px;" alt="">
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function sortear() {
+
+        var num = Math.random()
+
+        if (num >= 0.1 && num <= 0.3) {
+            timao.style.display = 'block';
+            verdao.style.display = 'none';
+            peixe.style.display = 'none';
+            tricolor.style.display = 'none';
+        } else if (num >= 0.4 && num <= 0.5) {
+            verdao.style.display = 'block'
+            timao.style.display = 'none';
+            peixe.style.display = 'none'
+            tricolor.style.display = 'none';
+        } else if (num >= 0.6 && num <= 0.8) {
+            peixe.style.display = 'block'
+            timao.style.display = 'none';
+            verdao.style.display = 'none';
+            tricolor.style.display = 'none';
+        } else {
+            peixe.style.display = 'none'
+            timao.style.display = 'none';
+            verdao.style.display = 'none';
+            tricolor.style.display = 'block';
+        }
+
+    }
+</script>
+
+<!-- 2. Crie um programa em HTML/JS o qual:
+
+a) Ao clicar no botão "Sortear time", faz aparecer somente um dos escudos dos 4 times de futebol de maior torcida do estado de São Paulo. Independente da imagem, todas devem ter 150px de altura. -->

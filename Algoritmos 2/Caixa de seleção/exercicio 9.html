@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex9</title>
+</head>
+
+<body>
+
+    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU" style="width: 200px;" alt="">
+
+    <br><br>
+
+    <select name="Combo1" id="tamanho" >
+        <option value="">Selecione uma opção</option>
+        <option value="">Normal</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU"  alt="">Grande</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU" alt="">Enorme</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU"  alt="">Pequeno</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU"  alt="">Minúsculo</option>
+    </select>
+
+    <br>
+
+    <button onclick="mostrar()" >Redimensionar imagem</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    
+
+    function mostrar() {
+       img.src = `${tamanho.value}`
+
+        if (num >=10) {
+            
+        } else {
+            
+        }
+
+
+    }
+
+
+
+
+
+</script>
+<!-- 
+9. Crie um programa em HTML/JS que:
+
+a) Tenha no topo uma foto qualquer. Verifique qual sua altura, em px (só verifique e deixe esse valor anotado em algum
+lugar, como no seu caderno, por exemplo)
+
+b) Abaixo da foto, uma "combo" com as opções
+
+Normal
+
+Grande
+
+Enorme
+
+Pequeno
+
+Minúsculo
+
+c) Ao clicar num botão "Redimensionar imagem", a foto deve mudar de altura, conforme estas regras:
+
+Normal: altura original (aquela que você anotou no início)
+
+Grande: altura original + 50px
+
+Enorme: altura original + 300px
+
+Pequeno: altura original - 50px
+
+Minúsculo: altura original - 100px -->

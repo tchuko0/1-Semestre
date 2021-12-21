@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex13</title>
+</head>
+
+<body>
+
+    Porções de pão francês: <b id="Pfrances">0</b>
+    <br>
+    Porções de carne boniva: <b id="Cbovina">0</b>
+    <br>
+    Porções de carne de soja: <b id="Csoja">0</b>
+    <br><br>
+    Porções de arroz com feijão: <b id="ParrozFeijao">0</b>
+    <br>
+    Total de calorias: <b id="Tcaloria">0</b>
+
+    <br><br>
+
+    <button onclick="pao()">Comer um pão francês</button>
+    <br>
+    <button onclick="carne()">Comer porção de carne boniva</button>
+    <br>
+    <button onclick="soja()">Comer porção de carne de soja</button>
+    <br>
+    <button onclick="arrozFeijao()">Comer porção de carne de soja</button>
+    <br>
+    <button onclick="limpar()">Recomeçar</button>
+
+
+
+</body>
+
+</html>
+
+<script>
+    PAO = 0;
+    CARNE = 0;
+    SOJA = 0;
+    ARROZFEIJAO = 0;
+
+    function pao() {
+        PAO += 50
+        Pfrances.innerHTML = `${PAO}`
+    }
+
+    function carne() {
+        CARNE +=100
+        Cbovina.innerHTML = `${CARNE}`
+    }
+
+    function soja() {
+        SOJA +=30
+        Csoja.innerHTML = `${SOJA}`
+    }
+
+    function arrozFeijao() {
+        ARROZFEIJAO +=120
+        ParrozFeijao.innerHTML = `${ARROZFEIJAO}`
+    }
+</script>
+
+<!-- 13. Crie um programa em HTML/JS que ajuda um nutricionista a calcular calorias diárias consumidas por seus pacientes:
+
+a) Tenho, logo de cara, o texto:
+
+Porções de pão francês: 0
+Porções de carne boniva: 0
+Porções de carne de soja: 0
+
+Porções de arroz com feijão: 0
+Total de calorias: 0
+
+b) Tenha o botão "Comer um pão francês". Ao clicar nele, aumenta em um o contador respectivo no texto em a) e adiciona
+50 calorias ao final do mesmo texto.
+
+c) Tenha o botão "Comer porção de carne boniva". Ao clicar nele, aumenta em um o contador respectivo no texto em a) e
+adiciona 100 calorias ao final do mesmo texto.
+
+d) Tenha o botão "Comer porção de carne de soja". Ao clicar nele, aumenta em um o contador respectivo no texto em a) e
+adiciona 30 calorias ao final do mesmo texto.
+
+e) Tenha o botão "Comer porção de arroz com feijão". Ao clicar nele, aumenta em um o contador respectivo no texto em a)
+e adiciona 120 calorias ao final do mesmo texto.
+
+f) Tenha o botão "Recomeçar", todos os contadores (até o total de calorias) do texto em a) zeram -->

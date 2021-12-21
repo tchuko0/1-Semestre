@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+<body>
+
+    <input type="text" placeholder="digite o nome do aluno" id="inp_aluno"> 
+    <button onclick="cadastrar()" >Cadastrar</button> <br>
+    
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+   var alunos=[];
+    function cadastrar() {
+        alunos.push(inp_aluno.value);
+        inp_aluno.value = '';
+            resposta()
+        }
+
+        function resposta() {
+            exibir.innerHTML = '';
+            for (var index = alunos.length-1; index >=0 ; index--) {
+            exibir.innerHTML += `${alunos[index]}<br>`;
+            
+        }
+        }
+
+    
+
+    
+
+
+
+</script>

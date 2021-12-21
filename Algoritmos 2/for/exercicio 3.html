@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+
+    <button onclick="mostrar()">Diga algo sobre a quarentena</button> <br><br>
+    <input type="text" id="frase">
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+
+        for (var index = 0; index < 7; index++) {
+            exibir.innerHTML += `boa tarde<br>${frase.value}<br> `
+
+        }
+    }
+</script>
+
+<!-- 3.       Refaça o programa da questão anterior de tal forma que, antes de cada frase apareça um contador a partir do 1. Ex:
+   1. Boa tarde
+   2. Boa tarde
+   ...
+   7. Boa tarde -->
+
+ 

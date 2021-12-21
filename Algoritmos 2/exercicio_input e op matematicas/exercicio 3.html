@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+</head>
+<body>
+
+    Digite sua cidade Natal
+    <input id="cidNatal">
+    <br>
+    Digite sua data de nascimento
+    <input id="dataNasc">
+    <br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+
+        var cidade = cidNatal.value;
+        var nascimento = dataNasc.value;
+
+        exibir.innerHTML = (` Você nasceu na cidade  <b>${cidade}</b> em <u> ${nascimento}</u>`);
+
+    }
+</script>
+    
+</body>
+</html>
+
+<!-- Refaça a questão anterior de tal forma que a frase apareça com o nome da cidade em negrito e o ano de nascimento sublinhado. -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+
+<body>
+
+    <button onclick="iniciar()">
+        Iniciar jogo
+    </button>
+
+    <div id="div_msg" style="display: none;">
+
+        <img onclick="scorpion()" src="https://i.pinimg.com/originals/8b/18/25/8b1825a51729496e1b0bb162ac6e4212.jpg"  width="250px"  height="250px">
+
+        <div id="vida_scorpion" style="background-color: red; height: 30px; width: 100%;"></div>
+
+        <br>
+
+        <img onclick="subzero()" src="https://cdn.awsli.com.br/600x450/241/241921/produto/7036768/e6af055524.jpg" width="250px"  height="250px">
+
+        <div id="vida_subzero" style="background-color: red; height: 30px; width: 100%;"></div>
+
+        <br><br>
+
+        Golpes sofridos pelo lutador 1: <b id="golpe_scorpion">0</b>
+        <br>
+
+        Golpes sofridos pelo lutador 2: <b id="golpe_subzero">0</b>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var vezes = +0;
+    var vezes2 = +0;
+    var vidascorpion = 100;
+    var vidasubzero = 100;
+
+    function iniciar() {
+
+        div_msg.style.display = 'block';
+
+    }
+
+    function scorpion() {
+
+        vidascorpion = vidascorpion - 5;
+
+        vezes++;
+        golpe_scorpion.innerHTML = vezes;
+        vida_scorpion.style.width = `${vidascorpion}%`;
+    }
+
+    function subzero() {
+
+        vidasubzero = vidasubzero - 5;
+
+        vezes2++;
+        golpe_subzero.innerHTML = vezes2;
+        vida_subzero.style.width = `${vidasubzero}%`;
+
+    }
+</script>

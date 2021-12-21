@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+</head>
+<body>
+    
+
+    Informe um numero qualquer 
+    <br>
+    <input type="text" id="inp_Nqualquer" >
+
+    <br><br>
+
+    <button onclick="Rquadrada()" >Exibir sua raiz quadrada</button>
+    <br><br>
+    <button onclick="Rcubica()" >Exibir sua raiz cúbica</button>
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+
+function raiz() {
+        div_msg.innerHTML += `<br>O resultado da radiciação é: <b> 
+            ${pri_num.value ** (1/seg_num.value)} </b>`;
+    }
+
+    function Rcubica() {
+        var result_cubica = Number(inp_Nqualquer.value) 
+    }
+
+
+</script>
+
+<!-- 3. Crie um programa em HTML/JS o qual:
+
+a) Solicite um número qualquer
+
+b) Ao clicar no botão "Exibir sua raiz quadrada", exiba abaixo do botão a raiz quadrada do número
+
+c) Ao clicar no botão "Exibir sua raiz cúbica", exiba abaixo do botão a raiz cúbica do número
+
+  -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>A história de uma pizza</h1>
+
+    <button id="ummin" onclick="primeiroMin()">Depois de 1 minuto</button>
+    <button id="cincomin" onclick="quintoMin()">Depois de 5 minuto</button>
+    <button id="decimoquintomin" onclick="decimoquintoMin()">Depois de 15 minuto</button>
+    <button id="vazio" onclick="vazios()" >Vazio</button>
+
+  
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function primeiroMin() {
+
+        exibir.innerHTML =
+            '<img src="https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-inteira-do-vetor-da-pizza-103705202.jpg" style="width: 200px;" alt="">'
+    }
+
+    function quintoMin() {
+        exibir.innerHTML = '<img src="https://i2.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/pizza-png-fundo-transparente-imagem8.png?resize=696%2C697&ssl=1" style="width: 200px;" alt="">'
+    }
+
+    function decimoquintoMin() {
+        exibir.innerHTML  = ' <img src="https://md.uninta.edu.br/geral/nivelamento-matematica-turma-engenharia-civil/img/f04.png" style="width: 200px;" alt="">'
+    }
+
+    function vazios() {
+
+        exibir.innerHTML = ' <img src="https://image.freepik.com/fotos-gratis/maos-femininas-com-faca-e-garfo-sobre-prato-vazio-branco_136401-2588.jpg" style="width: 200px;" alt="">'
+        
+    }
+</script>
+

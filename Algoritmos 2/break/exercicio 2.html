@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+
+    <button onclick="mostrar()">Ver minha sorte</button> <br>
+
+
+
+    <div id="img" style="width: 50px; height: 50px; display: none;">
+        <img id="img_amor"
+            src="https://cdn.w600.comps.canstockphoto.com.br/emoticon-cora%C3%A7%C3%A3o-abra%C3%A7ando-cliparte-vetor_csp69022508.jpg"
+            alt="">
+        <img id="img_sorte" src="https://http2.mlstatic.com/D_NQ_NP_831596-MLB26742474685_012018-O.jpg" alt="">
+    </div>
+
+    <br><br>
+
+    <div id="exibir"></div>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+
+
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+        resultado.innerHTML = '';
+        img.innerHTML = '';
+        sorte = 0;
+        amor = 0;
+
+
+        for (var index = 0; index < 20; index++) {
+
+            var sorteio = (Math.random() * 2);
+
+            if (sorteio < 1) {
+                amor++
+                exibir.innerHTML +=
+                    `<img src="https://cdn.w600.comps.canstockphoto.com.br/emoticon-cora%C3%A7%C3%A3o-abra%C3%A7ando-cliparte-vetor_csp69022508.jpg" style="width: 100px;" alt="">`
+            } else {
+                sorte++
+                exibir.innerHTML +=
+                    `<img src="https://http2.mlstatic.com/D_NQ_NP_831596-MLB26742474685_012018-O.jpg" style="width: 100px;" alt="">`
+
+            }
+
+            if (amor > sorte) {
+                resultado.innerHTML = `Você tem mais sorte no amor`
+            } else if (amor < sorte) {
+                resultado.innerHTML = `Você tem mais sorte no jogo`
+            }
+
+            if (amor == 11 || sorte == 11) {
+                break;
+            }
+
+
+        }
+
+    }
+</script>
+
+<!-- 2. Existe um dito popular que diz que se você tem sorte no amor tem azar no jogo e vice-versa. Assim, crie um programa o qual:
+
+a) Tenha um botão "Ver minha sorte".
+
+b) Ao ser clicado, ele exibe, no máximo*, 21 imagens, uma ao lado da outra. Essa imagens só podem ser ou de um coraçãozinho ou de uma carta de baralho (deixe todas na mesma altura para ficar mais bonito na tela)
+
+A distribuição das imagens é aleatória. Ao final serão, no máximo*, 21 imagens, entre corações e cartas, isso que importa
+
+c) Abaixo de todas a imagens, devem aparacer uma dessas mensagens:
+
+   "Você tem mais sorte no amor" caso tenham sido sorteados mais corações
+   "Você tem mais sorte no jogo" caso tenham sido sorteados mais cartas de baralho
+
+d) * - Porém... Caso o programa chegue a sortear 11 imagens de uma das 2 figuras antes de 21 sorteios, interrompa imediatamente os sorteios (já que já se sabe o resultado).  -->

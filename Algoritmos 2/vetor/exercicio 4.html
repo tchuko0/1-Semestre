@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Informe o filme que mais gosta" id="inp_filme">
+    <button onclick="cadastrar()" >Cadastrar</button> <br>
+    <button onclick="mostrar()" >Mostrar</button> <br> <br>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+    filmes=[];
+    function cadastrar() {
+        filmes.push(inp_filme.value);
+        inp_filme.value = '';
+       
+    }
+
+    function mostrar() {
+        exibir.innerHTML += `total ${filmes.length}<br>`
+        exibir.innerHTML += `O que mais gosta é ${filmes[0]}<br>`
+        exibir.innerHTML += ` E desses, o que menos gosta é ${filmes[filmes.length - 1 ]}<br>`
+    }
+
+
+
+
+</script>

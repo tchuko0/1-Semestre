@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe um numero inicial:
+    <input type="text" id="num"> <br><br>
+    Informe um numero final:
+    <input type="text" id="num2"> <br><br>
+    Informe um numero divisivel:
+    <input type="text" id="num3"> <br><br>
+    <button onclick="mostrar()">Mostrar</button>
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+        var numero = Number(num.value);
+        var numero2 = Number(num2.value);
+        var numdiv = Number(num3.value);
+        
+        
+        for (var index = numero; index <= numero2; index++) {
+            if (index %numdiv==0) {
+            exibir.innerHTML += `<span style="color: red;" >${index}</span><br>`
+        }
+    }
+
+        
+    }
+</script>

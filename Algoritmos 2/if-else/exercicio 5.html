@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Quantas latinhas vc bebe ao ano </h1>
+
+    <input id="latinha" placeholder="digite a quantidade de latinhas">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="exibir"></div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function calcular() {
+        var latas = Number(latinha.value);
+        var total = latas * 365;
+
+        exibir.innerHTML = `voce consome por ano  ${total} latas <br>`
+
+        if (total >= 500) {
+
+            total = latas * 365
+            exibir.innerHTML = `cuidado com o diabetes, por ter tomado ${total}`
+
+        }
+
+    }
+
+
+</script>

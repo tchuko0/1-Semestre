@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex16</title>
+</head>
+<body>
+
+    Informe a quantidade de pessoas que vâo entrar no carro : <br>
+    <input type="text" id="qtdPessoas"> <br><br>
+
+    <button onclick="mostrar()" >#Partiu Carona</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+ 
+    function mostrar() {
+        var qtd = Number(qtdPessoas.value)
+        exibir.innerHTML = '';
+        index=0;
+
+        while (index<qtd) {
+            index++
+            if (index == 1) {
+                exibir.innerHTML += `Entro o ${index} passageiro(que é o motorista)<br>`
+            }else if (index<6) {
+                exibir.innerHTML += `Entrou o ${index}º passageiro<br>`
+            }else {
+                exibir.innerHTML += `O ${index}º passageiro terá que esperar! <br>`
+            }
+        }
+    }
+
+
+
+
+</script>
+
+<!-- 16. Crie um programa em HTML/JS que simule a entrada de caronas num carro:
+
+a) Pergunte ao usuário quantas pessoas, vão entrar no carro
+
+b) Ao clicar num botão "#Partiu Carona"...
+
+c) Exiba, debaixo do botão, frases como estas:
+
+            Entrou o 1º passageiro (que é o(a) motorista)
+
+            Entrou o 2º passageiro
+
+            Entrou o 3º passageiro
+
+            Entrou o 4º passageiro
+
+            Entrou o 5º passageiro
+
+            O 6º passageiro terá que esperar!
+
+            O 7º passageiro terá que esperar!
+
+ 
+
+d) Note que, sempre na frase do 1º passageiro, deve constar ao lado que é motorista
+
+e) A partir do 6º passageiro, a frase muda, pois o carro só comporta 5 passageiros -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+<body>
+
+    informa quantos depósitos Voce fez no banco: <br>
+    <input type="text" id="inp_qtdDeposito"> <br><br>
+
+    Informe o valor do reposito de cada deposito: <br>
+    <input type="text" id="inp_valor"> <br> <br>
+
+    <button onclick="mostrar()" >Acompanhar grana</button> <br>
+
+    <div id="exibir"></div>
+
+
+    
+</body>
+</html>
+
+<script>
+    dinheiro = 0 
+    function mostrar() {
+        exibir.innerHTML = '';
+        var qtdDeposito = Number(inp_qtdDeposito.value);
+        var valor = Number(inp_valor.value);
+        var adicional = dinheiro * 0.01
+
+        for (var index = 1; index <= qtdDeposito; index++) {
+            dinheiro+=valor;
+            var juros
+            juros = dinheiro * 0.01
+            if (index %3==0) {
+                exibir.innerHTML += `mes ${index} R$${ juros }<br>`
+            }else{
+                exibir.innerHTML += `mes ${index} R$${ dinheiro}<br>`
+            }
+           
+            // exibir.innerHTML += `mes ${index} R$${ dinheiro}<br>`
+            
+        }
+
+    }
+
+
+
+
+</script>
+<!-- 15.   Refaça o programa anterior de tal forma que, a cada 3 depósitos o banco dê um bônus de 1% sobre o valor acumulado após o depósito. Ex:
+
+    1º Mês: R$ 500.00
+
+    2º Mês: R$ 1000.00
+    3º Mês: R$ 1515.00
+
+    4º Mês: R$ 2015.00
+
+    5º Mês: R$ 2515.00
+    6º Mês: R$ 3045.15
+
+    Total guardado: R$3045.15
+
+Note que nos meses 3 e 6, o valor aumentou em 1% do total após o depósito. -->

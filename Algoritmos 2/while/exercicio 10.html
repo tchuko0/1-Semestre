@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+
+    Informe a quantidade de muldias que seu time tem: <br>
+    <input type="text" id="inpNumero" > <br><br>
+
+    <button onclick="mostrar()" >Ver troféus</button> <br>
+
+    <div id="exibir"></div>
+   
+    <div id="choro" style="display: none;" >
+    <img src="https://ogimg.infoglobo.com.br/in/24097293-3e9-4c5/FT1086A/652/x85841104_Soccer-FootballCopa-LibertadoresFinalFlamengo-fans-watching-the-finalRio-de-Jan.jpg.pagespeed.ic.eT6kZdnwDv.jpg" style="height: 200px; display: none;"  alt=""></div>
+
+    <div id="trofeu" style="display: none;" >
+        <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" width="120px">
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    function mostrar() {
+        var numero = Number(inpNumero.value);
+        exibir.innerHTML = ' ';
+        index=0;
+
+        while (index<numero) {
+            if (numero == 0) {
+                choro.display.style+= `block`
+                trofeu.display.style+= `none`
+            }else if (index < numero) {
+                choro.display.style+= `none`
+                trofeu.display.style+= `block`
+            }
+            index++;
+        }
+
+    }
+
+
+
+</script>
+<!-- 10. Crie um programa em HTML/JS o qual:
+
+a) Solicite ao usuário a quantidade de títulos mundiais da FIFA que seu clube tem
+
+b) Ao clicar num botão "Ver troféus de mundiais FIFA"...
+
+c) Devem aparecer, abaixo do botão, N imagens de um troféu, onde N é o valor informado em a). Porém...
+
+d) Caso o valor informado em a) seja 0 ou menos, a imagem que deve aparecer apenas uma vez abaixo do botão é de um torcedor do time chorando -->

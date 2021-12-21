@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div style="background-color: black; width: 97px; height: 270px; " > 
+
+    <img onclick="vermelho()" id="div_vermelho" src="https://www.publicdomainpictures.net/pictures/310000/nahled/red-circle.png" width="80" alt="">
+    <br>
+    <img onclick="laranja()" id="div_laranja" src="https://images.emojiterra.com/google/android-10/512px/1f7e0.png" width="80" alt="">
+    <br>
+    <img onclick="verde()" id="div_verde" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Circulo_verde.png"width="80" alt="">
+
+</div>
+
+<div id="exibir" ></div>
+
+
+
+</body>
+</html>
+
+<script>
+
+function vermelho() {
+    div_vermelho.style.heigth =  "100%"
+    div_laranja.style.opacity = "10%"
+    div_verde.style.opacity = "10%"
+    
+    exibir.innerHTML = "<b style ='color: red;' > Pare! Aguarde o verde!!!!</b><br> "
+}
+
+function laranja() {
+    div_vermelho.style.opacity = "10%"
+    div_laranja.style.display = "100%"
+    div_verde.style.opacity = "10%"
+
+    exibir.innerHTML = "<b style ='color: orange;' > Só siga se estiver perto e rápido.!!!!</b><br> "
+}
+
+function verde() {
+
+    div_vermelho.style.opacity = "10%"
+    div_laranja.style.opacity = "10%"
+    div_verde.style.display = "100%"
+    
+    exibir.innerHTML = "<b style ='color: green;' > Siga :) !!!!</b><br> "
+}
+
+
+</script>

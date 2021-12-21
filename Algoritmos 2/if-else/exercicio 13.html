@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+
+<body>
+
+    <h1>Elevador</h1>
+
+    informe o peso do elevador: <br>
+    <input type="text" id="inp_pesoE"> <br><br>
+
+    <button onclick="calcular()">Ligar elevador</button>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var peso_elevador = Number(inp_pesoE.value);
+
+        if (peso_elevador < 500) {
+            alert('Elevador vai se mover');
+        } else {
+            alert('Alguém precisa descer do elevador')
+        }
+    }
+</script>
+
+
+
+
+<!-- 13. Crie um programa em HTML/JS o qual:
+
+a) Solicite o peso total num elevador
+
+b) Ao clicar num botão "Ligar elevador"...
+
+c) Caso o peso seja menor que 500, exiba um alert com a frase "Elevador vai se mover"
+
+d) Caso o peso seja a partir de 500, exiba um alert com "Alguém precisa descer do elevador" -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+
+    Informe a primeira nota:
+    <input id="Pnota" placeholder="EX 8">
+    <br>
+    Informe a segunda nota:
+    <input id="Snota" placeholder="EX 9">
+    <br>
+
+    <button onclick="calcular()" >Calcular</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+
+<script>
+
+    function calcular() {
+        
+        var primeira_nota = Number(Pnota.value);
+        var segunda_nota = Number(Snota.value);
+
+        var media = primeira_nota + segunda_nota;
+
+        var Mfinal = media / 2;
+
+        exibir.innerHTML = `Sua media é de ${Mfinal}`;
+    }
+
+
+</script>
+
+<!-- 4. Crie um programa em HTML/JS o qual:
+
+a) Solicite 2 notas ao usuário
+
+b) Ao clicar num botão "Calcular média", calcule sua média e exiba, na página a frase:
+
+    Sua média foi de X -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    <h1>ENEM / VESTIBULAR</h1>
+
+    informe a nota do ENEM do aluno: <br>
+    <input type="text" id="inp_enem"> <br><br>
+
+    informe a nota do vestibular interno do aluno: <br>
+    <input type="text" id="inp_interno"> <br><br>
+
+    <button onclick="calcular()" >Avaliação</button>
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+        var enem = Number(inp_enem.value);
+        var interno = Number(inp_interno.value);
+
+        if (enem >= '800' || interno == '700') {
+            alert('Parabéns! Aprovado')
+        }else{
+            alert('Tente semestre que vem!')
+        }    
+    }
+
+
+</script>

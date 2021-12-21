@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex20</title>
+</head>
+<body>
+
+    <button onclick="mostrar()" >Ver minha sorte</button> <br>
+
+    
+
+    <div id="img" style="width: 50px; height: 50px; display: none;"  >
+        <img id="img_amor" src="https://cdn.w600.comps.canstockphoto.com.br/emoticon-cora%C3%A7%C3%A3o-abra%C3%A7ando-cliparte-vetor_csp69022508.jpg" alt="">
+        <img id="img_sorte" src="https://http2.mlstatic.com/D_NQ_NP_831596-MLB26742474685_012018-O.jpg" alt="">
+    </div>
+
+    <br><br>
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+
+
+<script>
+
+    function mostrar() {
+        exibir.innerHTML = '';
+        img.innerHTML = '';
+         Totalamor = 0;
+         Totalsorte = 0;
+         sorte = 0;
+         amor = 0;
+       
+
+        for (var index = 0; index < 20; index++) {
+            
+            var sorteioamor = (Math.random()*2);
+            var sorteiosorte =(Math.random()*2);
+            Totalamor += sorteioamor;
+            Totalsorte += sorteiosorte;
+
+            
+            if (sorteioamor <  1) {
+            
+                exibir.innerHTML += `<img src="https://cdn.w600.comps.canstockphoto.com.br/emoticon-cora%C3%A7%C3%A3o-abra%C3%A7ando-cliparte-vetor_csp69022508.jpg" style="width: 100px;" alt="">`
+            }else{
+                exibir.innerHTML += `<img src="https://http2.mlstatic.com/D_NQ_NP_831596-MLB26742474685_012018-O.jpg" style="width: 100px;" alt="">`
+            } 
+            if (sorteioamor>amor) {
+                amor = sorteioamor
+            }
+            if (sorteiosorte>sorte) {
+                sorte=sorteiosorte
+                
+            }
+            
+       
+           
+
+            // if (amor > sorte ) {
+            //     exibir.innerHTML = `Você tem mais sorte no amor`
+            // }if (sorte < amor) {
+            //     exibir.innerHTML = `Você tem mais sorte no jogo`
+            // }
+            
+            
+            
+
+        }
+
+        
+      
+
+
+ 
+
+
+       
+
+    }
+
+
+
+</script>

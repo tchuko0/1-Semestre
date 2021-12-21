@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+</head>
+
+<body>
+
+    Informe o valor do Onibus
+    <input id="Vpassagem">
+    <br>
+    Informe a quantidade de viagens que faz por mês
+    <input id="Qviagens">
+    <br>
+    <button onclick="calcular()">Calcular VT</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function calcular() {
+        
+        var valor_passagem = Number(Vpassagem.value);
+        var qtd_viagens = Number(Qviagens.value);
+
+        var gasto = valor_passagem * qtd_viagens;
+
+        exibir.innerHTML = `Você vai gastar <u>R$${gasto}</u> por mês com ônibus`;
+    }
+
+
+
+
+</script>
+
+<!-- 5. Crie um programa em HTML/JS o qual:
+
+a) Solicite o valor da passagem de ônibus
+
+b) Solicite a quantidade de viagens que o usuário faz por mês
+
+c) Ao clicar em "Calcular VT" calcule e exiba na tela quanto o usuário gastará por mês com passagens como uma frase como
+esta
+
+Você vai gastar R$X por mês com ônibus
+
+Note que o valor é precedido de R$ e está sublinhado -->

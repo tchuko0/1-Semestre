@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esconder_palavras</title>
+</head>
+<body>
+    
+ <!--O atributo style="display: none;" faz com que o corpo da tag NÃO seja mostrada na tela 
+        O "display: block;" é o que mostra o corpo da tag na tela
+    -->
+<h2><B>Esconder e mostrar segredo</B></h2>
+
+há um secredo aqui. cuidado ! <br>
+
+<button id="but_mostrar" onclick="mostrar_segredo()" style="display: block;"> Mostrar segredo</button>
+<button id="but_esconder" onclick="esconder_segredo()" style="display: none;"> Esconder segredo</button>
+<br>
+
+<span id="span_segredo"style=display: none; > Palmeriras é uma merda !  </span>
+
+
+</body>
+</html>
+
+<script>
+
+   function mostrar_segredo(){
+        span_segredo.style.display = "block"; // aparece o segredo
+        but_mostrar.style.display = 'none';// desaparecer botão mostrar
+        but_esconder.style.display = 'block'; // mostrar botão esconder
+
+   }
+
+   function esconder_segredo() {      
+        span_segredo.style.display = "none"; // esconder segredo
+        but_mostrar.style.display = 'block'; // mostrar primeiro botão
+        but_esconder.style.display = 'none'; // esconder segundo botão 
+    }
+
+</script>

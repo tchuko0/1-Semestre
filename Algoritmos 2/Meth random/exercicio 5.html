@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+</head>
+
+<body>
+
+    <h1>Jo ken po</h1>
+
+
+    <button onclick="jogar()">Jogar</button>
+
+
+    <img src="jkp_pedra.jpg" id="pedra" height="200px" style="display: none;">
+    <img src="jkp_papel.png" id="papel" height="200px" style="display: none;">
+    <img src="jkp_tesoura.png" id="tesoura" height="200px" style="display: none;">
+
+</body>
+
+</html>
+
+<script>
+    function jogar() {
+        var num = (Math.random() * 3 + 1.).toFixed()
+
+        if (num == 1) {
+            pedra.style.display = 'block'
+            papel.style.display = 'none'
+            tesoura.style.display = 'none'
+        } else if (num == 2) {
+            pedra.style.display = 'none'
+            papel.style.display = 'block'
+            tesoura.style.display = 'none'
+        } else {
+            pedra.style.display = 'none'
+            papel.style.display = 'none'
+            tesoura.style.display = 'block'
+        }
+    }
+</script>
+
+<!-- 5. Tente fazer uma pequena simulação do famoso jogo "jo ken po" (pedra, papel e tesoura) em HTML/JS:
+
+a) Ao clicar no botão "Jogar", deve aparecer abaixo dele ou a figura de uma pedra, ou de uma folha de papel ou de uma tesoura (seja qual for a imagem, ela deve ter 200px de altura). -->

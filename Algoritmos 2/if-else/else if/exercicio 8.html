@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+
+<body>
+
+    <h1>Nutricionista</h1>
+
+    Informe quantos pães franceses o usuário tem comido por dia: <br>
+    <input type="text" id="inp_pao"> <br> <br>
+
+    Informe quantos pacotes de bolacha recheada o usuário tem comido por dia: <br>
+    <input type="text" id="inp_bolacha"> <br><br>
+
+    Informe quantos copos de achocolatado o usuário tem tomado por dia: <br>
+    <input type="text" id="inp_acho"><br><br>
+
+    <button onclick="calcular()">Verificar calorias</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+<script>
+    function calcular() {
+        var pao = Number(inp_pao.value) * 50;
+        var bolacha = Number(inp_bolacha.value) * 80
+        var achocolatado = Number(inp_acho.value) * 70
+
+
+        var Tcalorias = pao + bolacha + achocolatado;
+
+
+        if (Tcalorias < 200) {
+            exibir.innerHTML = `Parabéns, vai sair em forma da quarentena! ${Tcalorias}`
+        } else if (Tcalorias < 400) {
+            exibir.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena! ${Tcalorias}`
+        } else {
+            exibir.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena ${Tcalorias}`
+        }
+    }
+</script>
+<!-- 
+8. Uma nutricionista e precisa ajudar seus pacientes a não engordarem tanto na quarentena do Covid19. Ajude ela criando um programa em HTML/JS o qual:
+
+a) Pergunte quantos pães franceses o usuário tem comido por dia
+
+b) Pergunte quantos pacotes de bolacha recheada o usuário tem comido por dia
+
+c) Pergunte quantos copos de achocolatado o usuário tem tomado por dia
+
+d) Ao clicar em "Verificar calorias", calcule quantas calorias o usuário tem consumido com base nas 3 informações. Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70.
+
+e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão:
+
+   "Parabéns, vai sair em forma da quarentena!", caso as calorias sejam menores do que 200.
+
+   "Cuidado, vai ficar mais "fofinho(a)" após quarentena!", caso as calorias sejam entre 200 e 400.
+
+   "Bom, acho que muitos não vão te reconhecer após a quarentena", caso as calorias sejam mais de 400. -->

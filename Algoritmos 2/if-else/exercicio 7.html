@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+</head>
+
+<body>
+
+    <h1>Reunião da pizza</h1>
+
+    Qual valor da pizza
+    <input id="valorPizza" placeholder="Qual valor da pizza">
+
+    <br> <br>
+
+    Quantos amigos estão reunidos
+    <input id="quantosAmigos" placeholder="Quantos amigos estão reunidos">
+
+    <br> <br>
+
+    <button onclick="rolaPizza()">Rola pizza? </button>
+
+
+
+    <div id="exibirPizza"></div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+
+    function rolaPizza() {
+
+        var pizza = Number(valorPizza.value);
+        var amigos = Number(quantosAmigos.value);
+        var total = pizza / amigos;
+
+
+
+
+        if (total <= 20) {
+
+            exibirPizza.innerHTML = `cada amigo vai poder gastar ${total.toFixed(2)} reais`;
+        }
+
+        if (total >= 20) {
+
+            exibirPizza.innerHTML = "nada de pizza";
+
+        }
+
+    }
+
+</script>

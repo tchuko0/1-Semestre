@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+
+    Informe o nome do cavalo 1: <br>
+    <input type="text" id="inp_cav1"> <br><br>
+    Informe o nome do cavalo 2: <br>
+    <input type="text" id="inp_cav2"> <br><br>
+    Informe o nome do cavalo 2: <br>
+    <input type="text" id="inp_cav3"> <br><br>
+
+
+
+    <button onclick="mostrar()" >resultado</button>
+
+    <div id="exibir"></div>
+
+    <br><br>
+
+    
+
+    1º lugar - <span id="pos1" ></span>
+    2º lugar - <span id="pos2" ></span>
+    3º lugar - <span id="pos3" ></span>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar() {
+        var cav1 = (inp_cav1.value);
+        var cav2 = (inp_cav2.value);
+        var cav3 = (inp_cav3.value);
+        var cavalo1 = 0;
+        var cavalo2 = 0;
+        var cavalo3 = 0;
+        totalcav1 = 0;
+        totalcav2 = 0;
+        totalcav3 = 0;
+        exibir.innerHTML = '';
+
+        for (var index = 1; index <= 7; index++) {
+            
+            cavalo1 = Math.random()*2+7;
+            cavalo2 = Math.random()*2+7;
+            cavalo3 = Math.random()*2+7;
+            totalcav1 += cavalo1;
+            totalcav2 += cavalo2;
+            totalcav3 += cavalo3;
+            exibir.innerHTML += `Volta ${index} <br> Cavalo1 ${cav1} ${cavalo1.toFixed(1)} Cavalo2 ${cav2} ${cavalo2.toFixed(1)} Cavalo3 ${cav3} ${cavalo3.toFixed(1)}<br>`
+
+            
+            if (cavalo1 < cavalo2 && cavalo2 < cavalo3) {
+
+            pos1.innerHTML = totalcav1.toFixed();
+            pos2.innerHTML = totalcav2.toFixed(); 
+            pos3.innerHTML = totalcav3.toFixed(); 
+
+            }else if (cavalo1 < cavalo3 && cavalo3 < cavalo2) {
+
+            pos1.innerHTML = totalcav1.toFixed();
+            pos2.innerHTML = totalcav3.toFixed(); 
+            pos3.innerHTML = totalcav2.toFixed(); 
+           
+            // }else if (cavalo1< cavalo3 && cavalo2< cavalo3) {
+                
+            // pos1.innerHTML = totalcav1.toFixed();
+            // pos2.innerHTML = totalcav2.toFixed(); 
+            // pos3.innerHTML = totalcav3.toFixed();     
+           
+            // }else if (cavalo2 < cavalo1 && cavalo1 <cavalo3) {
+            // pos1.innerHTML = totalcav2.toFixed();
+            // pos2.innerHTML = totalcav1.toFixed(); 
+            // pos3.innerHTML = totalcav3.toFixed(); 
+           
+            }else if (cavalo2 < cavalo3 && cavalo3 < cavalo1) {
+             pos1.innerHTML = totalcav2.toFixed();
+            pos2.innerHTML = totalcav3.toFixed(); 
+            pos3.innerHTML = totalcav1.toFixed(); 
+           
+            }else if (cavalo2<cavalo1 && cavalo1< cavalo3) {
+                
+            pos1.innerHTML = totalcav2.toFixed();
+            pos2.innerHTML = totalcav1.toFixed(); 
+            pos3.innerHTML = totalcav3.toFixed();
+            
+            }else if (cavalo3<cavalo1 && cavalo1<cavalo2) {
+                
+
+            pos1.innerHTML = totalcav3.toFixed();
+            pos2.innerHTML = totalcav1.toFixed(); 
+            pos3.innerHTML = totalcav2.toFixed(); 
+           
+            }else if (cavalo3<cavalo1 && cavalo2<cavalo1) {
+            pos1.innerHTML = totalcav3.toFixed();
+            pos2.innerHTML = totalcav2.toFixed(); 
+            pos3.innerHTML = totalcav1.toFixed(); 
+                totalcav3
+            // }else if (cavalo3<cavalo2 && cavalo2<cavalo1) {
+            // // pos1.innerHTML = totalcav3.toFixed();
+            // // pos2.innerHTML = totalcav2.toFixed(); 
+            // // pos3.innerHTML = totalcav1.toFixed();
+            
+            // }
+
+
+
+       
+        }
+
+        
+        
+    }  
+
+}
+    
+
+
+</script>

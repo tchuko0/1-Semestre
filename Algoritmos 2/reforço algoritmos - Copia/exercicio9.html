@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Time A <b id="pontosA"> 0</b> : Time B <b id="pontosB">0</b>
+
+    <br>
+
+    <input id="inp_timeA">
+    <input id="inp_timeB">
+
+    <br>
+    <button onclick="time1()">Registrar pontos time a</button>
+    <button onclick="time2()">Registrar pontos time b</button>
+    <button onclick="zerar()">zerar partida</button>
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    var timeA = 0;
+    var timeB = 0;
+
+    function time1() {
+
+        var time_a = Number(inp_timeA.value)
+        timeA += time_a;
+
+        pontosA.innerHTML = timeA
+    }
+
+
+    function time2() {
+
+        var time_b = Number(inp_timeB.value)
+        timeB += time_b;
+
+        pontosB.innerHTML = timeB
+
+    }
+
+    function zerar() {
+        pontosA.innerHTML = 0;
+        pontosB.innerHTML = 0;
+        timeA = 0;
+        timeB = 0;
+    }
+</script>

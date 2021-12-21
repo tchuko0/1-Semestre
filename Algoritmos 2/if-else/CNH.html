@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cnh</title>
+</head>
+
+<body>
+
+    <h1>Carteira nacional de habilitação</h1>
+
+    Informe a quantidade de pontos da sua CNH: <br>
+    <input type="text" id="inp_pontos"><br><br>
+
+    <button onclick="calcular()">Calcular pontos</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var valorM = inp_pontos.value * 78.00;
+
+        if (inp_pontos.value >= 20) {
+            alert('Você esta com a CNH suspensa😢😒')
+            exibir.innerHTML = `Voce devera pagar ${valorM} referente as suas multas`
+        } else {
+            alert('Não perdeu a habilitação😍😎')
+            exibir.innerHTML = `Voce devera pagar ${valorM} referente as suas multas`
+        }
+    }
+</script>

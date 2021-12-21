@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar e esconder</title>
+</head>
+
+<body>
+
+
+    <h3>Esconder e mostrar elementos</h3>
+
+
+    Há um segredo aqui! Cuidado! <br><br>
+
+    <button id="Bmostrar" onclick="Msegredo()">Mostrar segredo</button>
+    <button id="Besconder" onclick="Esegredo()" style="display: none;" >Esconder segredo</button>
+    <br><br>
+
+    <b id="segredo" style="display: none; color: red;">Você é senhor do que cala e escravo do que fala</b>
+
+</body>
+
+</html>
+
+<script>
+    function Msegredo() {
+
+        segredo.style.display = 'block';
+        Besconder.style.display = 'block'
+        Bmostrar.style.display = 'none'
+        
+
+    }
+
+    function Esegredo() {
+
+        segredo.style.display = 'none';
+        Besconder.style.display = 'none'
+        Bmostrar.style.display = 'block'
+        
+        
+
+        
+
+    }
+</script>

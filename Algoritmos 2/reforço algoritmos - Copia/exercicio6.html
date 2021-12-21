@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofrinho</title>
+</head>
+
+<body>
+
+    <h1>Cofre</h1>
+
+    Valor guardado no cofrinho: R$<b id="qtd_cofre">0.00</b>
+    <br>
+    Quantidade de depósitos feitos: <b id="qtd_deposito">0</b>
+    <br>
+    Quantidade de retiradas feitas: <b id="qtd_retirada">0</b>
+    <br>
+    <div id="div_bar" style="height: 20px; background-color: blue; display: none;"></div>
+    <br><br>
+    Insira o valor a ser depositado:
+    <br>
+    <input type="text" id="ipt_valor">
+    <br><br>
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="tirar()">Tirar toda a grana</button>
+
+    <br><br>
+
+</body>
+
+</html>
+
+<script>
+    var cofre = 0;
+    var deposito = 0;
+    var retirar = 0;
+    var barra = 0; 
+
+    function depositar() {
+
+        var valor = Number(ipt_valor.value);
+        cofre += valor;
+        deposito++;
+
+        var barra = (valor / 2000) * 100;
+
+        qtd_cofre.innerHTML = cofre;
+        qtd_deposito.innerHTML = deposito;
+
+        div_bar.style.width = `${barra}%`;
+        div_bar.style.display = 'block';
+
+        if (valor > 2000) {
+
+            alert("Você atngiu o valor máximo de depósito.");
+
+            
+
+        }
+    }
+
+    function tirar() {
+
+        retirar++;
+        qtd_cofre.innerHTML = `${cofre * 0}`;
+        qtd_retirada.innerHTML = retirar;
+
+        div_bar.style.width = `${barra}%`;
+        div_bar.style.display = 'none';
+        }
+    
+</script>

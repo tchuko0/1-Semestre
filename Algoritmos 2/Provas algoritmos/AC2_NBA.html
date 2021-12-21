@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC-2 NBA</title>
+</head>
+
+<body>
+    Valor da premiação total: <input id="in_premiacao_total">
+    <br>
+    Número máximo de rodadas: <input id="in_numero_rodadas">
+    <br>
+    Resultado do time A:
+    <select id="resultado_time_A">
+        <option value="3">Vitória</option>
+        <option value="1">Empate</option>
+        <option value="0">Derrota</option>
+    </select>
+    <br>
+    Resultado do time B:
+    <select id="resultado_time_B">
+        <option value="3">Vitória</option>
+        <option value="1">Empate</option>
+        <option value="0">Derrota</option>
+    </select>
+    <br>
+    Resultado do time C:
+    <select id="resultado_time_C">
+        <option value="3">Vitória</option>
+        <option value="1">Empate</option>
+        <option value="0">Derrota</option>
+    </select>
+    <br>
+    <button onclick="realizar_rodada()">Realizar rodada</button>
+    <button onclick="revelar_premiacao()">Revelar premiação</button>
+    <br>
+    Rodada atual: <span id="span_rodada_atual">0</span>
+    <div id="div_timeA"></div>
+    <div id="div_timeB"></div>
+    <div id="div_timeC"></div>
+</body>
+
+</html>
+
+<script>
+
+    var pontuacao_timeA = 0;
+    var pontuacao_timeB = 0;
+    var pontuacao_timeC = 0;
+    var rodada_atual = 0;
+    function realizar_rodada() {
+        var numero_de_rodadas = Number(in_numero_rodadas.value);
+        var premiacao_total = Number(in_premiacao_total.value);
+        if (numero_de_rodadas >= 1 && premiacao_total >= 1000) {
+            span_rodada_atual.innerHTML = ++rodada_atual;
+            pontuacao_timeA += Number(resultado_time_A.value);
+            pontuacao_timeB += Number(resultado_time_B.value);
+            pontuacao_timeC += Number(resultado_time_C.value);
+            div_timeA.innerHTML = `Time A: ${pontuacao_timeA}`;
+            div_timeB.innerHTML = `Time B: ${pontuacao_timeB}`;
+            div_timeC.innerHTML = `Time C: ${pontuacao_timeC}`;
+            if(rodada_atual >= numero_de_rodadas) {
+                revelar_premiacao();
+            }
+        } else {
+            alert("Dados inválidos para a rodada");
+        }
+    }
+
+    function revelar_premiacao() {
+        var pontuacao_total = pontuacao_timeA + pontuacao_timeB + pontuacao_timeC;
+        var premiacao_total = Number(in_premiacao_total.value);
+
+        var porcentagemTimeA = (pontuacao_timeA / pontuacao_total) * 100;
+        var premioTimeA = (porcentagemTimeA / 100) * premiacao_total;
+        var porcentagemTimeB = (pontuacao_timeB / pontuacao_total) * 100;
+        var premioTimeB = (porcentagemTimeB / 100) * premiacao_total;
+        var porcentagemTimeC = (pontuacao_timeC / pontuacao_total) * 100;
+        var premioTimeC = (porcentagemTimeC / 100) * premiacao_total;
+
+        div_timeA.innerHTML = `Time A: ${premioTimeA.toFixed(2)}`;
+        div_timeB.innerHTML = `Time B: ${premioTimeB.toFixed(2)}`;
+        div_timeC.innerHTML = `Time C: ${premioTimeC.toFixed(2)}`;
+
+
+
+    }
+</script>

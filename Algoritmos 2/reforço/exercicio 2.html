@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 2</title>
+    <link rel="stylesheet" href="exercicio2.css">
+</head>
+
+<body>
+    <h1>Bem vindo a nossa loja</h1>
+    <div class="caixa">
+        <div class="form">
+
+
+            Digite seu nome:
+            <input id="nome" placeholder="Ex:Dener">
+            <br><br>
+            Digite seu CPF
+            <input id="cpf" placeholder="Ex:123">
+            <br><br>
+            <select id="Seletor" onchange="selecionar()">
+                <option value="">escolha a categoria</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Infantil">Infantil</option>
+            </select> <br><br>
+            <button onclick="ativar()">ativar</button>
+        </div>
+
+
+
+        <img style="width: 200px;" id="img" src=""> </img>
+    </div>
+
+    <div id="div_msg">
+
+
+    </div>
+
+
+</body>
+
+
+</html>
+
+<script>
+    function selecionar() {
+        var num = Seletor.value;
+        if (num == 'Masculino') {
+            img.src = "  https://1.bp.blogspot.com/-KJFNF210Grw/X2nYT5BQ0aI/AAAAAAAB8Wo/6iB6q8mRYfkp5JdWVPYyEUpYVqh8D_lZACLcBGAsYHQ/s846/moda-masculina-ver%25C3%25A3o-2021%2B%25287%2529.jpg "
+        }
+        if (num == 'Feminino') {
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ2-leswnXQDPiRR6ERZTQ06thfvEbRDZRqA&usqp=CAU"
+        }
+        if (num == 'Infantil') {
+            img.src = "https://www.vestidos2021.com.br/wp-content/uploads/2020/03/Vestido-infantil-de-malha-e-algod%C3%A3o-2021.jpg"
+        }
+        if (num == 'null') {
+            img.src = ""
+        }
+    }
+    function ativar() {
+        var num = Seletor.value;
+        var nom = nome.value
+        var doc = (cpf.value)
+
+
+        if (nom == "") {
+            alert(`Nome do Cliente inválido`);
+
+        
+
+        } else if (doc == "" ) {
+            alert(`CPF inválido`);
+            
+
+        } else {
+
+            
+            
+
+            div_msg.innerHTML = (`Ola ${nom}, você efetuou uma compra no setor ${num}.<br><br>`);
+
+        }
+
+
+    }
+
+    
+</script>

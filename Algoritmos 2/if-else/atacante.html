@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 10 - 23Mar</title>
+</head>
+
+<body>
+    <h2>Controle de atacantes</h2>
+    Informe a quantidade de Partidas:
+    <input id="inp_partidas" autofocus> <br><br>
+    Informe a quantidade de Gols:
+    <input id="inp_gols"> <br><br>
+    <button onclick="estudar()">Estudar Atacante</button> <br><br>
+    <div id="exibir"></div>
+</body>
+
+</html>
+<script>
+    function estudar() {
+        var media = inp_gols.value / inp_partidas.value;
+        if (media > 0.6) {
+            exibir.innerHTML = `Atacante de futuro <br><br> <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Bra-Cos_%281%29_%28cropped%29.jpg" style="width: 100px;" > `;
+            exibir.innerHTML += `<br><br>Sua média de gols/partida é de ${media}`;
+        } else {
+            if (media < 0.2) {
+                exibir.innerHTML = `Melhor mudar de posição <br><br> <img src="https://tntsports.com.br/__export/1591305790250/sites/esporteinterativo/img/2020/06/04/jo_corinthians.jpg_1811324301.jpg" style="width: 100px;" > `;
+            } else {
+                exibir.innerHTML = `Atacante Mediano <br><br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DuduPalmeiras2018.jpg/1200px-DuduPalmeiras2018.jpg" style="width:100px ;" >`;
+            }
+            exibir.innerHTML += `<br><br>Sua média de gols/partida é de ${media}`;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de tempo</title>
+</head>
+
+<body>
+
+
+    <button onclick="nublado()">Mudar para nublado</button>
+    <button onclick="ensolarado()">Mudar para ensolarado</button>
+
+    <br><br>
+
+    <img id="Dnublado" src="https://imagens.ne10.uol.com.br/img/imagens/2020/01/22/ff12b3d2e4_design-sem-nome-9.jpg"
+        width="300" style="display: none;" alt="">
+
+    <img id="Densolarado" src="https://imagens.climatempo.com.br/img_users/2018/09/7dc42b38de31f2003501f7ced8d171d3/656x0.jpg" style="width: 300px; display: none;" alt="">
+
+</body>
+
+</html>
+
+<script>
+
+    function nublado() {
+        Dnublado.style.display = 'block';
+        Densolarado.style.display = 'none'
+        
+    }
+
+    function ensolarado() {
+        Densolarado.style.display = 'block'
+        Dnublado.style.display = 'none';
+
+        
+    }
+
+
+
+</script>

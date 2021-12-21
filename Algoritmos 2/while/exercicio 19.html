@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex18</title>
+</head>
+
+<body>
+
+    Informe a quantidade de ônibus que precisa pegar: <br>
+    <input type="text" id="inpOnibus"> <br><br>
+
+    Informe a quantidade de trens que precisa pegar: <br>
+    <input type="text" id="inpTrem"> <br><br>
+
+    Informe a quantidade de metros que precisa pegar: <br>
+    <input type="text" id="inpMetro"> <br><br>
+
+    <button onclick="mostrar()">#Partiu Trajeto</button>
+
+    <div id="exibir"></div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    function mostrar() {
+        var contONI = 0;
+        var contTRE = 0;
+        var contMET = 0;
+        var onibus = Number(inpOnibus.value);
+        var trem = Number(inpTrem.value);
+        var metro = Number(inpMetro.value);
+        exibir.innerHTML = '';
+
+
+
+        while (contONI < onibus) {
+            contONI++
+            exibir.innerHTML += `<span style="color: red;" > Pegando o ${contONI}º buzão </span>`
+        if (contONI == 2) {
+            exibir.innerHTML += `Começando a cansar`
+        }else if (contONI >= 3) {
+            exibir.innerHTML += `Já cansado`
+        }
+        exibir.innerHTML += `<br>`
+        }
+
+
+
+
+        while (contTRE < trem) {
+            contTRE++
+            exibir.innerHTML += `<span style="color: green;" > Pegando o ${contTRE}º trem </span>`
+            if (contTRE == 2) {
+            exibir.innerHTML += `Começando a cansar`    
+            }else if (contTRE >= 3) {
+                exibir.innerHTML += `já cansado`
+            }
+            exibir.innerHTML += `<br>`
+        }
+
+
+
+        while (contMET < metro) {
+            contMET++
+            exibir.innerHTML += `<span style="color: blue;" > Pegando o ${contMET}º metro </span>`
+            if (contMET == 2) {
+                exibir.innerHTML += `Começando a cansar`
+            }else if (contMET >= 3) {
+                exibir.innerHTML += `já cansado`
+            }
+            exibir.innerHTML += `<br>`
+        }
+
+
+    }
+</script>

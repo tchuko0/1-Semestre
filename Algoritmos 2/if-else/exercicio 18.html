@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex18-4</title>
+</head>
+
+<body>
+
+    Informr a sua frequência: <br>
+    <input type="text" id="inp_freq"><br><br>
+
+    <button onclick="calcular()">Analisar Frequência</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular(params) {
+        var freq = Number(inp_freq.value);
+
+        if (freq < 50) {
+            exibir.innerHTML =
+                `<img src="https://pbs.twimg.com/profile_images/862451940134932481/O09I7pDr_400x400.jpg" style="width: 450;">`
+        } else {
+            exibir.innerHTML =
+                `<img src="https://africaeafricanidades.online/imagens/Abdias_Nascimento_TEN.jpg" style="width: 450;">`
+        }
+
+
+    }
+</script>
+
+<!-- 4. Crie um programa em HTML/JS o qual:
+
+a) Solicita a frequência do aluno
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+
+    A imagem de um turista, caso a frequência for menor que 50 OU
+    A imagem de um aluno estudioso, caso a frequência for a partir de 50 -->

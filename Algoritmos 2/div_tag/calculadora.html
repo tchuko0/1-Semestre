@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h1>Bem-Vindo a Calculadora</h1>
+
+    Digite o primeiro numero
+    <input type="text" id="Pnumero">
+    <br><br>
+    Digite o segundo numero
+    <input type="text" id="Snumero">
+    <br><br>
+
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="divisao()">Divisão</button>
+    <button onclick="exponenciacao()">Exponeciação</button>
+    <button onclick="radiciação ()">Radiação</button>
+    <button onclick="subtracao()">Subtração</button>
+    <button onclick="soma()">Somar</button>
+
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function multiplicar() {
+
+        var resultado_multiplicacao = Number(Pnumero.value) * Number(Snumero.value);
+
+        exibir.innerHTML += ` O resultado da multiplicação é: <b> ${resultado_multiplicacao} </b><br>`;
+    }
+
+    function divisao() {
+
+        var resultado_divisao = Number(Pnumero.value) / Number(Snumero.value);
+
+        exibir.innerHTML += ` O resultado da divisão é: <b> ${resultado_divisao} </b> <br>`;
+    }
+
+    function exponenciacao() {
+
+        var resultado_exponenciacao = Number(Pnumero.value) ** Number(Snumero.value);
+
+        exibir.innerHTML += `O resultado da exponenciação é:  <b> ${resultado_exponenciacao} </b> <br>`;
+    }
+
+
+    function radiciação() {
+
+        var resultado_radiciação = Number(Pnumero.value) ^ Number(Snumero.value);
+
+        exibir.innerHTML += `O resultado da raiz quadrada é:  <b> ${resultado_radiciação} </b> <br>`;
+    }
+
+    function subtracao() {
+
+        var resultado_subtracao = Number(Pnumero.value) - Number(Snumero.value);
+
+        exibir.innerHTML += `O resultado da subtração é  <b> ${resultado_subtracao} </b> <br>`;
+    }
+
+    function soma() {
+
+        var resultado_soma = Number(Pnumero.value) + Number(Snumero.value);
+
+        exibir.innerHTML += `O resultado da soma é  <b> ${resultado_soma} </b> <br>`;
+    }
+</script>

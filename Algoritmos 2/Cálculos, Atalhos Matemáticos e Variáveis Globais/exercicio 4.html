@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+
+<body>
+
+
+    <h1>Qauntas vezes clicou</h1>
+
+    Você já clicou <b id="num">0</b> vezes
+
+    <br><br>
+
+    <button onclick="calcular()">Clica numin</button>
+
+    <div id="exibir"></div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    var vezes = 0;
+
+    function calcular() {
+        vezes++
+        num.innerHTML = vezes
+    }
+</script>
+
+<!-- a) Tenha um texto "Você já clicou 0 vezes"
+
+b) Abaixo do texto, um botão "Clica nimim". Sempre que clicar nele o número do texto em a) aumenta em 1 (ex.: "Você já clicou 7 vezes", após 7 cliques)
+
+OBS: Você deve criar uma variável, necessariamente. -->

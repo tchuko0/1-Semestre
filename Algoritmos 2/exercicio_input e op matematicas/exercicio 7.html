@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+</head>
+
+<body>
+
+    Informe o nome do aluno
+    <input id="Naluno">
+    <br>
+
+    Informe a quantidade de aulas totais do curso
+    <input id="TAcurso">
+    <br>
+
+    informe a quantidade de aulas que o aluno faltou
+    <input id="Qfaltas">
+
+    <button onclick="calcular()">Calcular Frequência</button>
+
+    <div id="exibir"></div>
+
+    <div id="frequencia" style="background-color:red; height: 20px; width: 0;; float: left;"></div>
+    <div id="falta" style="background-color:blue; height: 20px; width: 0; float: left;"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    /*
+    total - porcent
+    150       100
+    130        X
+
+    X150 = 13000
+
+    X = 13000 / 150
+
+*/
+
+
+    function calcular(params) {
+
+        var nome_aluno = Naluno.value;
+
+        var qtd_aulas_curso = Number(TAcurso.value);
+
+        var qtd_faltas = Number(Qfaltas.value);
+
+
+        // var frequencia = qtd_aulas_curso - qtd_faltas;
+        // var result = frequencia * 100;
+        // var result1 = result / qtd_aulas_curso;
+
+        var result = ((qtd_aulas_curso - qtd_faltas) * 100) / qtd_aulas_curso
+
+        exibir.innerHTML =
+            ` <span style="color: blue;">Olá, ${nome_aluno}! Sua frequência foi de</span> <b>${result}%</b>`;
+
+        frequencia.style.width = `${result}%`
+        falta.style.width = `${qtd_faltas}%`
+
+    }
+</script>
+<!-- 7 . Crie um programa em HTML/JS o qual calcula e mostra de forma gráfica a frequência de um aluno num curso da seguinte forma:
+
+a) Solicite o nome do aluno
+
+b) Solicite a quantidade de aulas totais do curso
+
+c) Solicite a quantidade de aulas que o aluno faltou
+
+d) Ao clicar em "Calcular Frequência", calcule e exiba a frequência em forma de porcentagem conforme o exemplo a seguir:
+
+   Olá, NOME! Sua frequência foi de 90%
+
+   O texto deve estar na cor azul, menos a porcentagem, que deve estar na cor verde e negrito. No exemplo, o total de aulas foi 10 e o aluno faltou 1 aula (use esse exemplo para descobrir que cálculo fazer).
+
+e) Abaixo da frase em d) deve aparecer uma barra de cor vermelho escuro e uns 20px de altura. Sua largura ocupa uma determinada porcentagem da página, conforme a porcentagem de sua frequência (ex: se o aluno tiver 50% de frequência, a barra deve ter 50% da página de largura).
+
+#ficadica: para alterar a largura de um elemento via JS, basta pegar seu id e depois .style.width -->

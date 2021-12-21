@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando sorte</title>
+</head>
+
+<body>
+
+    <h1>Testando sua sorte</h1>
+
+    Informe um numero de 0 a 100; <br>
+    <input type="text" id="inp_num"> <br> <br>
+
+    <button onclick="testar()">Testar minha sorte</button> <br><br>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function testar() {
+        exibir.innerHTML = '';
+        var numero = Number(inp_num.value);
+
+        if (numero < 0 || numero > 100) {
+            alert('Digite um numero entre 0 e 100')
+        } else {
+            resultado()
+        }
+
+        function resultado() {
+
+            for (index = 1; index < 20; index++) {
+                var sorte = (Math.random() * 100).toFixed()
+
+                if (sorte == numero) {
+                    exibir.innerHTML += `Seu numero saiu no ${index}<br>`
+                    break;
+                } else {
+                    exibir.innerHTML += `É voce esta sem sorte<br>`
+                }
+            }
+
+        }
+
+    }
+</script>

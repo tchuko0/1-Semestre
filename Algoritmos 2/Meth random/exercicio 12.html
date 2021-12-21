@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+
+<body>
+
+    <button onclick="avaliar()">Avaliar</button>
+    <button onclick="equipe()" >Equipe</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    var num = 0 
+    function avaliar() {
+
+        var sorte = (Math.random() * 5).toFixed(1)
+        var nota = num = sorte
+
+        if (num < 0.5) {
+            alert('Muito triste 😭😭😭')
+        } else if (num <= 1.5) {
+            alert('Meio triste 😥😥😥')
+        } else if (num <= 3.5) {
+            alert('Neutro 😑😐😐')
+        } else if (num <= 4.5) {
+            alert('Feliz 🥰🥰🥰')
+        } else {
+            alert('Muito Feliz 🤩🤩🤩')
+        }
+
+    }
+
+    function equipe() {
+
+          num /5
+
+        if (num < 0.5) {
+            alert('Muito triste 😭😭😭')
+        } else if (num <= 1.5) {
+            alert('Meio triste 😥😥😥')
+        } else if (num <= 3.5) {
+            alert('Neutro 😑😐😐')
+        } else if (num <= 4.5) {
+            alert('Feliz 🥰🥰🥰')
+        } else {
+            alert('Muito Feliz 🤩🤩🤩')
+        }
+
+        exibir.innerHTML  = `${num}`
+
+    }
+</script>
+
+
+<!-- 12. Faça uma versão melhorada da questão anterior:
+
+a) Tenha um botão “Equipe” que quando clicado, mostre abaixo da última avaliação a média de todas as avaliações realizadas. Ex: "Média geral: 3.9"
+
+b) Mostrar também o emoji de acordo com a média.
+
+#ficadica: Essa média é a soma de todas as avaliações dividida pela quantidade de avaliações realizadas
+
+  -->

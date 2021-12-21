@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Informe seus filmes favoritos" id="inp_favoritos"> <br>
+    <button onclick="cadastrar()" >Cadastrar</button>
+
+    <div id="painel" >
+
+    Seu filme favorito: <span id="Fil_favorito" ></span> <br>
+        
+    Seu 3º filme favorito: <span id="favorito3"  ></span> <br>
+        
+    Total de filmes cadastrados: <span id="total" ></span> <br>
+
+    </div>
+
+    <div id="exibir"></div>
+
+
+</body>
+</html>
+
+<script>
+
+    favorito=[];
+
+    function cadastrar() {
+        favorito.push(inp_favoritos.value);
+        inp_favoritos.value = '';
+
+        Fil_favorito.innerHTML = `${favorito[0]}<br>`
+        favorito3.innerHTML = `${favorito[2]}<br>`
+        total.innerHTML = `${favorito.length}<br>`
+
+    }
+
+
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex19</title>
+</head>
+
+<body>
+
+
+    Digite sua idade: <br>
+    <input type="text" id="Inp_idade"> <br><br>
+
+    <button onclick="mostrar()">Fases da vida</button> <br>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        var idade = Number(Inp_idade.value);
+        exibir.innerHTML = '';
+
+        for (var index = 0; index <= idade; index++) {
+
+            if (index >= 0 && index <= 4) {
+                exibir.innerHTML += `${index} (Primeira infancia) <br>`
+            } else if (index > 4 && index <= 6) {
+                exibir.innerHTML += `${index} (Pré-escola)<br>`
+            } else if (index > 6 && index <= 10) {
+                exibir.innerHTML += `${index} (Segunda infancia) <br>`
+            } else if (index > 10 && index <= 18) {
+                exibir.innerHTML += `${index} (Adolecencia)<br>`
+            } else if (index > 18 && index <= 50) {
+                exibir.innerHTML += `${index} (adulto)<br>`
+            } else if (index > 50 && index <= 100) {
+                exibir.innerHTML += `${index} (Melhor idade)<br>`
+            } else if (index > 100) {
+                exibir.innerHTML += `${index} (Matusalem)<br>`
+            }
+
+
+
+        }
+    }
+</script>

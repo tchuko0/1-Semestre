@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3-lista1</title>
+</head>
+<body>
+
+    Informe seu time do coração: 
+    <input type="text" id="inp_coracao"> <br>
+
+    Informe o time que não goste:
+    <input type="text" id="inp_Ngosta">
+
+    <br>
+
+    <button onclick="resultado()" >Repetir a realidade!</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function resultado() {
+        var coracao = (inp_coracao.value)
+        var NGosta = (inp_Ngosta.value)
+        var index=0;
+
+        while (index<10) {
+            exibir.innerHTML += `<br> ${coracao} é melhor do que ${NGosta}`;
+            index++
+        }
+
+
+    }
+
+
+
+</script>
+<!-- 
+3. Crie um programa em HTML/JS o qual:
+
+a) Pergunte o nome de um time de futebol que ache bom e de outro que ache ruim
+
+b) Ao clicar num botão "Repetir a realidade!", exiba 10 vezes na tela um conteúdo parecido com este:
+
+   NOME TIME 1 é melhor do que NOME TIME 2
+
+   (replique as formatações desse exemplo) -->

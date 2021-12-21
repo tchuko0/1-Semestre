@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+</head>
+
+<body>
+
+
+    <button id="frutas" onclick="fruta()">Frutas</button>
+    <button id="legumes" onclick="legumes()">Legumes</button>
+    <button id="carnes" onclick="carnes()">Carnes</button>
+    <button id="guloseimas" onclick="guloseimas()">guloseimas</button>
+    <br><br>
+
+    <div id="compras"> </div>
+
+
+    <button id="apagar" onclick="apagar()">Apagar</button>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function fruta() {
+
+        compras.innerHTML +=
+            '*Frutas  <img src="https://www.isabelaflores.com/media/catalog/product/a/l/alta-256-3.jpg" style="width: 100px;" alt=""> <br><br>';
+
+    }
+
+    function legumes() {
+
+        compras.innerHTML +=
+            '*Legumes <img src="https://exame.com/wp-content/uploads/2016/10/size_960_16_9_frutas-e-legumes.jpg" style="width: 100px;" alt=""> <br><br>'
+    }
+
+    function carnes() {
+
+        compras.innerHTML +=
+            '*Carnes  <img src="http://www.farmnews.com.br/wp-content/uploads/2017/04/produo-de-carnes-no-brasil.jpg" style="width: 100px;" alt=""> <br><br>'
+
+    }
+
+    function guloseimas() {
+
+        compras.innerHTML +=
+            '*Guloseimas <img src="https://img.elo7.com.br/product/zoom/1564B9C/kit-de-mesa-de-guloseimas-p-100-pessoas-mesas-de-guloseimas.jpg" style="width: 100px;" alt=""> <br><br>'
+
+    }
+
+    function apagar() {
+        compras.innerHTML = ' ';
+    }
+</script>

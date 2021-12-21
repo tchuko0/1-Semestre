@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+    
+    <select name="Combo1" id="Combo_ruim" onchange="ruim()">
+        <option value="">Selecione uma opção</option>
+        <option value="Ruim">onde houver ódio</option>
+        <option value="Ruim">onde houver desespero</option>
+        <option value="Ruim"> tem um sentimento ruim</option>
+    </select>
+
+    <br>
+    <br>
+
+    <select name="Combo1" id="combo_boa"onchange="boa()">
+        <option value="">Selecione uma opção</option>
+        <option value="Boa">Oração pela paz</option>
+        <option value="Boa">leve amor</option>
+        <option value="Boa">leve esperança</option>
+    </select>
+
+
+</body>
+</html>
+
+<script>
+
+    function ruim() {
+        alert(`${Combo_ruim.value}`)
+    }
+
+    function boa() {
+        alert(`${combo_boa.value}`)
+    }
+
+
+
+
+</script>

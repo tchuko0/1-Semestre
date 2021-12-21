@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+
+    <button onclick="mostrar()" >Números cabalísticos</button><br><br>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function mostrar() {
+        exibir.innerHTML = '';
+
+        for (let index = 0; index < 15; index++) {
+            
+            if (index == 3) {
+            exibir.innerHTML += ' '
+        }else if (index == 4) {
+            exibir.innerHTML += ' '
+        }else if (index==7) {
+            exibir.innerHTML += ' '
+        }else if ((index == 10)&&(index == 12)) {
+            exibir.innerHTML += ' '
+        }else if (index == 1) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 2) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 5) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 6) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 8) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 9) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 11) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 13) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 14) {
+            exibir.innerHTML += `${index} <br>`
+        }else if (index == 15) {
+            exibir.innerHTML += `${index} <br>`
+        }
+            
+        }
+    }
+
+
+
+</script>
+
+<!-- 
+10.   Crie um programa o qual:
+
+a) Ao clicar num botão "Números cabalísticos"...
+
+c) Exiba, debaixo do botão, os números de 1 a 15, um embaixo do outro, PORÉM, não devem aparecer os números cabalísticos 3, 4, 7, 10 e 12. -->

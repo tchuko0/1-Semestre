@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC-2 Campo Minado</title>
+    <style>
+        img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Campo Minado da hora!</h2>
+
+    <button onclick="novo()">Novo jogo</button>
+
+    <br> <br>
+    <div id="div_informacao">
+        Minas: <b id="b_minas">?</b> <br>
+        Explosões: <b id="b_explosoes">0</b> <br>
+        Pontos: <b id="b_pontos">0</b>
+    </div> <br>
+
+    <!-- Blocos do campo minado -->
+    <img id="img_bloco1" src="" onclick="ver_bloco1()">
+    <img id="img_bloco2" src="" onclick="ver_bloco2()">
+    <br>
+    <img id="img_bloco3" src="" onclick="ver_bloco3()">
+    <img id="img_bloco4" src="" onclick="ver_bloco4()">
+
+</body>
+
+</html>
+
+<script>
+
+    var explosoes = 0;
+    var pontos = 0;
+    var ax_qt_minas = 0;
+
+    // Variáveis para indicar se o bloco já foi clicado
+    var ax_clique_bloco1 = 0
+    var ax_clique_bloco2 = 0
+    var ax_clique_bloco3 = 0
+    var ax_clique_bloco4 = 0
+
+    // Variáveis para receber bomba ou vazio
+    var ax_bloco1 = 0;
+    var ax_bloco2 = 0;
+    var ax_bloco3 = 0;
+    var ax_bloco4 = 0;
+
+
+    function novo() {
+        explosoes = 0;
+        b_explosoes.innerHTML = explosoes;
+        pontos = 0;
+        b_pontos.innerHTML = pontos;
+
+        // Reset nos cliques dos blocos
+        ax_clique_bloco1 = 0;
+        ax_clique_bloco2 = 0;
+        ax_clique_bloco3 = 0;
+        ax_clique_bloco4 = 0;
+
+
+        // sorteio dos blocos, valores possíveis 0 e 1, onde 
+        // 0 = bloco vazio;
+        // 1 = bloco com mina ==> BOMBA
+        ax_bloco1 = parseInt(Math.random() * 2);
+        ax_bloco2 = parseInt(Math.random() * 2);
+        ax_bloco3 = parseInt(Math.random() * 2);
+        ax_bloco4 = parseInt(Math.random() * 2);
+
+        ax_qt_minas = ax_bloco1 + ax_bloco2 + ax_bloco3 + ax_bloco4;
+        b_minas.innerHTML = ax_qt_minas;
+
+        // deixando todos os blocos com a interrogação 
+        img_bloco1.src = "https://image0.flaticon.com/icons/png/128/84/84042.png";
+        img_bloco2.src = "https://image0.flaticon.com/icons/png/128/84/84042.png";
+        img_bloco3.src = "https://image0.flaticon.com/icons/png/128/84/84042.png";
+        img_bloco4.src = "https://image0.flaticon.com/icons/png/128/84/84042.png";
+    }
+
+    function ver_bloco1() {
+        if (ax_clique_bloco1 != 0) {
+            //bloco já clicado
+            alert("Você já clicou aqui, isso não vale!!!")
+        } else if (ax_bloco1 == 0) {
+            // bloco vazio, o jogador ganha 100 pontos
+            img_bloco1.src = "https://image0.flaticon.com/icons/png/128/61/61218.png";
+            pontos += 100;
+            b_pontos.innerHTML = pontos;
+        } else {
+            // bloco com mina, soma 1 em explosões
+            img_bloco1.src = "https://image.flaticon.com/icons/png/128/112/112683.png";
+            explosoes++;
+            b_explosoes.innerHTML = explosoes;
+        }
+
+        ax_clique_bloco1 = 1;
+        verificar_termino();
+    }
+
+    function ver_bloco2() {
+        if (ax_clique_bloco2 != 0) {
+            alert("Você já clicou aqui, isso não vale!!!")
+        } else if (ax_bloco2 == 0) {
+            img_bloco2.src = "https://image0.flaticon.com/icons/png/128/61/61218.png";
+            pontos += 100;
+            b_pontos.innerHTML = pontos;
+        } else {
+            img_bloco2.src = "https://image.flaticon.com/icons/png/128/112/112683.png";
+            explosoes++;
+            b_explosoes.innerHTML = explosoes;
+        }
+
+        ax_clique_bloco2 = 1;
+        verificar_termino();
+    }
+
+    function ver_bloco3() {
+        if (ax_clique_bloco3 != 0) {
+            alert("Você já clicou aqui, isso não vale!!!")
+        } else if (ax_bloco3 == 0) {
+            img_bloco3.src = "https://image0.flaticon.com/icons/png/128/61/61218.png";
+            pontos += 100;
+            b_pontos.innerHTML = pontos;
+        } else {
+            img_bloco3.src = "https://image.flaticon.com/icons/png/128/112/112683.png";
+            explosoes++;
+            b_explosoes.innerHTML = explosoes;
+        }
+
+        ax_clique_bloco3 = 1;
+        verificar_termino();
+    }
+
+    function ver_bloco4() {
+        if (ax_clique_bloco4 != 0) {
+            alert("Você já clicou aqui, isso não vale!!!")
+        } else if (ax_bloco4 == 0) {
+            img_bloco4.src = "https://image0.flaticon.com/icons/png/128/61/61218.png";
+            pontos += 100;
+            b_pontos.innerHTML = pontos;
+        } else {
+            img_bloco4.src = "https://image.flaticon.com/icons/png/128/112/112683.png";
+            explosoes++;
+            b_explosoes.innerHTML = explosoes;
+        }
+
+        ax_clique_bloco4 = 1;
+        verificar_termino();
+    }
+
+    function verificar_termino() {
+        if (pontos == ((4 - ax_qt_minas) * 100)) {
+            alert("Parabéns!!!  Você encontrou todos os campos NÃO minados");
+            novo();
+        }
+
+    }
+</script>

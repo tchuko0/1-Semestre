@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    informe um numero entre 20 e 100: <br>
+    <input type="text" id="inp_numero">
+
+    <button onclick="mostrar()">Adoro múltiplos de 5</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+
+        var numero = Number(inp_numero.value);
+        index = 0;
+
+        while (index < numero) {
+            index++
+            if (numero <20 || numero > 100) {
+                exibir.innerHTML = `o número tem que ser entre 20 e 100`
+            }
+
+            else if (index % 5 == 0) {
+                exibir.innerHTML += `${index}<br>`;
+
+            }
+            
+        }
+
+    }
+</script>
+
+<!-- 7. Crie um programa em HTML/JS o qual:
+
+a) Receba do usuário um número (tem que ser entre 20 e 100)
+
+b) Ao clicar num botão "Adoro múltiplos de 5"...
+
+b) Exiba, debaixo do botão, todos os múltiplos de 5 entre de 0 e o número informado em a), um embaixo do outro. Ex: 5, 10, 15, 20... -->

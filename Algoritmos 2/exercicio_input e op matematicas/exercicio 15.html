@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+
+<body>
+
+    <h1>Eleições</h1>
+
+    <div>
+
+        Cor do candidato Dener = <span style="color: blue;">Azul</span> 
+        <br>
+        Cor do candidato Diego = <span style="color: red;" >Vermelho</span> 
+        <br>
+        Votos brancos = <span style="color: green;" >Verde</span> 
+        <br>
+        Votos nulos = <span style="color: indigo;" >Roxo</span>
+
+    </div>
+
+    <br><br>
+
+
+    Informe a quantidade de votos que o Dener teve na eleição
+    <input type="text" id="qtd_dener">
+    <br>
+    Informe a quantidade de votos que o Diego teve na eleição
+    <input type="text" id="qtd_diego">
+    <br>
+    Informe a quantidade de votos em branco
+    <input type="text" id="qtd_branco">
+    <br>
+    Informe a quantidade de votos em nulos
+    <input type="text" id="qtd_nulos">
+
+    <br>
+
+    <div id="barra_dener" style="background-color: blue; height: 30px; width: 0px;"></div>
+    
+    <div id="barra_diego" style="background-color: red; height: 30px; width: 0px;"></div>
+    
+    <div id="barra_branco" style="background-color: green; height: 30px; width: 0px; float: left"></div>
+    
+    <div id="barra_nulos" style="background-color: indigo; height: 30px; width: 0; float: left;"></div>
+
+    <br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="exibir"></div>
+
+    
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var dener = Number(qtd_dener.value);
+        var diego = Number(qtd_diego.value);
+        var brancos = Number(qtd_branco.value);
+        var nulos = Number(qtd_nulos.value);
+
+        var total_votos = Number(dener) + Number(diego) + Number(brancos) + Number(nulos);
+        var result_invalidos = brancos + nulos;
+        var result_dener = (dener / total_votos) * 100;
+        var result_diego = (diego / total_votos) * 100;
+
+        exibir.innerHTML = `  
+        <br>
+    Total de votos: ${total_votos}
+        <br>
+    Dener: ${result_dener.toFixed(2)}%
+        <br>
+    Diego: ${result_diego.toFixed(2)}% 
+        <br>
+    Inválidos: ${result_invalidos.toFixed(2)}%
+
+ `
+
+        barra_dener.style.width = `${result_dener}%`;
+        barra_diego.style.width = `${result_diego}%`
+        barra_branco.style.width = `${brancos}%`
+        barra_nulos.style.width = `${nulos}%`
+    }
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Informe o nome da pessoa que Você ama: <br>
+    <input type="text" id="inp_ama"> <br> <br>
+
+    Informe em numeros quanto você ama essa pessoa: <br>
+    <input type="text" id="inp_qtd" > <br> <br>
+
+    <button onclick="mostrar()" >Mostrar</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function mostrar() {
+        var ama = (inp_ama.value);
+        var qtd = Number(inp_qtd.value);
+        index=0;
+
+        while (index < qtd) {
+            exibir.innerHTML += `<br>${ama}, eu te amo! Sempre lembre disso!<br>`
+            index++
+        }
+    }
+
+
+
+</script>
+
+<!-- 4. Crie um programa em HTML/JS o qual:
+
+a) Pergunte o nome da pessoa que o usuário mais ama na vida
+
+b) Pergunte o quanto o usuário a ama (um número inteiro)
+
+c) Ao clicar num botão "Expressar amor", devem aparacer, abaixo dele, N vezes (conforme o valor em b)) a frase indicada em a), como neste exemplo (considerando o nome "Lady Gaga" e que ama "3")
+
+   Lady Gaga, eu te amo! Sempre lembre disso!
+
+   Lady Gaga, eu te amo! Sempre lembre disso!
+
+   Lady Gaga, eu te amo! Sempre lembre disso! -->

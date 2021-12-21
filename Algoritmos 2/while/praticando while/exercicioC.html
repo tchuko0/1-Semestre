@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exC</title>
+</head>
+
+<body>
+
+    <input type="text" id="num1"> <br>
+    <input type="text" id="num2"> <br>
+
+    <button onclick="teste()">Teste</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function teste() {
+        exibir.innerHTML = '';
+        var contadorI = Number(num1.value);
+        var contadorF = Number(num2.value);
+        while (contadorI <= contadorF) {
+
+            exibir.innerHTML += `${contadorI}<br>`
+            contadorI++
+
+
+        }
+    }
+</script>

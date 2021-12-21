@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo numeros aleatorios</title>
+</head>
+<body>
+
+    <h1>Numero aleatorios</h1>
+
+    <button onclick="mostrar()" >Mostrar</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<!-- Math.random() gera numero aleatorio / parseInt(Math.random) * 4) mostrar a parte inteira do numero aleatorio 
+
+    sempre multiplcar pela diferença do intervalo...  o intervalo entre 1 e 4 é 3 os numeros aleatorios seram gerados entre 1 e 3
+
+    (fim-inicio)+inicio
+
+   
+    ex: dado, dado tem 6 lados eso vai cair um lado .. entao o intervalo é entre 6 e 1
+
+    (fim-inicio)+inicio
+    a conta var ser (6-1)+1
+
+-->
+
+<script>
+
+    function mostrar() {
+
+        var num = Number (Math.random())
+
+        // exibir.innerHTML += `${num * 4} <br>`
+        // exibir.innerHTML += ` ${parseInt(Math.random() * 5 + 1 )} <br>`;
+
+        // intervalo entre 1 e 4
+        // exibir.innerHTML += `O numero aleatorio é ${num}, o numero aleatorio transaformado é ${num *3} e arredondado é ${(num * 3 + 1).toFixed()} <br> <br>`;
+
+        // intervalo entre 20  e 30
+        // exibir.innerHTML += `O numero aleatorio é ${num}, o numero aleatorio transaformado é ${num *20+10} e arredondado é ${(num * 20 + 10).toFixed()} <br><br>` 
+
+        // intervalo entre 20  e 30 com uma casa depois da virgula com o tofixad(1)
+        // exibir.innerHTML += `O numero aleatorio é ${num}, o numero aleatorio transaformado é ${num *20+10} e arredondado é ${(num * 20 + 10).toFixed(1)} <br><br>` 
+
+        exibir.innerHTML += `O numero aleatorio é ${num}, o numero aleatorio transaformado é ${num *-11+10} e arredondado é ${(num * 20 - 10).toFixed()} <br><br>` 
+
+    }
+
+
+
+</script>

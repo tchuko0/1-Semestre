@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="produto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="pag1" style="display: block;">
+        <h1>AllFat-Auxilio Alimentação</h1>
+        <br>
+        Informe o valor do beneficio: <input type="text" id="inp_valorbene"> <br>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="mostrar()">Pesquisar</button>
+        <div id="exibir"></div>
+    </div>
+
+    <div id="pag2" style="display: none;">
+        <h1>AllFat-Auxilio Alimentação</h1>
+        Inform o intervalo de valores para pesquisar <br>
+        de <input type="text" id="inp_menorI">
+        até <input type="text" id="inp_maiorI">
+        <button onclick="resumirIntervalo()">Resumir Intervalo</button>
+        <div id="relatorio"></div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    var beneficiario = [];
+
+
+    var minimo = 99999;
+    var maximo = 0;
+    var somadas = 0
+    var total = 0
+
+
+
+
+    function cadastrar() {
+
+        if (inp_valorbene.value < 3 && inp_valorbene.value > 35) {
+            alert('Valores invalidos')
+        } else {
+
+            beneficiario.push(inp_valorbene.value);
+            inp_valorbene.value = '';
+
+        }
+
+
+
+    }
+
+
+    function mostrar() {
+
+        if (beneficiario.length > 0) {
+
+            pag1.style.display = 'none'
+            pag2.style.display = 'block'
+        } else {
+
+            alert('Informe um beneficiario')
+
+
+        }
+
+    }
+
+    function resumirIntervalo() {
+
+        if (inp_maiorI.value < inp_menorI.values) {
+            alert("O segundo número deve ser maior que o primeiro número!");
+        } else {
+
+
+            for (let index = beneficiario.length - 1; index >= 0; index--) {
+                somadas += Number(beneficiario[index])
+
+                if (maximo < beneficiario[index]) {
+                    maximo = beneficiario[index]
+                }
+                if (minimo > beneficiario[index]) {
+                    minimo = beneficiario[index]
+                }
+                relatorio.innerHTML+= `a ${index} ocorrencia ${beneficiario[index]}<br><br>`
+            }
+            
+
+
+        }
+
+        total += Number(somadas / beneficiario.length)
+
+        relatorio.innerHTML += `O Maior valor encontrado no intervalo foi ${maximo} <br>
+                                    O Menor valor encontraddo no intervalo foi ${minimo}<br>   
+                                    A Média do intervalo informado foi ${total} <br> `
+
+    }
+</script>

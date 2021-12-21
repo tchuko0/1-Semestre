@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+
+<body>
+
+    <button onclick="verLuar()">Ver a Lua</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+
+<script>
+    function verLuar() {
+
+        var numero = (Math.random() * 30 + 1)
+
+        if (numero <= 7) {
+            exibir.innerHTML =
+                '<img src="https://joaobidu.com.br/images/large/2019/03/01/lua-nova.jpg" height="150px" alt="">'
+        } else if (numero >= 8 && numero <= 16) {
+            exibir.innerHTML =
+                '<img src="https://d168rbuicf8uyi.cloudfront.net/wp-content/uploads/2019/09/25185134/bigstock-The-Full-Phase-Of-The-Moon-In-301966447.jpg" height="150px" alt="">'
+        } else if (numero >= 17 && numero <= 22) {
+            exibir.innerHTML =
+                '<img src="https://vidasimples.co/wp-content/uploads/2019/11/moon-614210_1920.jpg" style="height: 150px;" alt="">'
+        } else {
+            exibir.innerHTML =
+                '<img src="https://www.signos.com.br/wp-content/uploads/2020/07/px_lua-crescente_4493668_1280.jpg" style="height: 150px;" alt="">'
+        }
+
+    }
+</script>

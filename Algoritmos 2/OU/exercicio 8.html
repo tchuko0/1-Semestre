@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de cansaço aprimorada do aluno Bandtec.</h1>
+
+    Meio de transporte <br><br>
+
+    <select name="" id="sel_transp">
+        <option value="">Escolha um transporte</option>
+        <option value="onibus">Onibus</option>
+        <option value="metro">Metro</option>
+        <option value="carro">Carro</option>
+        <option value="bicicleta">Bicicleta</option>
+    </select>
+    <br><br>
+
+    Distância da faculdade (KM): <br>
+    <input type="text" id="inp_km"> <br><br>
+
+    <button onclick="calcular()">Calcular cansaço</button>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var km = Number(inp_km.value);
+
+        if (km <= 10 || sel_transp == 'onibus' || sel_transp == 'metro' || sel_transp == 'carro') {
+            alert('Tá tranks ...')
+
+        } else if (km > 10 && sel_transp == 'carro') {
+            alert("É ... um pouco cansado ...")
+
+        } else if (km > 10 && sel_transp == 'onibus' || sel_transp == 'metro') {
+            alert("Bem cansado ...")
+            
+        } else {
+            alert("Vish ... tá só o pó ...")
+        }
+    }
+</script>

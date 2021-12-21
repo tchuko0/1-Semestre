@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex18</title>
+</head>
+<body>
+
+    <h1>Luta</h1>
+
+
+    Vida do Lutador: <span id="id_vida" >1000</span> 
+
+    <br><br>
+
+    <img src="https://i.pinimg.com/originals/bc/9e/8b/bc9e8b5b7e1470388e429da85b6b6600.jpg" id="imgBem" alt=""> <br><br>
+    <img src="http://s2.glbimg.com/mGTRC-yZd0_uHXpVQevO1v9ltjM=/300x397/s.glbimg.com/es/ge/f/original/2013/10/09/toquinho_mikepierce_rodrigomalinverni-5.jpg" id="imgMau" style="display: none;" alt="">
+
+    <button onclick="Apanhar()" >Apanhar</button>
+    <button onclick="ConcentrarForca()" >Concentrar força</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+    var apanhar = 100;
+    var concentrar_Forca = 5;
+    var idvida = 1000
+
+    function Apanhar() {
+        
+    if (idvida > 0) {
+        idvida -= 100
+        id_vida.innerHTML = idvida;
+
+    if (idvida > 0) {
+        imgBem.style.display = 'block'
+        
+        
+    } else {
+        imgMau.style.display = 'block'
+        imgBem.style.display = 'none'
+        exibir.innerHtml = `Lutador derrotado`
+    }
+    }
+}
+
+
+    function ConcentrarForca() {
+     if (idvida < 1000) {
+         
+    
+        idvida = idvida + (idvida * 0.05);
+        id_vida.innerHTML = `${idvida.toFixed(2)}`
+        
+
+     if (idvida >= 0 ) {
+            imgBem.style.display = 'block';
+            imgMau.style.display = 'none'
+       
+            
+    } else {
+        imgMau.style.display = 'block'
+        imgBem.style.display = 'none'
+        exibir.innerHtml = `Lutador derrotado`
+
+    }
+}
+
+}
+</script>
+
+
+
+<!-- 18 (desafio). Crie um programa em HTML/JS o qual:
+
+a) Tenha o seguinte texto no topo:
+
+Vida do Lutador: 1000
+
+b) Abaixo do texto tenha uma foto de um Lutador em ótima condição
+
+c) Tenha os botões "Apanhar" e "Concentrar força"
+
+d) Ao clicar no "Apanhar", a vida do Lutador reduz em 100
+
+e) Ao clicar no "Concentrar força", a vida do Lutador aumenta em 5%
+
+f) Caso a vida do lutador chegue em 0 ou menos, exibir, abaixo do texto de a) a frase Lutador já era! e a foto do Lutador deve mudar para o mesmo personagem, mas todo machucado. Enquanto não chegar em 0, sempre que apanhar ou concentrar força, exiba, no mesmo lugar, a frase Lutador ainda vivo!
+
+f) Caso a vida seja 0 ou menos, nenhum dos botões deve mais funcionar -->

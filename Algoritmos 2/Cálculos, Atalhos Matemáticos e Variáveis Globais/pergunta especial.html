@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista C</title>
+</head>
+
+<body>
+
+    <h3>EXERCICIO 1</h3>
+
+    <span id="IP">Informe o nome do produto:</span>
+    <input type="text" id="Nproduto">
+
+    <br><br>
+
+    <span id="IQ"> Informe a quantidade:</span>
+    <input type="text" id="Qproduto">
+
+    <br><br>
+
+    <span id="VU">Informe o valor unitario:</span>
+    <input type="text" id="vunitario">
+
+    <br><br>
+
+    <img id="carrinho" onclick="Carrinho()"
+        src="https://estilosgondolas.com.br/informacoes/images/carrinhos-de-mercado-em-guarulhos.jpg"
+        style="width: 200px;" alt="">
+
+
+    <button id="btn_mais" style="display: none;" onclick="Cmais()">Comprar mais</button>
+
+    <button id="btn_fim" style="display: none;" onclick="Fcompra()">Finalizar</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    var qtd_produto = 0;
+    var Vunitario = 0;
+   
+
+    function Carrinho() {
+
+
+        Nproduto.style.display = 'none';
+        Qproduto.style.display = 'none';
+        vunitario.style.display = 'none';
+        IP.style.display = 'none';
+        IQ.style.display = 'none';
+        VU.style.display = 'none';
+        carrinho.style.display = 'none'
+        btn_mais.style.display = 'block'
+        btn_fim.style.display = 'block'
+        qtd_produto +=Number(Qproduto.value)
+        Vunitario += Number(vunitario.value)
+        
+
+        exibir.innerHTML +=
+            `O orçamento da quantidade ${Qproduto.value} do produto ${Nproduto.value} é de R$ ${vunitario.value}.<br>`
+
+    }
+
+
+    function Cmais() {
+
+        Nproduto.style.display = 'block';
+        Qproduto.style.display = 'block';
+        vunitario.style.display = 'block';
+        IP.style.display = 'block';
+        IQ.style.display = 'block';
+        VU.style.display = 'block';
+        carrinho.style.display = 'block'
+        btn_fim.style.display = 'block'
+        exibir.style.display = 'none'
+    }
+
+
+
+
+    function Fcompra() {
+       var total = Number(vunitario.value) * (qtd_produto)
+        alert(`A quantidade de itens orçados foi de ${qtd_produto} e a soma desses orçamentos foi de R$ ${total}`)
+
+        exibir.innerHTML = " "
+
+
+
+    }
+</script>
+
+<!-- 
+a) Tenha três campos de entrada (nome do produto, quantidade e valor unitário) e uma imagem de carrinho de compras
+clicável.
+
+b) Ao clicar no carrinho os elementos do item a) deve sumir e surgir o seguinte:
+
+· Texto na página: “O orçamento da quantidade XXX do produto YYYYYYYY é de R$ 999999,99”, esta mensagem não pode apagar
+as mensagens anteriores (se existirem).
+
+· Botão “Comprar MAIS” que esconde os elementos do item b) e exibe novamente os elementos do item a).
+
+· Botão “Finalizar” que emite o alerta abaixo, limpa todas as áreas e variáveis (como se estivesse iniciando novamente o
+programa.
+
+o Alerta: “A quantidade de itens orçados foi de 999 e a soma desses orçamentos foi de R$ 99999999,99” -->

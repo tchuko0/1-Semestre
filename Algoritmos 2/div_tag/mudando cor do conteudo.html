@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cor do conteudo</title>
+</head>
+
+<body>
+
+    <button id="fria" onclick="Pfria()">Pessoa Fria</button>
+    <button id="neutra" onclick="Pneutra()">Pessoa Neutra</button>
+    <button id="nervosa" onclick="Pnervosa()">Pessoa Nervosa</button>
+    <br><br>
+
+    <div id="exibir">Bom dia, colegas</div>
+
+</body>
+
+</html>
+
+<script>
+    function Pfria() {
+        exibir.innerHTML = ' <span style="color: darkblue;" > Bom dia, colegas</span> <br>';
+    }
+
+    function Pneutra() {
+        exibir.innerHTML = '<span style="color: gray;" > Bom dia, colegas</span> <br>';
+    }
+
+    function Pnervosa() {
+        exibir.innerHTML = '<span style="color: red;" > Bom dia, colegas</span> <br>';
+    }
+</script>
+
+<!-- 15. Crie um programa em HTML/JS a qual: 
+
+a) Tenha os botões "Pessoa fria", "Pessoa neutra", "Pessoa nervosa" 
+
+b) Abaixo dos botões deve haver um texto na cor preta dizendo "Bom dia, colegas" 
+
+c) Ao clicar no primeiro botão, o texto fica com a cor azul escuro 
+
+d) Ao clicar no segundo botão, o texto fica com a cor cinza 
+
+e) Ao clicar no terceiro botão, o texto fica com a cor vermelha 
+
+OBS: não é para mudar o conteúdo do texto, e sim alterar apenas sua cor!  -->

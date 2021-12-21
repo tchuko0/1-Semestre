@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+
+<body>
+
+    Digite sua cidade Natal
+    <input id="cidNatal">
+    <br>
+    Digite sua data de nascimento
+    <input id="dataNasc">
+    <br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+
+        var cidade = cidNatal.value;
+        var nascimento = dataNasc.value;
+
+        alert(` Você nasceu na cidade ${cidade} em ${nascimento}`)
+
+    }
+</script>
+
+<!-- 1. Crie um programa em HTML/JS o qual:
+a) Tenha o campo "Cidade Natal"
+b) Tenha o campo "Ano de nascimento"
+c) Tenha o botão "Cadastrar"
+d) Ao clicar no botão, deve aparecer 1 (um) alert com a frase
+
+   Você nasceu na cidade de X em Y
+
+Onde X é o valor do campo em a) e Y é o valor do campo em b) -->

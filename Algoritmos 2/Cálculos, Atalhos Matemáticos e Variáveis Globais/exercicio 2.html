@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+
+
+    Informe o raio de um circunferência
+    <br>
+    <input type="text" id="inp_raio">
+
+    <br><br>
+
+    <button onclick="calcular()"> Calcular Área </button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var raio = Number(inp_raio.value);
+
+        var result = (3.14 * (raio ** 2));
+
+        var total = 2 * 3.14 * raio;
+
+        exibir.innerHTML =
+            ` O comprimento da circunferencia é ${total.toFixed(2)} e a areá do circulo é ${result.toFixed(2)} `
+
+
+    }
+</script>
+
+<!-- Crie um programa em HTML/JS o qual:
+a) Solicite o raio de uma circunferência
+b) Ao clicar num botão "Calcular Área", calcule e exiba a área da circunferência na tela, abaixo do botão (considere o PI como sendo 3,14) -->

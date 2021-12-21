@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+</head>
+<body>
+
+    <h1>Nota do aluno</h1>
+
+    Digite sua nota: <br><br>
+    <input type="text" id="inp_nota"> <br><br>
+
+    <button onclick="avaliar()" >Avaliar aluno</button>
+    
+</body>
+</html>
+
+<script>
+
+    function avaliar() {
+        var nota = Number(inp_nota.value);
+
+        if (nota < 6) {
+            alert('Aluno Reprovado')
+        } else if (nota >= 8.5 && nota <= 10) {
+            alert('Aluno Exemplar!')
+        } else {
+            alert('Aluno comum e aprovado')
+        } 
+    }
+
+
+</script>
+
+
+
+<!-- 6. Crie um programa em HTML/JS o qual:
+
+a) Pergunte uma nota de um aluno
+
+b) Ao clicar em "Avaliar aluno"...
+
+c) Caso a nota for menor que 6, exibir um alert com a frase "Aluno não aprovado"
+
+d) Caso a nota seja entre 8,5 e 10, exibir um alert com a frase "Aluno Exemplar!"
+
+e) Caso a nota for entre 6 e menor que 8,5, exibir um alert com a frase "Aluno comum e aprovado" -->

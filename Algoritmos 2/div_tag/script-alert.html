@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>tag script </h1>
+
+    <div style="display: none;" id="corinthians">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_659396-MLB31045370256_062019-O.jpg" style="width: 200px;" alt="">
+    </div>
+
+
+    <button onclick="esconder()" id="esconder_" style="display: none;">Esconder</button>
+
+    <br>
+
+    <input id="voltar" style="display: none;" type="button" value="Esconder" onClick="window.location.reload()">
+
+    <div id="frase">Aqui esta escondido o maior clube de São paulo ?</div>
+
+    <br>
+
+    <button onclick="mostrar()" id="mostrar_" style="display: block;">Mostra</button>
+
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+
+        corinthians.style.display = 'block';
+        esconder_.style.display = 'none';
+        mostrar_.style.display = 'none';
+        frase.innerHTML = '<b style="color:crimson; background-color: black;" >Timão</b> é monstro';
+        voltar.style.display = 'block'
+    }
+
+    function esconder() {
+
+        corinthians.style.display = 'none';
+        mostrar_.style.display = 'block';
+        esconder_.style.display = 'none';
+        frase.style.display = 'none';
+        voltar.style.display = 'none'
+
+
+    }
+</script>

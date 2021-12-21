@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="verificar()" >Curto 3 e 5</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        
+        contador = 0 
+        exibir.innerHTML = ""
+        
+        while (contador <= 100) {
+            
+            if ((contador % 5) == 0 && (contador % 3)==0) {
+                exibir.innerHTML += `É TRI É PENTA <br>`
+          
+            }else if ((contador % 5) == 0) {
+                exibir.innerHTML += `É PENTA <br>` 
+            
+            }else if ((contador % 3) == 0) {
+                exibir.innerHTML += `É TRI <br>`
+
+
+            }else {
+
+                exibir.innerHTML += `${contador}<br>`
+            }
+
+            contador ++
+        }
+
+
+    }
+
+
+</script>

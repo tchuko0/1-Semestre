@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+</head>
+<body>
+
+    <h1>Ir a festa</h1>
+
+    Informe a sua idade: <br>
+    <input type="text" id="inp_idade" > <br><br>
+
+    <button onclick="calcular()" >Resultado</button>
+
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+        
+        if (inp_idade.value < 18) {
+            alert ('PEDIR PERMISSÃO AO REPONSAVEL' )
+        } if (inp_idade.value < 15 && inp_idade.value >18 ) {
+            alert ('PEDIR PERMISSÃO AO REPONSAVEL' )
+            alert ('Partiu festa' )
+        } 
+        else {
+            alert ('Partiu festa')
+        }
+    }
+
+
+
+</script>
+<!-- 
+a) Ao clicar num botão "Ir pra festa" e a idade for menor que 18, continua acontecendo o que já acontecia, porém, caso a
+idade for menor que 15, exibir na sequência "Sem chance! Vai estudar!"
+
+b) A mensagem final de "#partiuFesta" só aparece se a idade for maior ou igual a 15 (>=15), senão nem aparece -->

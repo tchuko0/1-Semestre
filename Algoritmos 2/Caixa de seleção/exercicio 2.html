@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+    <select name="eventos" id="role">
+        <option value="">Escolha uma opção</option>
+        <option value="Sessão Marley & Eu">Cinema</option>
+        <option value=" O espetaculo de hoje é O Fantasma da Ópera">Teatro</option>
+        <option value="Partiu Hopi Hari">Parque</option>
+        <option value=" Partiu show da Lady Gaga">Show</option>
+    </select>
+
+    <br>
+    <button onclick="mostrar()">Ver atração</button>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = ` ${role.value}`
+    }
+</script>
+<!-- 
+2. Faça um programa em HTML/JS que:
+
+A) Tenha uma caixa de seleção com as opções:
+
+- Cinema
+
+- Teatro
+
+- Parque
+
+- Show
+
+B) Ao clicar no botão "Ver atração” exiba o seguinte alerta:
+
+- Assistir a filme "Marley & Eu" (caso esteja selecionado o Cinema),
+
+- Assistir a peça "O Fantasma da Ópera" (caso esteja selecionado o Teatro),
+
+- Ir ao parque "Hopi Hari" (caso esteja selecionado o Parque),
+
+- Ouvir o show da "Lady Gaga" (caso esteja selecionado o Show), -->

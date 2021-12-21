@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex15</title>
+</head>
+<body>
+
+    Números pares: <div id="divPar">0</div>
+    <br> 
+    Números ímpares: <div id="divImpar">0</div> 
+
+    <button onclick="sortear()" >Sortear número</button>
+
+    <div id="exibir"></div>
+    
+    
+</body>
+</html>
+
+
+<script>
+
+    var par = 0
+    var impar = 0
+    function sortear() {
+ 
+        
+        var sorte = (Math.random()* 21 + -30 ).toFixed()
+
+        if (sorte%2==0 ) {
+            par++
+            divPar.innerHTML = `${par}`
+        
+        } else  {
+            impar++
+            divImpar.innerHTML = `${impar}`
+            exibir.innerHTML = `${sorte}`    
+        } 
+    }
+
+
+
+</script>
+
+
+<!-- 15. Crie um programa em HTML/JS o qual:
+
+a) Tenho o seguinte texto:
+
+    Números pares: 0
+    Números ímpares: 0
+
+b) Um botão "Sortear número". Ao clicar nele, sortear um número entre -30 e -9, exiba abaixo do botão o número sorteado. Aumente um dos contadores do item a) conforme ele seja par ou ímpar -->

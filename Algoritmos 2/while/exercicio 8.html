@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+<body>
+
+    Informe um numero: <br>
+    <input type="text" id="num"> <br> <br>
+
+    <button onclick="mostrar()" >Viva o 7!</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function mostrar(params) {
+        var numero = Number (num.value);
+        index=0;
+        exibir.innerHTML ='';
+
+        while (index<numero) {
+            index++
+            if (numero ==0 || numero > 200) {
+                exibir.innerHTML = `número tem que estar entre 0 e 200`
+            }else if (index%7==0) {
+                exibir.innerHTML +=`${index}<br>`
+            }
+            
+        }
+
+    }
+
+
+
+</script>
+
+
+<!-- 8. Crie um programa em HTML/JS o qual:
+
+a) Receber um número (tem que estar entre 0 e 200)
+
+b) Ter um botão chamado "Viva o 7!"
+
+c) Ao clicar nesse botão, devem aparecer todos os múltiplos de 7 entre 0 e o número informado em a)
+
+c) ATENÇÃO! Use a técnica de dedução de múltiplos por uso do resto da divisão e não usando a técnica de incrementar em 7. Para saber se um número é múltiplo de 7, basta descobrir se o resto da divisão dele por 7 é 0. Ex: -->

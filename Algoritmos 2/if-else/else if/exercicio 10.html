@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+
+<body>
+
+    digite seu nome: <br>
+    <input type="text" id="inp_nome" > <br><br>
+
+    digite seu saldo: <br>
+    <input type="text" id="inp_saldo" > <br><br>
+
+    <button onclick="Verificarconta()">Verificar Conta</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function Verificarconta() {
+        var nome = inp_nome.value;
+        var saldo = Number(inp_saldo.value);
+
+        if (saldo < 0) {
+            exibir.innerHTML = `Com o saldo de ${saldo} o cliente ${nome} está com saldo devedor`
+        } else if (saldo <= 2000) {
+            exibir.innerHTML = `Com o saldo de ${saldo} o cliente ${nome} está com saldo normal`
+        } else if (saldo <= 5000) {
+            exibir.innerHTML = `Com o saldo de ${saldo} o cliente ${nome} está com saldo ACIMA DA MEDIA`
+        } else {
+            exibir.innerHTML = `Com o saldo de ${saldo} o cliente ${nome} TEM PERFIL DE INVESTIDOR`
+        }
+
+    }
+</script>
+
+
+
+<!-- 10. Faça um programa para auxiliar o banco SPTO na análise das contas de seus clientes
+
+ a) Pergunte ao usuário o nome e o saldo do cliente
+
+ b) Ao clicar num botão "Verificar Conta"...
+
+            b.1) Se o saldo for negativo, exiba a frase “Com o saldo de 999.99 o cliente XXXXXXX está com saldo devedor”
+
+b.2) Se o saldo estiver entre 0 e 2000, exiba a frase “Com o saldo de 999.99 o cliente XXXXXXX está com saldo NORMAL
+
+b.3) Se o saldo estiver entre 2000,01 e 5000, exiba a frase “Com o saldo de 999.99 o cliente XXXXXXX está com saldo ACIMA DA MÉDIA”
+
+b.4) Se o saldo estiver acima de 5000, exiba a frase “Com o saldo de 999.99 o cliente XXXXXXX TEM PERFIL DE INVESTIDOR” -->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendedo operações de texto</title>
+</head>
+<body>
+
+    <h1>Operações com texto</h1>
+
+    Digite uma frase:
+    <input type="text" id="inp_frase" onkeyup="analisar()">
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+        var frase = (inp_frase.value)
+    
+    exibir.innerHTML = ' ';
+
+    // .length mostra quantidade de caracteres
+    exibir.innerHTML += `quantos caracteres ${frase.length} <br> `;
+
+    // .startsWith verifica se começa com o caracter especificado
+    exibir.innerHTML += `qual letra começa ${frase.startsWith('d')} <br> `;
+
+    exibir.innerHTML += `qual letra começa ${frase.startsWith('www.')} <br> `;
+
+    exibir.innerHTML += `qual letra começa ${frase.startsWith('D') || frase.startsWith('d')} <br> `;
+
+    // endsWith verificar se termina com a letra desejado
+    exibir.innerHTML += `ele termina com ${frase.endsWith('.br')} <br> `;
+
+    // [...] achar em qual posição esta a letra desejada
+    exibir.innerHTML += `qual a letra da posição 3 ${frase[3]} <br> `;
+
+    //  ${frase[frase.length -1]} qual letra termina
+    exibir.innerHTML += `qual a ultima letra ${frase[frase.length -1]} <br> `;
+
+    // indexOf(valor) procura a primeira vez q o valor aparece
+    exibir.innerHTML += `aonde esta o 1º @ ${frase.indexOf('@')} <br> `;
+
+    // toWupperCase e toLowerCase NÃO ALTERAM o valor da variavel, só mostra em caixa alta ou caixa baixa
+
+    exibir.innerHTML += `Como fica em maisculo ${frase.toUpperCase('')} <br> `;
+    
+    exibir.innerHTML += `Como fica em minusculo ${frase.toLowerCase('')} <br> `;
+
+    }
+
+
+    
+
+
+
+</script>
+

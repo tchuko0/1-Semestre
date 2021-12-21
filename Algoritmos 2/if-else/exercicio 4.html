@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+
+    <h1>Familia</h1>
+
+    Informe a quantidade de filhos: <br>
+    <input type="text" id="inp_filho"> <br><br>
+
+    <button onclick="calcular()" >Analisar família</button>
+
+    <div id="exibir"></div>
+
+
+
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+        var filhos = Number(inp_filho.value)
+
+        if (filhos == 1) {
+            exibir.innerHTML += 'Não tem TV <br>'
+        } else if (filhos == 2 ) {
+            exibir.innerHTML += 'Não tem internet <br>'
+        } else if (filhos == 3) {
+            exibir.innerHTML += 'Não tem video game <br>'
+        } else {
+            exibir.innerHTML += 'Não tem Netflix <br>'
+        }
+    }
+
+
+
+</script>

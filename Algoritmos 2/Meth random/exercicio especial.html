@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exEspecial</title>
+</head>
+<body>
+
+    <h1>SDA AS MELHORES CAMISETAS</h1>
+
+    Informe a Quantidade: <br>
+    <input type="text" id="inpQtd"> <br>
+
+    <select id="selTamanho">
+        <option value=" 0 ">Escolha um tamanho</option>
+        <option value="G">Grande</option>
+        <option value="P">Pequeno</option>
+    </select>
+
+    <br>
+
+    <select id="selCor">
+        <option value=" 0 ">Escolha uma cor</option>
+        <option value="Camisa Preto e Branco"> Camisa Preto e Branco</option>
+        <option value="Camisa Colorido">Camisa Colorido</option>
+    </select>
+
+    <br>
+
+    Informe a distancia: <br>
+    <input type="text" id="inpDistancia">
+
+    <br>
+
+    <button onclick="orcar()" id="btnOrcar" >Orçar</button>
+
+    <div id="exibir"></div>
+
+
+    <div id="pagina2" style="display: none;">
+
+        Orçamento de vendas
+
+ 
+
+                    Quantidade Solicitada: <span id="qtd" ></span> <br>
+
+                    Produto Selecionado: <span id="prod" ></span> <br>
+
+                    Tamanho Selecionado: <span id="tmn" ></span> <br>
+
+ 
+
+                    O valor total das mercadorias é de R$ <span id="total" ></span> <br>
+                    Para essa distância será cobrado um adicional de R$ <span id="valorfrete"></span> para entrega 
+
+
+
+    </div>
+</body>
+</html>
+
+<script>
+    qntCamisa = 0;
+    km = 0;
+    function orcar() {
+
+        var quantidade = Number(inpQtd.value);
+        var distancia = Number(inpDistancia.value);
+      
+        // validação
+        
+        if (quantidade <= 100) {
+            alert('Só vendemos por atacado');
+
+        }else if (quantidade >2000) {
+            alert('Consulte o nosso PCP');
+
+        }else if (selTamanho.value == 0 ) {
+            alert('Escolha um Tamanho')
+
+        }else if (selCor.value == 0 ) {
+            alert('Escolha uma cor')   
+           
+        }else if (distancia == 0) {
+            alert('Distancia invalida');
+
+        } else{
+            btnOrcar.style.display = 'none';
+            pagina2.style.display = 'block'
+        }
+
+        // total
+
+        if (selCor.value == 'Camisa Preto e Branco' && selTamanho.value == `G`  ) {
+        var Vtotal = quantidade * 16
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}` 
+        
+        
+        }else if (selCor.value == 'Camisa Preto e Branco' && selTamanho.value == `P`) {
+        var Vtotal = quantidade * 15
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+         
+            
+        }else if (selCor.value == 'Camisa colorida' && selTamanho.value == `P`) {    
+        var Vtotal = quantidade * 17
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        
+        }else{
+        var Vtotal = quantidade * 18
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        
+        }
+
+        // frete
+
+        if (distancia > 67 && selCor.value == 'Camisa Preto e Branco' && selTamanho.value == `G` ) {
+        var frete = Vtotal * 0.07
+        var Vtotal = quantidade * 16
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        valorfrete.innerHTML = `${frete}`
+            
+        }else if (distancia > 67 && selCor.value == 'Camisa Preto e Branco' && selTamanho.value == `P`) {
+        var frete = Vtotal * 0.07
+        var Vtotal = quantidade * 15
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        valorfrete.innerHTML = `${frete}`
+       
+        }else if (distancia > 67 && selCor.value == 'Camisa colorida' && selTamanho.value == `P`) {
+        var frete = Vtotal * 0.07
+        var Vtotal = quantidade * 17
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        valorfrete.innerHTML = `${frete}`
+
+        }else{
+        var frete = Vtotal * 0.07
+        var Vtotal = quantidade * 18
+        qtd.innerHTML = `${quantidade}`
+        prod.innerHTML = `${selCor.value}`
+        tmn.innerHTML = `${selTamanho.value}`
+        total.innerHTML = `${Vtotal}`
+        valorfrete.innerHTML = `${frete}`
+        }
+
+
+    }
+
+
+</script>

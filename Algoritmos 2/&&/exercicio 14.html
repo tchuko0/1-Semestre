@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+</head>
+<body>
+
+    <div id="esconder_form1">
+
+    <h1>Alturas desejadas para pilotos</h1>
+    
+    Digite altura inicia: <br>
+    <input type="text" id="inp_inicialP"> <br><br>
+
+    Digite altura final: <br>
+    <input type="text" id="inp_finalP"> <br><br>
+
+    <h1>Alturas desejadas para jogadores de basquete</h1>
+
+    Digite altura inicia: <br>
+    <input type="text" id="inp_inicialB"> <br><br>
+
+    Digite altura final: <br>
+    <input type="text" id="inp_finalB"> <br><br>
+
+    <button onclick="selecionar()" >Selecionar</button>
+
+    </div>
+
+    <div id="form_dois" style="display: none; "  >
+    - Título: “Processo de Seleção de novos atletas”
+    <br>
+    - Subtítulo: Critério de Seleção de piloto – altura entre <b id="altura_piloto1" >9,99</b> até <b id="altura_piloto2" >9,99</b> 
+    <br>
+    - Subtítulo: Critério de Seleção de jogador de basquete – altura entre  <b id="altura_jogador1" >9,99</b> até <b id="altura_piloto2" >9,99</b> <br><br>
+
+    Digite seu nome: <br>
+    <input type="text" id="inp_nome"><br><br>
+
+    Digite sua altura: <br>
+    <input type="text" id="inp_altura"> <br><br>
+
+    <select name="" id="sel_escolha">
+        <option value="">Escolha uma opção</option>
+        <option value="piloto">Piloto</option>
+        <option value="jogador">Jogador de basquete</option>
+
+    </select>
+
+    </div>
+
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+
+    function selecionar() {
+        var alt_inP = Number(inp_inicialP.value);
+        var alt_finP = Number(inp_finalP.value);
+        var alt_inJ = Number(inp_inicialB.value);
+        var alt_finJ = Number(inp_finalB.value);
+
+            if (alt_inP > 1 && alt_finP > alt_inP && alt_inJ > 1.5 && alt_finJ > alt_inJ  ) {
+            esconder_form1.style.display = 'none'
+            form_dois.style.display = 'block'
+            altura_piloto1.innerHTML = `${alt_inP}` 
+            altura_piloto2.innerHTML = `${alt_finP}`
+            altura_jogador1.innerHTML = `${alt_inJ}` 
+            altura_jogador2.innerHTML = `${alt_finJ}`
+
+            } else{
+                alert('E NÃO SEGUIR EM FRENTE.');
+                
+            }
+
+
+            // esconder_form1.style.display = 'none'
+            // form_dois.style.display = 'block'
+
+           
+        
+    }
+
+
+
+</script>

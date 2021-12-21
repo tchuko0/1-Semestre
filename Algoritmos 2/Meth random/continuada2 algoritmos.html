@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuada 2</title>
+</head>
+<body>
+
+    <div id="pagina1" >
+
+    <h1>SDA – AS MELHORES CAMISETAS DO BRASIL</h1>
+
+    Informe a quantidade de camisas solicitas: <br>
+    <input type="text" id="inpCamisa"> <br>
+
+    <select  id="sel_tamanho">
+        <option value="">Escolha o seu tamanho</option>
+        <option value="pequeno">Pequeno</option>
+        <option value="grande">Grande</option>
+    </select>
+<br><br>
+    <select  id="sel_Cor">
+        <option value="">Escolha a cor</option>
+        <option value="colorida">Colorida</option>
+        <option value="prataEbranca">Preta e branca</option>
+    </select>
+<br><br>
+
+    Informe a distancia da entrega <br>
+    <input type="text" id="inpDistancia">
+
+<br>
+    <button onclick="orcar()" >Orçar</button>
+
+    <div id="exibir"></div>
+
+    </div>
+
+    <div id="pagina2" style="display: none;">
+
+        
+        Quantidade Solicitada: <span id="pa2_quantidade" ></span>
+        <br>
+
+        Produto Selecionado: <span id="pa2_tamanho" ></span>
+        <br>
+        Tamanho Selecionado: <span id="pa2_cor" ></span>
+
+        <br>
+
+
+        O valor total das mercadorias é de R$ <span id="precoT"></span> 
+
+        <br><br>
+
+        exibir.innerHTML = `Para essa distância será cobrado um adicional de R$ <span id="frete" ></span> para entrega`
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+
+    quantidade = 0;
+    Vunitario = 0;
+    camisa_p_branca = 15;
+    camisa_g_branca = 16;
+    camisa_p_colorida =17
+    camisa_g_colorida = 18
+    function orcar() {
+
+        var tamanho = sel_tamanho.value;
+        var cor = sel_Cor.value;
+         Vunitario  += Number(inpCamisa.value)
+         quantidade +=Number(inpCamisa.value)
+
+         var total =Number(inpCamisa.value) * quantidade
+        var frete = total- 0.07 / 100
+        quantidade++
+
+        if (inpCamisa.value < 100) {
+            exibir.innerHTML = `Vendemos somente no atacado`
+        }else if (inpCamisa.value > 2000) {
+            exibir.innerHTML = `Consulte nosso PCP (planejamento e controle da produção)`
+         
+        }else if (tamanho == 'pequeno' && cor == 'prataEbranca') {
+            camisa_p_branca *= Number(inpCamisa.value) 
+            pagina1.style.display = 'none'
+            pagina2.style.display = 'block'
+            
+        }else if (tamanho == 'grande' && cor == 'prataEbranca') {
+            camisa_g_branca *= Number(inpCamisa.value)
+            pagina1.style.display = 'none'
+            pagina2.style.display = 'block'
+            
+        }else if (tamanho == 'pequeno' && cor == 'colorida') {
+            camisa_p_colorida*= Number(inpCamisa.value)
+            pagina1.style.display = 'none'
+            pagina2.style.display = 'block'
+            
+        }else{
+            camisa_g_colorida *= Number(inpCamisa.value)
+            pagina1.style.display = 'none'
+            pagina2.style.display = 'block'
+        }
+
+        pa2_quantidade.innerHTML = `${Number(inpCamisa.value)}`
+            pa2_tamanho.innerHTML = `${sel_tamanho.value}`
+            pa2_cor.innerHTML = `${sel_Cor.value}`
+            precoT.innerHTML = `${total}`
+            frete.innerHTML = `${frete}`
+
+            if (inpDistancia.value > 67) {
+                
+            }
+
+  }
+
+ 
+
+
+
+</script>

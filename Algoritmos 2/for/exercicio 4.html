@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+
+<body>
+
+    <button onclick="mostrar()">Contar</button> <br><br>
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function mostrar() {
+        exibir.innerHTML = '';
+
+        for (var index = 5; index <= 15; index++) {
+            exibir.innerHTML += `${index}<br>`
+
+        }
+    }
+</script>
+
+
+
+<!-- 4.       Crie um programa o qual:
+
+a) Ao clicar num botão "Contar"...
+
+b) Exiba, debaixo do botão, os números de 5 a 15, um embaixo do outro -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="pt">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metrô de SP</title>
+    </head>
+    
+    <body>
+    
+        <h1>Comprar Fidelidade</h1>
+    
+        <button onclick="conducao1()">08 passagens</button>
+        <button onclick="conducao2()">20 passagens</button>
+        <button onclick="conducao3()">50 passagens</button>
+    
+        <br><br>
+    
+        <div id="exibir"></div>
+    
+    </body>
+    
+    </html>
+    
+    <script>
+        var passagem = 4.40;
+    
+        function conducao1() {
+    
+            var conducoensadquiridas = 08;
+            var Desconto = 4.06;
+            var calculo = Desconto / passagem;
+            var calculo2 = calculo * 2;
+    
+    
+            exibir.innerHTML =
+                `Ao comprar ${conducoensadquiridas} passagens, você pagou ${calculo.toFixed(2)}% a menos. É como se tivesse ganhado ${calculo2.toFixed(0)} passagens de bônus.`;
+        }
+    
+        function conducao2() {
+    
+            var conducoensadquiridas = 20;
+            var Desconto = 3.93;
+            var calculo = Desconto / passagem;
+            var calculo2 = calculo * 2;
+    
+    
+            exibir.innerHTML =
+                `Ao comprar ${conducoensadquiridas} passagens, você pagou ${calculo.toFixed(2)}% a menos. É como se tivesse ganhado ${calculo2.toFixed(0)} passagens de bônus.`;
+        }
+    
+        function conducao3() {
+    
+            var conducoensadquiridas = 50;
+            var Desconto = 3.83;
+            var calculo = Desconto / passagem;
+            var calculo2 = calculo * 2;
+         
+    
+    
+            exibir.innerHTML =
+                `Ao comprar ${conducoensadquiridas} passagens, você pagou ${calculo.toFixed(2)}% a menos. É como se tivesse ganhado ${calculo2.toFixed(0)} passagens de bônus.`;
+        }
+    </script>
+    
+</body>
+</html>
+

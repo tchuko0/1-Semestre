@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Nome do produto" id="inp_nome"> <br>
+    <input type="text" placeholder="preco" id="inp_preco"> <br>
+    <button onclick="cadastrar()" >Cadastrar</button> <br>
+    <button onclick="mostrar()" >Relatório de estoque</button> <br>
+    <div id="relatorio"></div>
+    <div id="exibir"></div>
+    
+</body>
+
+
+
+<script>
+    var produto=[]
+    var preco=[]
+    var minimo = 9999;
+    var maximo = 0;
+    var soma = 0;
+    function cadastrar() {
+
+      if (inp_nome.value == '') {
+            alert('Informe um produto');
+        }else if (inp_preco.value == '') {
+            alert('Informe o preço')
+        }else{
+            preco.push(inp_preco.value);
+            produto.push(inp_nome.value)
+            inp_nome.value = '';
+            inp_preco.value = '';
+        }
+
+        
+        for (let index = 0; index < preco.length ; index++) {
+                soma += Number(preco[index])
+        
+    }
+
+}
+
+    function mostrar() {
+
+        if (produto.length < 1) {
+            alert("Insira o nome do produto e seu preço!")
+        }else {
+
+            for (let index2 = 0; index2 < produto.length; index2++) {
+                if (maximo < preco[index2]) {
+                    maximo = preco[index2]
+                }
+                if (minimo > preco[index2]) {
+                    minimo = preco[index2]
+                }
+                
+                relatorio.innerHTML += `
+                    Produto ${index2+1}: ${produto[index2]} <br>
+                    Preço de compra: R$${preco[index2]} <br> 
+                    Vender por R$${preco[index2] * 1.25} <br><br>
+                `;
+        
+            }
+
+            var media = soma / preco.length;
+          
+          exibir.innerHTML+= ` O nome do produto mais caro ${produto[preco.indexOf(maximo)]} 
+                                    <br>
+                                  O nome do produto mais barato ${produto[preco.indexOf(minimo)]}
+                                    <br>
+                                  A soma dos preços de compra dos produtos ${soma}
+                                    <br>
+                                   A média de preço de venda dos produtos ${media} `
+        
+
+    }
+
+    
+
+        }
+        
+    
+
+       
+
+
+
+
+</script>
+<!-- </html>
+
+14. Crie um pequeno sistema de loja eletrônica o qual:
+
+a) Tenha um campo "Nome do produto" e outro "Preço de compra"
+
+b) Tenha um botão "Cadastrar". Ao clicar nele, o nome e preço ficam cadastrados em algum lugar, por enquanto invisível ao usuário
+
+c) Tenha um botão "Relatório de estoque". Ao clicar nele, deve aparecer uma listagem dos produtos cadastrados com seu valor para venda, como no exemplo a seguir:
+
+ 
+
+   Total de produtos: 2
+
+ 
+
+   Produto 1: Leite de arroz
+
+   Preço de compra: R$1.50. Vender por R$1,87
+
+ 
+
+   Produto 2: Caixa de chocolates
+
+   Preço de compra: R$9.00. Vender por R$11,25
+
+ 
+
+O preço de venda é sempre o valor da compra mais 25%. Ou seja, basta multiplicar o preço de compra por 1,25.
+
+ 
+
+#FicaDica: De repente você pode precisar de 2 vetores aqui ;) -->

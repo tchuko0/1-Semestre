@@ -1,0 +1,48 @@
+<title>ex16</title>
+</head>
+<body>
+
+    Informe a capacidade maxima do veiculo: <br>
+    <input type="text" id="qtdMax"> <br> <br>
+
+
+    Informe a quantidade de pessoas que vâo entrar no carro : <br>
+    <input type="text" id="qtdPessoas"> <br><br>
+
+    <button onclick="mostrar()" >#Partiu Carona</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+ 
+    function mostrar() {
+        var qtd = Number(qtdPessoas.value);
+        var max = Number(qtdMax.value);
+        exibir.innerHTML = '';
+        index=0;
+
+        while (index<qtd) {
+            index++
+            if (index == 1) {
+                exibir.innerHTML += `Entro o ${index} passageiro(que é o motorista)<br>`
+            }else if (index<=max) {
+                exibir.innerHTML += `Entrou o ${index}º passageiro<br>`
+            }else {
+                exibir.innerHTML += `O ${index}º passageiro terá que esperar! <br>`
+            }
+        }
+    }
+
+
+
+
+</script>
+
+<!-- 17. Incremente a questão anterior de tal forma que:
+
+a) Também tenha um campo no qual o usuário indique a capacidade de passageiros que o veículo suporta
+
+b) Ao clicar no botão, as frases só começam a mostrar que o passageiro terá que esperar quando a capacidade indicada em a) for excedida -->

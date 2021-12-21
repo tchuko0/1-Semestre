@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex17</title>
+</head>
+
+<body>
+
+    <h1>Entrega delivery</h1>
+
+    Digite a distância da pizzaria em relação a sua casa: <br>
+    <input type="text" id="inp_dis"> <br><br>
+
+    <button onclick="calcular()">Verificar disponibilidade</button>
+
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var disponibilidade = Number(inp_dis.value);
+
+        if (disponibilidade >= 25) {
+            exibir.innerHTML = `A Pizza Rãti não entrega neste endereço!`
+        } else if (disponibilidade >= 5 && disponibilidade <= 25) {
+            exibir.innerHTML = `A sua pizza será entregue, porém o valor de entrega é de R$ 25,00`
+        } else {
+            exibir.innerHTML = `A sua pizza será entregue e não custará nada para você sorriso`
+        }
+    }
+</script>
+
+
+<!-- 17. Em meio a crise de Covid19 muitos restaurantes tiveram que fechar por ordem do governo, podendo trabalhar apenas com a modalidade de delivery.
+Ajude a pizzaria "Pizza Rãti" a saber se compensa entregar um pedido feito pelo cliente de acordo com a distância que ele mora do estabelecimento.
+Crie um programa em HTML/JS o qual:
+a) Peça ao usuário para informar a distância (em km) da pizzaria em relação a sua casa.
+b) Tenha um botão "Verificar disponibilidade" que, ao ser clicado, exiba um texto abaixo dele como esse:
+Se o usuário reside a 25km ou mais: "A Pizza Rãti não entrega neste endereço!".
+Se o usuário reside a menos de 25km e mais de 5km: "A sua pizza será entregue, porém o valor de entrega é de R$ 25,00".
+Se o usuário reside a menos de 5km: "A sua pizza será entregue e não custará nada para você sorriso". -->

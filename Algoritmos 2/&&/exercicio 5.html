@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+</head>
+<body>
+
+    Informe a hora que costuma acessar: <br>
+    <input type="text" id="inp_hora" > <br><br>
+
+    Informe o dia que costuma acessar: <br>
+    <input type="text" id="inp_dia" > <br><br>
+
+    <button onclick="recomendacao()" >Ver recomendação</button>
+
+    <div id="exibir"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function recomendacao() {
+        var hora = Number(inp_hora.value);
+        var dia = Number(inp_dia.value);
+
+        if (hora >=19 && hora <= 21) {
+            exibir.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${hora}!`       
+        } else {
+            exibir.innerHTML = `O horário ${hora} é adequado para assistir sua série favorita!`
+        }
+    }
+
+
+
+</script>
+
+<!-- 5. A Netflix é uma das plataformas que mais consomem e transferem dados em alguns países – o que cria alguns horários críticos. Entre 19h e 21h, por exemplo, é comum que ocorram instabilidades na plataforma, porque é o período em que mais há gente assistindo ao conteúdo.
+Sabendo disso, crie um programa em HTML/JS o qual:
+a) Peça ao usuário para informar a hora do dia que ele costuma acessar a Netflix
+b) Tenha um botão "Ver recomendação" que exiba abaixo dele a seguinte frase:
+Se o horário informado for entre as 19h e 21h - "Não é recomendável que você assista sua série favorita no horário X!".
+Caso contrário - "O horário X é adequado para assistir sua série favorita!" -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+</head>
+
+<body>
+
+    <h1>Promoção dos ingressos</h1>
+
+    <button onclick="p1()">04 ingressos</button>
+    <button onclick="p2()">06 ingressos</button>
+    <button onclick="p3()">08 ingressos</button>
+
+    <br><br>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    function p1() {
+
+        var qnt_ingresso = 04;
+
+        var calculo1 = 32 * 100;
+        var calculo2 = calculo1 / 48;
+
+        exibir.innerHTML = `Ao comprar ${qtd_ingresso} ingressos, você pagou ${calculo2.toFixed(2)}% a menos.`;
+    }
+
+    function p2() {
+
+        var qnt_ingresso = 06;
+
+        var calculo1 = 42 * 100;
+        var calculo2 = calculo1 / 72;
+
+        exibir.innerHTML = `Ao comprar ${qtd_ingresso} ingressos, você pagou ${calculo2.toFixed(2)}% a menos.`;
+    }
+
+    function p3() {
+
+        var qnt_ingresso = 08;
+
+        var calculo1 = 48 * 100;
+        var calculo2 = calculo1 / 96;
+
+        exibir.innerHTML = `Ao comprar ${qtd_ingresso} ingressos, você pagou ${calculo2.toFixed(2)}% a menos.`;
+    }
+</script>

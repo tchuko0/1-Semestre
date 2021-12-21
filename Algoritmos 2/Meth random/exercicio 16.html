@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    solicite o nome
+    <input type="text" id="ipt_nome"> <br>
+    solicite primeiro numero
+    <input type="text" id="ipt_pri_numero"><br>
+    solicite segundo numero
+    <input type="text" id="ipt_seg_numero"><br>
+    solicite terceiro numero
+    <input type="text" id="ipt_ter_numero">
+
+
+    <button onclick="sorteio()">sortear</button>
+    <span id="sp_mostrar"></span>
+</body>
+
+</html>
+
+<script>
+
+    var sorteador = 0
+
+    function sorteio() {
+
+        sorteador++
+
+        var numero_sorteado = Math.random() * 9 + 1;
+        numero_sorteado = numero_sorteado.toFixed(0);
+
+        if ((ipt_pri_numero.value && ipt_seg_numero.value && ipt_seg_numero.value >= 0
+            && ipt_pri_numero.value && ipt_seg_numero.value && ipt_seg_numero.value <= 10) &&
+            ipt_pri_numero.value && ipt_seg_numero.value && ipt_seg_numero.value == numero_sorteado) {
+            sp_mostrar.innerHTML = `<br>parabens ${ipt_nome.value} voce foi sorteado apos ${sorteador} sorteios`
+        }
+        else {
+            alert('algo deu errado!!')
+        }
+    }
+
+</script>

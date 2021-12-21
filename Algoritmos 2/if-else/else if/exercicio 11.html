@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    
+    <h1>Meses do anos</h1>
+
+    <select name="" id="sel_meses" onchange="meses()">
+        <option value="">Selecione um mes</option>
+        <option value="verao">janeiro</option>
+        <option value="verao">fevereiro</option>
+        <option value="outono">Março</option>
+        <option value="outono">Abril</option>
+        <option value="outono">Maio</option>
+        <option value="inverno">Junho</option>
+        <option value="inverno">Julho</option>
+        <option value="inverno">Agosto</option>
+        <option value="primavera">Setembro</option>
+        <option value="primavera">Outubro</option>
+        <option value="primavera">Novembro</option>
+        <option value="verao">Dezembro</option>
+
+    </select>
+
+    <img src="https://cdn.abcdoabc.com.br/verao_5508634b.jpg" id="id_verao" width="350px" alt="" style="display: none;" >
+    <img src="https://www.dci.com.br/wp-content/uploads/2021/03/outono.png" id="id_outono" width="350px" alt="" style="display: none;">
+    <img src="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg" id="id_inverno" width="350px" alt="" style="display: none;">
+    <img src="https://www.infoescola.com/wp-content/uploads/2008/10/primavera.jpg" id="id_primavera" width="350px" alt="" style="display: none;">
+
+</body>
+</html>
+
+<script>
+
+function meses() {
+    
+    if (sel_meses.value == 'verao' ) {
+        id_verao.style.display = 'block'
+        id_outono.style.display = 'none'
+        id_inverno.style.display = 'none'
+        id_primavera.style.display = 'none'
+    } else if (sel_meses.value == 'outono') {
+        id_outono.style.display = 'block'
+        id_inverno.style.display = 'none'
+        id_primavera.style.display = 'none'
+        id_verao.style.display = 'none'
+    } else if (sel_meses.value == 'inverno') {
+        id_inverno.style.display = 'block'
+        id_primavera.style.display = 'none'
+        id_verao.style.display = 'none'
+        id_outono.style.display = 'none'
+    } else {
+        id_primavera.style.display = 'block'
+        id_verao.style.display = 'none'
+        id_outono.style.display = 'none'
+        id_inverno.style.display = 'none'
+    }
+}
+
+
+
+
+</script>
+
+
+
+
+
+<!-- 11. Crie um programa em HTML/JS o qual:
+
+a) Tenha uma combo com todos os meses do ano
+
+b) Após alterar o valor da combo, exiba abaixo dela o nome uma imagem da estação do ano mais provável
+
+c) Considere que o clima é no hemisfério sul, ou seja:
+
+   Outono: março, abril e maio.
+   Inverno: junho, julho e agosto.
+    Primavera: setembro, outubro e novembro.
+    Verão: dezembro, janeiro e fevereiro. -->

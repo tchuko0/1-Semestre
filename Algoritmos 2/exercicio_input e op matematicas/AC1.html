@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC1</title>
+</head>
+
+<body>
+
+    <h1>Avaliação 1</h1>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpT6PN3aemYsMKrt3o6K3E1x4rjg3LVnUJIQ&usqp=C"
+        style="width: 150px;" alt="">
+    <br>
+    <input type="text" id="Vcarro" placeholder="Informe o valor do carro">
+    <input type="text" id="par_carro" placeholder="Informe a quantidade de parcela">
+
+    <br><br>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIrfs2nLFu0g7E0uBaN5wf-ConsKuaw_E_g&usqp=CAU"
+        style="width: 150px;" alt="">
+    <br>
+    <input type="text" id="Vmoto" placeholder="Informe o valor da moto">
+    <input type="text" id="par_moto" placeholder="Informe a quantidade de parcela">
+
+    <br><br>
+
+    <button onclick="calcular()">Simular compra</button>
+
+    <br><br>
+
+    <div id="barra_carro" style="background-color: blue; height: 30px; width: 0px;"></div>
+
+    <div id="barra_moto" style="background-color: rgb(13, 189, 7); height: 30px; width: 0px;"></div>
+
+
+
+    <div id="exibir"></div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var valorC = Number(Vcarro.value);
+        var valorM = Number(Vmoto.value);
+
+        var qtdP_carro = Number(par_carro.value);
+        var qtdP_moto = Number(par_moto.value);
+
+        var totalV = valorC + valorM /*valor total dos veiculos*/
+
+        var result_carro = (valorC / totalV) * 100; /*valor do carro sobre o total da moto e do carro */
+        var result_moto = (valorM / totalV) * 100; /*valor da moto sobre o total da moto e do carro */
+
+        var valor_parC = valorC / qtdP_carro; /*quantidade de parcela do carro dividido sobre o valor do mesmo */
+        var valor_parM = valorM / qtdP_moto; /*quantidade de parcela da moto dividido sobre o valor da mesma  */
+
+        var somaP = qtdP_carro + qtdP_moto;
+
+
+
+
+        exibir.innerHTML = `
+    <br>    
+    <u><b>ANÁLISE DAS PRESTAÇÕES</b></u>
+    <br>
+     O <span style="background-color: blue;" >Carro</span> será pago em ${qtdP_carro} meses e cada parcela será de R$  <span style="color: blue;"> ${valor_parC.toFixed(2)} </span>
+    <br>
+     A <span style="background-color: green;" >Moto</span> será paga em ${qtdP_moto} meses e cada parcela será de R$   <span style="color: green ;"> ${valor_parM.toFixed(2)} </span>
+    <br>
+    <i> A soma da parcela mensal do carro e da moto é de <b> R$ ${somaP} </b></i> 
+    <br><br>
+
+    <img src="https://www.mgpconsultoria.com.br/wp-content/uploads/2018/10/calculation.png" style="height: 150px;" alt="">
+   
+   `
+
+        barra_carro.style.width = `${result_carro}%`;
+        barra_moto.style.width = `${result_moto}%`;
+
+
+    }
+</script>

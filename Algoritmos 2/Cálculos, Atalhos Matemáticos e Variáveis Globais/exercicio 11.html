@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+
+    <h1>Cofrinho</h1>
+
+    Valor guardado no cofrinho:  <b id="valor">R$0.00</b> 
+
+    <br><br>
+
+   Informe o valor a ser depositado
+   <br>
+   <input type="text" id="inp_deposito" >
+
+   <br><br>
+
+    <button onclick="deposito()" >Depositar</button>
+    <br>
+    <button onclick="tirargrana()" >Tirar toda a grana</button>
+
+    <div id="exibir"></div>
+
+    
+</body>
+</html>
+
+<script>
+
+    depositar = 0;
+    function deposito() {
+        depositar += Number(inp_deposito.value)
+        valor.innerHTML = `${depositar}`
+    }
+
+    function tirargrana() {
+        depositar -= Number(depositar)
+        valor.innerHTML = `${depositar}`
+    }
+
+
+
+</script>
+
+<!-- 11. Crie um programa em HTML/JS que simule um cofrinho da seguinte forma:
+
+a) Tenha, logo de cara, a frase "Valor guardado no cofrinho: R$0.00"
+
+b) Solicite o valor a ser depositado
+
+c) Ao clicar num botão "Depositar", o valor informado em b) é adicionado ao valor exibido na frase descrita em a)
+
+d) Ao clicar num botão "Tirar toda a grana", o valor exibido em a) volta a 0.00 -->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+</head>
+
+<body>
+
+
+
+    <select name="Combo1" id="escudos" onchange="Escudos()">
+        <option value="">Selecione uma opção</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0l8HAfTEPA8BfkvlArNHwLANIZiDL22ctw&usqp=CAU">Corinthians</option>
+        <option value="https://seeklogo.com/images/S/Sao_Paulo_FC-logo-F9DBBF4DA6-seeklogo.com.png">São Paulo</option>
+        <option value="https://i.pinimg.com/600x315/d3/82/f8/d382f8e96c26dde08716f4455f51b72b.jpg">Palmeiras</option>
+        <option value="https://www.pngfind.com/pngs/m/225-2253443_santos-fc-escudo-png-logo-do-santos-png.png">Santos</option>
+    </select>
+
+
+
+    <div id="exibir"></div>
+
+    <br><br>
+
+    <img style="width: 200px;" id="img" src=""> </img>
+
+</body>
+
+</html>
+
+<script>
+    function Escudos() {
+        img.src = `${escudos.value} `
+    }
+</script>

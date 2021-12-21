@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+</head>
+
+<body>
+    <select name="mercado" id="compras">
+        <option value="">Selecione um item</option>
+        <option value="3.50">Leite</option>
+        <option value="2.00">Farinha</option>
+        <option value="7.00">Arro</option>
+        <option value="6.00">Feijão</option>
+    </select>
+
+    <br>
+
+    <button onclick="mostrar()">Ver preço</button>
+
+    <div id="exibir"></div>
+</body>
+
+</html>
+
+<script>
+    // var leite = 0;
+    // var farinha = 0;
+    // var arroz = 0;
+    // var feijao = 0
+    function mostrar() {
+        alert(` Isso custa: ${compras.value} reais`)
+    }
+</script>
+
+
+
+<!-- 1. Crie um programa em HTML/JS o qual:
+
+a) Tenha uma "combo" com nomes de 4 produtos de mercearia (ex: leite, farinha etc)
+
+b) Ao clicar num botão "ver preço" deve aparecer um alert com a frase "Isso custa R$X,XX" (você decide o valor de cada
+produto com 2 casas decimais). -->

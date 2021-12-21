@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+<body>
+
+    <h1>Consumo de energia</h1>
+
+    Informe a quantidade de kWh consumida no mês: <br>
+    <input type="text" name="" id="inp_kwh"><br>
+
+    <button onclick="calcular()" >calcular conta de luz</button>
+
+    <div id="exibir"></div>
+
+
+</body>
+</html>
+
+<script>
+
+
+    function calcular() {
+        var kwh = Number(inp_kwh.value) * 0.85;
+        var desconto = kwh * 0.9; 
+        if (kwh < 100) {
+            alert(`O valor é de ${kwh}`)
+        } else {
+            alert(`${desconto}`)
+        }
+
+
+    }
+
+
+
+</script>
+
+
+<!-- 8. Na cidade Paulopolis a luz custa R$ 0,85 por kWh. Criar um programa em HTML/JS que:
+a) Solicite a quantidade de kWh consumida no mês
+b) Ao clicar em "calcular conta de luz", calcule o valor da conta no mês
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 kWh
+d) Exiba um alerta com o valor da conta a ser paga
+
+OBS. Faça o teste de mesa para este exercício. -->
